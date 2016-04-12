@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">GlucoseBonds1</string>
+    <string name="logolabel">the_logo</string>
+
+    <string name="title_activity_login">Login</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+    <string name="title_activity_three_mains">Three_mains</string>
 </resources>

@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "C:\\Users\\ecalo\\AndroidStudioProjects\\GlucoseBonds1\\mobile\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi-v4\\logo.png",
+        "source": "C:\\Users\\ecalo\\AndroidStudioProjects\\GlucoseBonds1\\mobile\\src\\main\\res\\mipmap-mdpi\\logo.png"
+    },
+    {
+        "merged": "C:\\Users\\ecalo\\AndroidStudioProjects\\GlucoseBonds1\\mobile\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi-v4\\ic_launcher.png",
+        "source": "C:\\Users\\ecalo\\AndroidStudioProjects\\GlucoseBonds1\\mobile\\src\\main\\res\\mipmap-mdpi\\ic_launcher.png"
+    }
+]
