@@ -34,23 +34,13 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.example.ecalo.glucosebonds1.Login"
-            android:configChanges="orientation|keyboardHidden|screenSize"
-            android:label="@string/title_activity_login"
-            android:parentActivityName="com.example.ecalo.glucosebonds1.MainActivity"
-            android:theme="@style/FullscreenTheme" >
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.example.ecalo.glucosebonds1.MainActivity" />
-        </activity>
-        <activity
-            android:name="com.example.ecalo.glucosebonds1.Three_mains"
+            android:name="com.example.ecalo.glucosebonds1.ForumsActivity"
             android:label="@string/title_activity_three_mains"
-            android:parentActivityName="com.example.ecalo.glucosebonds1.Login"
+            android:parentActivityName="com.example.ecalo.glucosebonds1.MainActivity"
             android:theme="@style/AppTheme.NoActionBar" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.example.ecalo.glucosebonds1.Login" />
+                android:value="com.example.ecalo.glucosebonds1.MainActivity" />
         </activity>
         <!-- Include the AdActivity and InAppPurchaseActivity configChanges and themes. -->
         <activity

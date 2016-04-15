@@ -4,7 +4,15 @@
         "source": "C:\\Users\\ecalo\\AndroidStudioProjects\\GlucoseBonds1\\mobile\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher.png"
     },
     {
+        "merged": "C:\\Users\\Allen\\Desktop\\Glucose Bonds\\GlucoseBonds1\\mobile\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi-v4\\logo.png",
+        "source": "C:\\Users\\Allen\\Desktop\\Glucose Bonds\\GlucoseBonds1\\mobile\\src\\main\\res\\mipmap-xxxhdpi\\logo.png"
+    },
+    {
         "merged": "C:\\Users\\ecalo\\AndroidStudioProjects\\GlucoseBonds1\\mobile\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi-v4\\logo.png",
         "source": "C:\\Users\\ecalo\\AndroidStudioProjects\\GlucoseBonds1\\mobile\\src\\main\\res\\mipmap-xxxhdpi\\logo.png"
+    },
+    {
+        "merged": "C:\\Users\\Allen\\Desktop\\Glucose Bonds\\GlucoseBonds1\\mobile\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi-v4\\ic_launcher.png",
+        "source": "C:\\Users\\Allen\\Desktop\\Glucose Bonds\\GlucoseBonds1\\mobile\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher.png"
     }
 ]
