@@ -623,42 +623,53 @@ containing a value of this type.
         public static final int generic_confirmation_animation=0x7f02002f;
         public static final int ic_full_cancel=0x7f020030;
         public static final int ic_full_sad=0x7f020031;
-        public static final int open_on_phone=0x7f020032;
-        public static final int open_on_phone_animation=0x7f020033;
+        public static final int mentor_msg=0x7f020032;
+        public static final int open_on_phone=0x7f020033;
+        public static final int open_on_phone_animation=0x7f020034;
+        public static final int quicktips_watch=0x7f020035;
+        public static final int start_watch=0x7f020036;
+        public static final int step1=0x7f020037;
+        public static final int step2=0x7f020038;
+        public static final int step3=0x7f020039;
+        public static final int step4=0x7f02003a;
+        public static final int step5=0x7f02003b;
+        public static final int step6=0x7f02003c;
+        public static final int video_watch=0x7f02003d;
     }
     public static final class id {
         public static final int adjust_height=0x7f0e0007;
         public static final int adjust_width=0x7f0e0008;
-        public static final int alertTitle=0x7f0e001c;
+        public static final int alertTitle=0x7f0e001d;
         public static final int all=0x7f0e0000;
-        public static final int animatedWrapperContainer=0x7f0e001b;
+        public static final int animatedWrapperContainer=0x7f0e001c;
         public static final int auto=0x7f0e000d;
         public static final int bottom=0x7f0e0001;
-        public static final int buttonPanel=0x7f0e001d;
+        public static final int buttonPanel=0x7f0e001e;
         public static final int center=0x7f0e0005;
         public static final int center_horizontal=0x7f0e0010;
         public static final int center_vertical=0x7f0e0011;
         public static final int clip_horizontal=0x7f0e0012;
         public static final int clip_vertical=0x7f0e0013;
         public static final int dark=0x7f0e000e;
-        public static final int dismiss_overlay_button=0x7f0e001f;
-        public static final int dismiss_overlay_explain=0x7f0e001e;
+        public static final int dismiss_overlay_button=0x7f0e0020;
+        public static final int dismiss_overlay_explain=0x7f0e001f;
         public static final int end=0x7f0e0014;
         public static final int fill=0x7f0e0015;
         public static final int fill_horizontal=0x7f0e0016;
         public static final int fill_vertical=0x7f0e0017;
         public static final int fit=0x7f0e0006;
         public static final int icon_only=0x7f0e000a;
+        public static final int imagebtn=0x7f0e001a;
         public static final int left=0x7f0e0002;
         public static final int light=0x7f0e000f;
-        public static final int message=0x7f0e0020;
+        public static final int message=0x7f0e0021;
         public static final int none=0x7f0e0009;
-        public static final int parentPanel=0x7f0e001a;
+        public static final int parentPanel=0x7f0e001b;
         public static final int right=0x7f0e0003;
         public static final int standard=0x7f0e000b;
         public static final int start=0x7f0e0018;
-        public static final int text=0x7f0e0021;
-        public static final int title=0x7f0e0022;
+        public static final int text=0x7f0e0022;
+        public static final int title=0x7f0e0023;
         public static final int top=0x7f0e0004;
         public static final int watch_view_stub=0x7f0e0019;
         public static final int wide=0x7f0e000c;
@@ -676,12 +687,13 @@ containing a value of this type.
     }
     public static final class layout {
         public static final int activity_main=0x7f040000;
-        public static final int alert_dialog_wearable=0x7f040001;
-        public static final int dismiss_overlay=0x7f040002;
-        public static final int error_layout=0x7f040003;
-        public static final int rect_activity_main=0x7f040004;
-        public static final int round_activity_main=0x7f040005;
-        public static final int watch_card_content=0x7f040006;
+        public static final int activity_quicktips=0x7f040001;
+        public static final int alert_dialog_wearable=0x7f040002;
+        public static final int dismiss_overlay=0x7f040003;
+        public static final int error_layout=0x7f040004;
+        public static final int rect_activity_main=0x7f040005;
+        public static final int round_activity_main=0x7f040006;
+        public static final int watch_card_content=0x7f040007;
     }
     public static final class mipmap {
         public static final int ic_launcher=0x7f030000;

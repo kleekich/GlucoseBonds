@@ -14,6 +14,12 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".WelcomeActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
         <activity
             android:name=".ForumsActivity"
             android:label="@string/title_activity_three_mains"
@@ -23,6 +29,76 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.ecalo.glucosebonds1.MainActivity" />
         </activity>
+        <activity
+            android:name=".ForumsDetailActivity"
+            android:label="@string/title_activity_three_mains"
+            android:parentActivityName=".ForumsActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.ecalo.glucosebonds1.ForumsActivity" />
+        </activity>
+        <activity
+            android:name=".MentorshipActivity"
+            android:label="@string/title_activity_three_mains"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.ecalo.glucosebonds1.MainActivity" />
+        </activity>
+        <activity
+            android:name=".MessageActivity"
+            android:label="@string/title_activity_three_mains"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.ecalo.glucosebonds1.MainActivity" />
+        </activity>
+        <activity
+            android:name=".EducationActivity"
+            android:label="@string/title_activity_three_mains"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.ecalo.glucosebonds1.MainActivity" />
+        </activity>
+        <activity
+            android:name=".QuicktipsActivity"
+            android:label="@string/title_activity_three_mains"
+            android:parentActivityName=".EducationActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.ecalo.glucosebonds1.EducationActivity" />
+        </activity>
+        <activity
+            android:name=".VideoActivity"
+            android:label="@string/title_activity_three_mains"
+            android:parentActivityName=".EducationActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.ecalo.glucosebonds1.EducationActivity" />
+        </activity>
+        <activity
+            android:name=".LinksActivity"
+            android:label="@string/title_activity_three_mains"
+            android:parentActivityName=".EducationActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.ecalo.glucosebonds1.EducationActivity" />
+        </activity>
+        <service android:name=".PhoneToWatchService"/>
+        <service android:name=".PhoneListenerService">
+            <intent-filter>
+                <action android:name="com.google.android.gms.wearable.BIND_LISTENER" />
+            </intent-filter>
+        </service>
+
     </application>
 
 </manifest>
