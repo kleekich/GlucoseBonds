@@ -21,7 +21,7 @@ public class ForumsActivity extends AppCompatActivity {
         context = this;
         setContentView(R.layout.activity_main);
         button = (ImageButton) findViewById(R.id.img_btn);
-        button.setImageResource(R.drawable.gb_loading);
+        button.setImageResource(R.drawable.forum_gen_screen);
 
         button.setOnTouchListener(new GestureHelper(context));
     }
@@ -37,19 +37,19 @@ public class ForumsActivity extends AppCompatActivity {
         }
 
         public void onSwipeRight() {
-            Toast.makeText(mContext, "right is always right!", Toast.LENGTH_SHORT).show();
+            Toast.makeText(mContext, "right", Toast.LENGTH_SHORT).show();
         };
 
         public void onSwipeLeft() {
-            Toast.makeText(mContext, "left is best!", Toast.LENGTH_SHORT).show();
+            Toast.makeText(mContext, "left", Toast.LENGTH_SHORT).show();
         };
 
         public void onSwipeTop() {
-            Toast.makeText(mContext, "up up and away!", Toast.LENGTH_SHORT).show();
+            Toast.makeText(mContext, "up", Toast.LENGTH_SHORT).show();
         };
 
         public void onSwipeBottom() {
-            Toast.makeText(mContext, "what's down there?", Toast.LENGTH_SHORT).show();
+            Toast.makeText(mContext, "down", Toast.LENGTH_SHORT).show();
         };
 
         public void onDoubleTap() {
@@ -57,7 +57,7 @@ public class ForumsActivity extends AppCompatActivity {
         };
 
         public void onClick() {
-            Toast.makeText(mContext, "my what a wonderful click!", Toast.LENGTH_SHORT).show();
+            Toast.makeText(mContext, "click", Toast.LENGTH_SHORT).show();
             //Intent forumsActivity = new Intent(context, ForumsActivity.class);
             //startActivity(forumsActivity);
         };
