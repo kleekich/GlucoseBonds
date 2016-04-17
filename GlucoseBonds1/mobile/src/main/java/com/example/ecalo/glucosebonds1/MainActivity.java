@@ -21,7 +21,7 @@ public class MainActivity extends AppCompatActivity {
         context = this;
         setContentView(R.layout.activity_main);
         button = (ImageButton) findViewById(R.id.img_btn);
-        button.setImageResource(R.drawable.gb_main);
+        button.setImageResource(R.drawable.gb_loading);
 
         button.setOnTouchListener(new GestureHelper(context));
     }
@@ -57,9 +57,8 @@ public class MainActivity extends AppCompatActivity {
         };
 
         public void onClick() {
-            Toast.makeText(mContext, "my what a wonderful click!", Toast.LENGTH_SHORT).show();
-            Intent forumsActivity = new Intent(context, ForumsActivity.class);
-            startActivity(forumsActivity);
+            Intent welcomeActivity = new Intent(context, WelcomeActivity.class);
+            startActivity(welcomeActivity);
         };
 
         @Override

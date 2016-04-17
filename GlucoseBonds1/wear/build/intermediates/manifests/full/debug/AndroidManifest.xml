@@ -26,6 +26,41 @@
             </intent-filter>
         </activity>
         <activity
+            android:name="com.example.ecalo.glucosebonds1.QuicktipsActivity"
+            android:label="@string/app_name"
+            android:parentActivityName="com.example.ecalo.glucosebonds1.MainActivity"
+            android:theme="@android:style/Theme.DeviceDefault" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.ecalo.glucosebonds1.MainActivity" />
+        </activity>
+        <activity
+            android:name="com.example.ecalo.glucosebonds1.MessageActivity"
+            android:label="@string/app_name"
+            android:parentActivityName="com.example.ecalo.glucosebonds1.MainActivity"
+            android:theme="@android:style/Theme.DeviceDefault" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.ecalo.glucosebonds1.MainActivity" />
+        </activity>
+        <activity
+            android:name="com.example.ecalo.glucosebonds1.VideoActivity"
+            android:label="@string/app_name"
+            android:parentActivityName="com.example.ecalo.glucosebonds1.MainActivity"
+            android:theme="@android:style/Theme.DeviceDefault" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.ecalo.glucosebonds1.MainActivity" />
+        </activity>
+
+        <service android:name="com.example.ecalo.glucosebonds1.WatchToPhoneService" />
+        <service android:name="com.example.ecalo.glucosebonds1.WatchListenerService" >
+            <intent-filter>
+                <action android:name="com.google.android.gms.wearable.BIND_LISTENER" />
+            </intent-filter>
+        </service>
+
+        <activity
             android:name="android.support.v7.widget.TestActivity"
             android:label="RecyclerViewTestActivity" />
 
