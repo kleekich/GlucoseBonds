@@ -6,5 +6,9 @@
     {
         "merged": "C:\\Users\\ecalo\\AndroidStudioProjects\\GlucoseBonds1\\wear\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi-v4\\ic_launcher.png",
         "source": "C:\\Users\\ecalo\\AndroidStudioProjects\\GlucoseBonds1\\wear\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "C:\\Users\\ecalo\\git_good\\Group-10-Project\\GlucoseBonds1\\wear\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi-v4\\ic_launcher.png",
+        "source": "C:\\Users\\ecalo\\git_good\\Group-10-Project\\GlucoseBonds1\\wear\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher.png"
     }
 ]
