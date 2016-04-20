@@ -57,10 +57,10 @@ public class MainActivity extends AppCompatActivity {
         };
 
         public void onClick() {
-            Intent loginTestActivity = new Intent(context, TestLoginActivity.class);
-            startActivity(loginTestActivity);
-            //Intent welcomeActivity = new Intent(context, WelcomeActivity.class);
-            //startActivity(welcomeActivity);
+            //Intent loginTestActivity = new Intent(context, TestLoginActivity.class);
+            //startActivity(loginTestActivity);
+            Intent welcomeActivity = new Intent(context, WelcomeActivity.class);
+            startActivity(welcomeActivity);
         };
 
         @Override
