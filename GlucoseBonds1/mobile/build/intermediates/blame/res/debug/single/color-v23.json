@@ -1,14 +1,6 @@
 [
     {
-        "merged": "C:\\Users\\Allen\\Desktop\\Glucose Bonds\\GlucoseBonds1\\mobile\\build\\intermediates\\res\\merged\\debug\\color-v23\\abc_color_highlight_material.xml",
-        "source": "C:\\Users\\Allen\\Desktop\\Glucose Bonds\\GlucoseBonds1\\mobile\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.0\\res\\color-v23\\abc_color_highlight_material.xml"
-    },
-    {
-        "merged": "C:\\Users\\ecalo\\AndroidStudioProjects\\GlucoseBonds1\\mobile\\build\\intermediates\\res\\merged\\debug\\color-v23\\abc_color_highlight_material.xml",
-        "source": "C:\\Users\\ecalo\\AndroidStudioProjects\\GlucoseBonds1\\mobile\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.0\\res\\color-v23\\abc_color_highlight_material.xml"
-    },
-    {
-        "merged": "C:\\Users\\ecalo\\git_good\\Group-10-Project\\GlucoseBonds1\\mobile\\build\\intermediates\\res\\merged\\debug\\color-v23\\abc_color_highlight_material.xml",
-        "source": "C:\\Users\\ecalo\\git_good\\Group-10-Project\\GlucoseBonds1\\mobile\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.0\\res\\color-v23\\abc_color_highlight_material.xml"
+        "merged": "/Users/joel/AndroidStudioProjects/GlucoseBonds1/mobile/build/intermediates/res/merged/debug/color-v23/abc_color_highlight_material.xml",
+        "source": "/Users/joel/AndroidStudioProjects/GlucoseBonds1/mobile/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.2.0/res/color-v23/abc_color_highlight_material.xml"
     }
 ]

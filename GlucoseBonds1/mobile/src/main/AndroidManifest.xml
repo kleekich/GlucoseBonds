@@ -75,6 +75,24 @@
                 android:value="com.example.ecalo.glucosebonds1.EducationActivity" />
         </activity>
         <activity
+            android:name=".BeMentorActivity"
+            android:label="@string/title_activity_three_mains"
+            android:parentActivityName=".EducationActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.ecalo.glucosebonds1.EducationActivity" />
+        </activity>
+        <activity
+            android:name=".FindMentorActivity"
+            android:label="@string/title_activity_three_mains"
+            android:parentActivityName=".EducationActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.ecalo.glucosebonds1.EducationActivity" />
+        </activity>
+        <activity
             android:name=".VideoActivity"
             android:label="@string/title_activity_three_mains"
             android:parentActivityName=".EducationActivity"

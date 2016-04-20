@@ -14,10 +14,8 @@
 
     <uses-feature
         android:glEsVersion="0x00020000"
-        android:required="true" />
- <!-- Permissions required for GCM -->
-    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
- <!-- Optional permission for App measurement to run. -->
+        android:required="true" /> <!-- Permissions required for GCM -->
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" /> <!-- Optional permission for App measurement to run. -->
     <uses-permission android:name="android.permission.WAKE_LOCK" />
 
     <application
@@ -87,6 +85,24 @@
         </activity>
         <activity
             android:name="com.example.ecalo.glucosebonds1.QuicktipsActivity"
+            android:label="@string/title_activity_three_mains"
+            android:parentActivityName="com.example.ecalo.glucosebonds1.EducationActivity"
+            android:theme="@style/AppTheme.NoActionBar" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.ecalo.glucosebonds1.EducationActivity" />
+        </activity>
+        <activity
+            android:name="com.example.ecalo.glucosebonds1.BeMentorActivity"
+            android:label="@string/title_activity_three_mains"
+            android:parentActivityName="com.example.ecalo.glucosebonds1.EducationActivity"
+            android:theme="@style/AppTheme.NoActionBar" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.ecalo.glucosebonds1.EducationActivity" />
+        </activity>
+        <activity
+            android:name="com.example.ecalo.glucosebonds1.FindMentorActivity"
             android:label="@string/title_activity_three_mains"
             android:parentActivityName="com.example.ecalo.glucosebonds1.EducationActivity"
             android:theme="@style/AppTheme.NoActionBar" >

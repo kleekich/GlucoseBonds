@@ -1,26 +1,10 @@
 [
     {
-        "merged": "C:\\Users\\ecalo\\git_good\\Group-10-Project\\GlucoseBonds1\\mobile\\build\\intermediates\\res\\merged\\debug\\anim-v21\\design_bottom_sheet_slide_in.xml",
-        "source": "C:\\Users\\ecalo\\git_good\\Group-10-Project\\GlucoseBonds1\\mobile\\build\\intermediates\\exploded-aar\\com.android.support\\design\\23.2.0\\res\\anim-v21\\design_bottom_sheet_slide_in.xml"
+        "merged": "/Users/joel/AndroidStudioProjects/GlucoseBonds1/mobile/build/intermediates/res/merged/debug/anim-v21/design_bottom_sheet_slide_in.xml",
+        "source": "/Users/joel/AndroidStudioProjects/GlucoseBonds1/mobile/build/intermediates/exploded-aar/com.android.support/design/23.2.0/res/anim-v21/design_bottom_sheet_slide_in.xml"
     },
     {
-        "merged": "C:\\Users\\Allen\\Desktop\\Glucose Bonds\\GlucoseBonds1\\mobile\\build\\intermediates\\res\\merged\\debug\\anim-v21\\design_bottom_sheet_slide_out.xml",
-        "source": "C:\\Users\\Allen\\Desktop\\Glucose Bonds\\GlucoseBonds1\\mobile\\build\\intermediates\\exploded-aar\\com.android.support\\design\\23.2.0\\res\\anim-v21\\design_bottom_sheet_slide_out.xml"
-    },
-    {
-        "merged": "C:\\Users\\ecalo\\git_good\\Group-10-Project\\GlucoseBonds1\\mobile\\build\\intermediates\\res\\merged\\debug\\anim-v21\\design_bottom_sheet_slide_out.xml",
-        "source": "C:\\Users\\ecalo\\git_good\\Group-10-Project\\GlucoseBonds1\\mobile\\build\\intermediates\\exploded-aar\\com.android.support\\design\\23.2.0\\res\\anim-v21\\design_bottom_sheet_slide_out.xml"
-    },
-    {
-        "merged": "C:\\Users\\Allen\\Desktop\\Glucose Bonds\\GlucoseBonds1\\mobile\\build\\intermediates\\res\\merged\\debug\\anim-v21\\design_bottom_sheet_slide_in.xml",
-        "source": "C:\\Users\\Allen\\Desktop\\Glucose Bonds\\GlucoseBonds1\\mobile\\build\\intermediates\\exploded-aar\\com.android.support\\design\\23.2.0\\res\\anim-v21\\design_bottom_sheet_slide_in.xml"
-    },
-    {
-        "merged": "C:\\Users\\ecalo\\AndroidStudioProjects\\GlucoseBonds1\\mobile\\build\\intermediates\\res\\merged\\debug\\anim-v21\\design_bottom_sheet_slide_out.xml",
-        "source": "C:\\Users\\ecalo\\AndroidStudioProjects\\GlucoseBonds1\\mobile\\build\\intermediates\\exploded-aar\\com.android.support\\design\\23.2.0\\res\\anim-v21\\design_bottom_sheet_slide_out.xml"
-    },
-    {
-        "merged": "C:\\Users\\ecalo\\AndroidStudioProjects\\GlucoseBonds1\\mobile\\build\\intermediates\\res\\merged\\debug\\anim-v21\\design_bottom_sheet_slide_in.xml",
-        "source": "C:\\Users\\ecalo\\AndroidStudioProjects\\GlucoseBonds1\\mobile\\build\\intermediates\\exploded-aar\\com.android.support\\design\\23.2.0\\res\\anim-v21\\design_bottom_sheet_slide_in.xml"
+        "merged": "/Users/joel/AndroidStudioProjects/GlucoseBonds1/mobile/build/intermediates/res/merged/debug/anim-v21/design_bottom_sheet_slide_out.xml",
+        "source": "/Users/joel/AndroidStudioProjects/GlucoseBonds1/mobile/build/intermediates/exploded-aar/com.android.support/design/23.2.0/res/anim-v21/design_bottom_sheet_slide_out.xml"
     }
 ]
