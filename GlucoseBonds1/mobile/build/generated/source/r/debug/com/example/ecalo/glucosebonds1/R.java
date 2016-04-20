@@ -2915,6 +2915,7 @@ containing a value of this type.
         public static final int clip_vertical=0x7f0d002e;
         public static final int collapseActionView=0x7f0d003b;
         public static final int contentPanel=0x7f0d0071;
+        public static final int create_doc=0x7f0d00c6;
         public static final int custom=0x7f0d0077;
         public static final int customPanel=0x7f0d0076;
         public static final int dark=0x7f0d0043;
@@ -2944,6 +2945,9 @@ containing a value of this type.
         public static final int fill_vertical=0x7f0d0023;
         public static final int fixed=0x7f0d0045;
         public static final int fullscreen_content=0x7f0d0090;
+        public static final int get_body=0x7f0d00c9;
+        public static final int get_doc=0x7f0d00c7;
+        public static final int get_title=0x7f0d00c8;
         public static final int google_wallet_classic=0x7f0d005b;
         public static final int google_wallet_grayscale=0x7f0d005c;
         public static final int google_wallet_monochrome=0x7f0d005d;
@@ -2959,6 +2963,8 @@ containing a value of this type.
         public static final int image=0x7f0d0066;
         public static final int img_btn=0x7f0d0092;
         public static final int info=0x7f0d00b6;
+        public static final int input_body=0x7f0d00c5;
+        public static final int input_title=0x7f0d00c4;
         public static final int item_touch_helper_previous_elevation=0x7f0d0006;
         public static final int left=0x7f0d0024;
         public static final int light=0x7f0d0044;
@@ -2966,6 +2972,9 @@ containing a value of this type.
         public static final int line3=0x7f0d00b4;
         public static final int listMode=0x7f0d000c;
         public static final int list_item=0x7f0d0068;
+        public static final int login_btn=0x7f0d00c2;
+        public static final int login_pass=0x7f0d00c1;
+        public static final int login_user=0x7f0d00c0;
         public static final int logo_only=0x7f0d0056;
         public static final int match_parent=0x7f0d004f;
         public static final int media_actions=0x7f0d00ae;
@@ -3025,6 +3034,7 @@ containing a value of this type.
         public static final int showCustom=0x7f0d0012;
         public static final int showHome=0x7f0d0013;
         public static final int showTitle=0x7f0d0014;
+        public static final int signup_btn=0x7f0d00c3;
         public static final int slide=0x7f0d0031;
         public static final int snackbar_action=0x7f0d0097;
         public static final int snackbar_text=0x7f0d0096;
@@ -3132,6 +3142,7 @@ containing a value of this type.
         public static final int select_dialog_multichoice_material=0x7f040039;
         public static final int select_dialog_singlechoice_material=0x7f04003a;
         public static final int support_simple_spinner_dropdown_item=0x7f04003b;
+        public static final int test_login=0x7f04003c;
     }
     public static final class mipmap {
         public static final int ic_launcher=0x7f030000;
