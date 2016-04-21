@@ -58,7 +58,7 @@ public class ForumsActivity extends AppCompatActivity {
 
         public void onClick() {
             Toast.makeText(mContext, "click", Toast.LENGTH_SHORT).show();
-            Intent forumsDetailActivity = new Intent(context, ForumsDetailActivity.class);
+            Intent forumsDetailActivity = new Intent(context, DetailedForumActivity.class);
             startActivity(forumsDetailActivity);
         };
 

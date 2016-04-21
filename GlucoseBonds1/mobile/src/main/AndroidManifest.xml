@@ -30,7 +30,7 @@
                 android:value="com.example.ecalo.glucosebonds1.MainActivity" />
         </activity>
         <activity
-            android:name=".ForumsDetailActivity"
+            android:name=".DetailedForumActivity"
             android:label="@string/title_activity_three_mains"
             android:parentActivityName=".ForumsActivity"
             android:theme="@style/AppTheme.NoActionBar">
