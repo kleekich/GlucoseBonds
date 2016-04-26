@@ -136,6 +136,10 @@
             </intent-filter>
         </service>
 
+        <activity
+            android:name="com.example.ecalo.glucosebonds1.Main2Activity"
+            android:label="@string/title_activity_main2"
+            android:theme="@style/AppTheme.NoActionBar" />
         <!-- Include the AdActivity and InAppPurchaseActivity configChanges and themes. -->
         <activity
             android:name="com.google.android.gms.ads.AdActivity"
