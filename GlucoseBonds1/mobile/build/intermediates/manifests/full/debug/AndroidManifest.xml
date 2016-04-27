@@ -39,6 +39,24 @@
             </intent-filter>
         </activity>
         <activity
+            android:name="com.example.ecalo.glucosebonds1.Login"
+            android:label="@string/title_activity_three_mains"
+            android:parentActivityName="com.example.ecalo.glucosebonds1.MainActivity"
+            android:theme="@style/AppTheme.NoActionBar" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.ecalo.glucosebonds1.MainActivity" />
+        </activity>
+        <activity
+            android:name="com.example.ecalo.glucosebonds1.SignUpActivity"
+            android:label="@string/title_activity_three_mains"
+            android:parentActivityName="com.example.ecalo.glucosebonds1.MainActivity"
+            android:theme="@style/AppTheme.NoActionBar" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.ecalo.glucosebonds1.MainActivity" />
+        </activity>
+        <activity
             android:name="com.example.ecalo.glucosebonds1.ForumsActivity"
             android:label="@string/title_activity_three_mains"
             android:parentActivityName="com.example.ecalo.glucosebonds1.MainActivity"
@@ -58,15 +76,6 @@
         </activity>
         <activity
             android:name="com.example.ecalo.glucosebonds1.MentorshipActivity"
-            android:label="@string/title_activity_three_mains"
-            android:parentActivityName="com.example.ecalo.glucosebonds1.MainActivity"
-            android:theme="@style/AppTheme.NoActionBar" >
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.example.ecalo.glucosebonds1.MainActivity" />
-        </activity>
-        <activity
-            android:name="com.example.ecalo.glucosebonds1.Login"
             android:label="@string/title_activity_three_mains"
             android:parentActivityName="com.example.ecalo.glucosebonds1.MainActivity"
             android:theme="@style/AppTheme.NoActionBar" >

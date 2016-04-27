@@ -49,7 +49,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textColor="#ffffff"
-                android:text="Question?"
+                android:text="What are some ways to get your child to exercise more?"
                 android:layout_marginTop="20dp"
                 android:textSize="18dp"
                 android:layout_gravity="center_horizontal"

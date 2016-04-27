@@ -26,7 +26,7 @@ public class MainActivity extends AppCompatActivity {
         home_screen.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent welcomeActivity = new Intent(context, WelcomeActivity.class);
+                Intent welcomeActivity = new Intent(context, Login.class);
                 startActivity(welcomeActivity);            }
         });
 

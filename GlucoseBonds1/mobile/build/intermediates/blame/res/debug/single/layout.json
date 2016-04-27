@@ -1,5 +1,9 @@
 [
     {
+        "merged": "/Users/joel/AndroidStudioProjects/GlucoseBonds1/mobile/build/intermediates/res/merged/debug/layout/sign_up.xml",
+        "source": "/Users/joel/AndroidStudioProjects/GlucoseBonds1/mobile/src/main/res/layout/sign_up.xml"
+    },
+    {
         "merged": "/Users/joel/AndroidStudioProjects/GlucoseBonds1/mobile/build/intermediates/res/merged/debug/layout/abc_action_bar_up_container.xml",
         "source": "/Users/joel/AndroidStudioProjects/GlucoseBonds1/mobile/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.2.0/res/layout/abc_action_bar_up_container.xml"
     },
@@ -24,16 +28,16 @@
         "source": "/Users/joel/AndroidStudioProjects/GlucoseBonds1/mobile/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.2.0/res/layout/notification_template_big_media.xml"
     },
     {
-        "merged": "/Users/joel/AndroidStudioProjects/GlucoseBonds1/mobile/build/intermediates/res/merged/debug/layout/place_autocomplete_item_powered_by_google.xml",
-        "source": "/Users/joel/AndroidStudioProjects/GlucoseBonds1/mobile/build/intermediates/exploded-aar/com.google.android.gms/play-services-location/8.4.0/res/layout/place_autocomplete_item_powered_by_google.xml"
+        "merged": "/Users/joel/AndroidStudioProjects/GlucoseBonds1/mobile/build/intermediates/res/merged/debug/layout/mentorship_homepage.xml",
+        "source": "/Users/joel/AndroidStudioProjects/GlucoseBonds1/mobile/src/main/res/layout/mentorship_homepage.xml"
     },
     {
         "merged": "/Users/joel/AndroidStudioProjects/GlucoseBonds1/mobile/build/intermediates/res/merged/debug/layout/abc_screen_toolbar.xml",
         "source": "/Users/joel/AndroidStudioProjects/GlucoseBonds1/mobile/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.2.0/res/layout/abc_screen_toolbar.xml"
     },
     {
-        "merged": "/Users/joel/AndroidStudioProjects/GlucoseBonds1/mobile/build/intermediates/res/merged/debug/layout/mentorship_homepage.xml",
-        "source": "/Users/joel/AndroidStudioProjects/GlucoseBonds1/mobile/src/main/res/layout/mentorship_homepage.xml"
+        "merged": "/Users/joel/AndroidStudioProjects/GlucoseBonds1/mobile/build/intermediates/res/merged/debug/layout/place_autocomplete_item_powered_by_google.xml",
+        "source": "/Users/joel/AndroidStudioProjects/GlucoseBonds1/mobile/build/intermediates/exploded-aar/com.google.android.gms/play-services-location/8.4.0/res/layout/place_autocomplete_item_powered_by_google.xml"
     },
     {
         "merged": "/Users/joel/AndroidStudioProjects/GlucoseBonds1/mobile/build/intermediates/res/merged/debug/layout/abc_activity_chooser_view_list_item.xml",
@@ -176,6 +180,10 @@
         "source": "/Users/joel/AndroidStudioProjects/GlucoseBonds1/mobile/build/intermediates/exploded-aar/com.android.support/design/23.2.0/res/layout/design_navigation_menu.xml"
     },
     {
+        "merged": "/Users/joel/AndroidStudioProjects/GlucoseBonds1/mobile/build/intermediates/res/merged/debug/layout/quick_tips.xml",
+        "source": "/Users/joel/AndroidStudioProjects/GlucoseBonds1/mobile/src/main/res/layout/quick_tips.xml"
+    },
+    {
         "merged": "/Users/joel/AndroidStudioProjects/GlucoseBonds1/mobile/build/intermediates/res/merged/debug/layout/login_screen.xml",
         "source": "/Users/joel/AndroidStudioProjects/GlucoseBonds1/mobile/src/main/res/layout/login_screen.xml"
     },
@@ -276,12 +284,12 @@
         "source": "/Users/joel/AndroidStudioProjects/GlucoseBonds1/mobile/build/intermediates/exploded-aar/com.android.support/design/23.2.0/res/layout/design_layout_snackbar.xml"
     },
     {
-        "merged": "/Users/joel/AndroidStudioProjects/GlucoseBonds1/mobile/build/intermediates/res/merged/debug/layout/notification_template_part_time.xml",
-        "source": "/Users/joel/AndroidStudioProjects/GlucoseBonds1/mobile/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.2.0/res/layout/notification_template_part_time.xml"
-    },
-    {
         "merged": "/Users/joel/AndroidStudioProjects/GlucoseBonds1/mobile/build/intermediates/res/merged/debug/layout/notification_template_big_media_narrow.xml",
         "source": "/Users/joel/AndroidStudioProjects/GlucoseBonds1/mobile/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.2.0/res/layout/notification_template_big_media_narrow.xml"
+    },
+    {
+        "merged": "/Users/joel/AndroidStudioProjects/GlucoseBonds1/mobile/build/intermediates/res/merged/debug/layout/notification_template_part_time.xml",
+        "source": "/Users/joel/AndroidStudioProjects/GlucoseBonds1/mobile/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.2.0/res/layout/notification_template_part_time.xml"
     },
     {
         "merged": "/Users/joel/AndroidStudioProjects/GlucoseBonds1/mobile/build/intermediates/res/merged/debug/layout/nav_header_main2.xml",

@@ -58,7 +58,7 @@ public class DetailedForumActivity extends AppCompatActivity{
         forumQuestion.put("lastName", "Smith");
         forumQuestion.put("dayPosted", "4/14/16");
         forumQuestion.put("likes", "6");
-        forumQuestion.put("question", "What are some ways to get your child to exercise more");
+        forumQuestion.put("question", "What are some ways to get your child to exercise more?");
         forumQuestion.put("comments", 7);
         forumQuestion.put("questionDescription", "My son is currently 10 years old, diagnosed with type 1 diabetes over a year ago. He was never an athletic child and mostly spends his time in front of the tv. I have tried to get him to go outside but can’t motivate him to exercise for long. Any thoughts?");
         //This is adding the json object in an array that we will parse through in order to get this information onto

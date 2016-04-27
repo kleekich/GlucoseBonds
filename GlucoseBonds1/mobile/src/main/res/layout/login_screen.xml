@@ -48,7 +48,7 @@
             <EditText
                 android:layout_width="245dp"
                 android:layout_height="50dp"
-                android:text="Username"
+                android:hint="Username"
                 android:background="@drawable/text_box"
                 android:layout_gravity="center"
                 android:layout_marginLeft="5dp"
@@ -74,9 +74,10 @@
             <EditText
                 android:layout_width="245dp"
                 android:layout_height="50dp"
-                android:text="Passwords"
+                android:hint="Passwords"
                 android:background="@drawable/text_box"
                 android:layout_gravity="center"
+                android:inputType="textPassword"
                 android:layout_marginLeft="5dp"
                 android:layout_marginTop="5dp" />
         </LinearLayout>
