@@ -19,11 +19,11 @@ public class VideoActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         context = this;
-        setContentView(R.layout.activity_main);
-        button = (ImageButton) findViewById(R.id.img_btn);
-        button.setImageResource(R.drawable.videos_screen);
-
-        button.setOnTouchListener(new GestureHelper(context));
+        setContentView(R.layout.video_resources);
+//        button = (ImageButton) findViewById(R.id.img_btn);
+//        button.setImageResource(R.drawable.videos_screen);
+//
+//        button.setOnTouchListener(new GestureHelper(context));
 
         // start video activity on watch
         Intent watchVideo = new Intent(context, PhoneToWatchService.class);

@@ -24,7 +24,8 @@
         android:orientation="horizontal"
         android:background="@drawable/button_background"
         android:layout_gravity="center"
-        android:clickable="true">
+        android:clickable="true"
+        android:id="@+id/forums">
         <ImageView
             android:layout_width="40dp"
             android:layout_height="wrap_content"
@@ -47,7 +48,8 @@
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="20dp"
         android:layout_marginBottom="20dp"
-        android:clickable="true">
+        android:clickable="true"
+        android:id="@+id/education">
         <ImageView
             android:layout_width="40dp"
             android:layout_height="wrap_content"
@@ -68,7 +70,8 @@
         android:orientation="horizontal"
         android:background="@drawable/button_background"
         android:layout_gravity="center_horizontal"
-        android:clickable="true">
+        android:clickable="true"
+        android:id="@+id/mentorship">
         <ImageView
             android:layout_width="40dp"
             android:layout_height="wrap_content"

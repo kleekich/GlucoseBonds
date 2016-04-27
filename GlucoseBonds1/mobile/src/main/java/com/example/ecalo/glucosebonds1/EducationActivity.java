@@ -10,20 +10,44 @@ import android.view.View;
 import android.widget.ImageButton;
 import android.widget.Toast;
 
-public class EducationActivity extends AppCompatActivity {
+public class EducationActivity extends AppCompatActivity implements View.OnClickListener {
 
-    ImageButton button;
     Context context;
-
+    private ImageButton quickTip, video, links;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         context = this;
-        setContentView(R.layout.activity_main);
-        button = (ImageButton) findViewById(R.id.img_btn);
-        button.setImageResource(R.drawable.education_screen);
+        setContentView(R.layout.education_options);
+        quickTip = (ImageButton) findViewById(R.id.imageButton6);
+        video = (ImageButton) findViewById(R.id.imageButton7);
+        links = (ImageButton) findViewById(R.id.imageButton8);
+        quickTip.setOnClickListener(this);
+        video.setOnClickListener(this);
+        links.setOnClickListener(this);
+//        button = (ImageButton) findViewById(R.id.img_btn);
+//        button.setImageResource(R.drawable.education_screen);
+//
+//        button.setOnTouchListener(new GestureHelper(context));
+    }
 
-        button.setOnTouchListener(new GestureHelper(context));
+    @Override
+
+    public void onClick(View v) {
+        switch (v.getId()) {
+            case R.id.imageButton6:
+                Intent quickTipActivity = new Intent(context, ForumsActivity.class);
+                startActivity(quickTipActivity);
+                break;
+            case R.id.imageButton7:
+                Intent videoActivity = new Intent(context, VideoActivity.class);
+                startActivity(videoActivity);
+                break;
+            case R.id.imageButton8:
+                Intent linksActivity = new Intent(context, VideoActivity.class);
+                startActivity(linksActivity);
+                break;
+        }
     }
 
     public class GestureHelper implements View.OnTouchListener {
@@ -51,8 +75,8 @@ public class EducationActivity extends AppCompatActivity {
         };
 
         public void onSwipeBottom() {
-            Intent linksActivity = new Intent(context, LinksActivity.class);
-            startActivity(linksActivity);
+//            Intent linksActivity = new Intent(context, LinksActivity.class);
+//            startActivity(linksActivity);
         };
 
         public void onDoubleTap() {

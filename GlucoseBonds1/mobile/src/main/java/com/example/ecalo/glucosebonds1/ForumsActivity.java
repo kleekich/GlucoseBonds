@@ -8,22 +8,31 @@ import android.view.GestureDetector;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.ImageButton;
+import android.widget.TextView;
 import android.widget.Toast;
 
 public class ForumsActivity extends AppCompatActivity {
 
-    ImageButton button;
     Context context;
+    private TextView question;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         context = this;
-        setContentView(R.layout.activity_main);
-        button = (ImageButton) findViewById(R.id.img_btn);
-        button.setImageResource(R.drawable.forum_gen_screen);
-
-        button.setOnTouchListener(new GestureHelper(context));
+        setContentView(R.layout.general_forum);
+        question = (TextView) findViewById(R.id.question);
+        question.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent forumsDetailActivity = new Intent(context, DetailedForumActivity.class);
+                startActivity(forumsDetailActivity);
+            }
+        });
+//        button = (ImageButton) findViewById(R.id.img_btn);
+//        button.setImageResource(R.drawable.forum_gen_screen);
+//
+//        button.setOnTouchListener(new GestureHelper(context));
     }
 
     public class GestureHelper implements View.OnTouchListener {
