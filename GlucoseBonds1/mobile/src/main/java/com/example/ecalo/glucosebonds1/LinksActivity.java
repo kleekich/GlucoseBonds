@@ -21,7 +21,7 @@ public class LinksActivity extends AppCompatActivity {
         context = this;
         setContentView(R.layout.activity_main);
         button = (ImageButton) findViewById(R.id.img_btn);
-        button.setImageResource(R.drawable.injection_screen);
+        button.setImageResource(R.drawable.links_screen);
 
         button.setOnTouchListener(new GestureHelper(context));
     }

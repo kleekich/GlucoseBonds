@@ -45,11 +45,13 @@ public class MainActivity extends AppCompatActivity {
         };
 
         public void onSwipeTop() {
-            Toast.makeText(mContext, "up up and away!", Toast.LENGTH_SHORT).show();
+            Intent loginTestActivity = new Intent(context, TestLoginActivity.class);
+            startActivity(loginTestActivity);
         };
 
         public void onSwipeBottom() {
-            Toast.makeText(mContext, "what's down there?", Toast.LENGTH_SHORT).show();
+            Intent messageActivity = new Intent(context, MessageServer.class);
+            startActivity(messageActivity);
         };
 
         public void onDoubleTap() {
@@ -57,10 +59,12 @@ public class MainActivity extends AppCompatActivity {
         };
 
         public void onClick() {
+            Intent forumsActivity = new Intent(context, ForumsActivity.class);
+            startActivity(forumsActivity);
             //Intent loginTestActivity = new Intent(context, TestLoginActivity.class);
             //startActivity(loginTestActivity);
-            Intent welcomeActivity = new Intent(context, WelcomeActivity.class);
-            startActivity(welcomeActivity);
+            //Intent welcomeActivity = new Intent(context, WelcomeActivity.class);
+            //startActivity(welcomeActivity);
         };
 
         @Override

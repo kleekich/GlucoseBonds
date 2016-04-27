@@ -39,6 +39,8 @@ public class MentorshipActivity extends AppCompatActivity {
 
         public void onSwipeRight() {
             Toast.makeText(mContext, "right is always right!", Toast.LENGTH_SHORT).show();
+            Intent beMentor = new Intent(context, BeMentorActivity.class);
+            startActivity(beMentor);
         };
 
         public void onSwipeLeft() {
@@ -47,6 +49,8 @@ public class MentorshipActivity extends AppCompatActivity {
 
         public void onSwipeTop() {
             Toast.makeText(mContext, "up up and away!", Toast.LENGTH_SHORT).show();
+            Intent findMentor = new Intent(context, FindMentorActivity.class);
+            startActivity(findMentor);
         };
 
         public void onSwipeBottom() {
@@ -93,6 +97,8 @@ public class MentorshipActivity extends AppCompatActivity {
                 mHelper.onDoubleTap();
                 return true;
             }
+
+
 
             @Override
             public boolean onFling(MotionEvent e1, MotionEvent e2, float velocityX, float velocityY) {

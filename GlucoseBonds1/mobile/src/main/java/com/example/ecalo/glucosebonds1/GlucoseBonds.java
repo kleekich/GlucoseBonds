@@ -16,9 +16,14 @@ public class GlucoseBonds extends Application {
         super.onCreate();
         BaasBox.Builder b = new BaasBox.Builder(this);
         // have to use 10.0.3.2 for genymotion
-        client = b.setApiDomain("10.0.3.2")
+        // String apiDomain = "192.168.1.183";
+        String apiDomain = "10.0.3.2";
+        //String apiDomain = "10.0.2.2";
+        //String apiDomain = "192.168.1.183";
+        client = b.setApiDomain(apiDomain)
                 .setPort(9000)
                 .setAppCode("1234567890")
+                .setHttpConnectionTimeout(30000)
                 .init();
     }
 }

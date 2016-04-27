@@ -4,126 +4,199 @@ import android.content.Context;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.GestureDetector;
+import android.view.LayoutInflater;
 import android.view.MotionEvent;
 import android.view.View;
+import android.view.ViewGroup;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
+import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ImageButton;
+import android.widget.ListView;
+import android.widget.TextView;
 import android.widget.Toast;
+
+import com.baasbox.android.BaasACL;
+import com.baasbox.android.BaasDocument;
+import com.baasbox.android.BaasHandler;
+import com.baasbox.android.BaasResult;
+import com.baasbox.android.BaasUser;
+import com.baasbox.android.Grant;
+import com.baasbox.android.Role;
+
+import org.w3c.dom.Text;
+
+import java.lang.reflect.Array;
+import java.util.ArrayList;
+import java.util.List;
 
 public class ForumsActivity extends AppCompatActivity {
 
     ImageButton button;
     Context context;
+    ListAdapter listAdapter;
+
+    ArrayList<ForumItem> listItems;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         context = this;
-        setContentView(R.layout.activity_main);
-        button = (ImageButton) findViewById(R.id.img_btn);
-        button.setImageResource(R.drawable.forum_gen_screen);
+        setContentView(R.layout.forums);
 
-        button.setOnTouchListener(new GestureHelper(context));
-    }
+        Button post = (Button) findViewById(R.id.create_question);
 
-    public class GestureHelper implements View.OnTouchListener {
+        listItems = new ArrayList<>();
 
-        private final GestureDetector mGestureDetector;
-        Context mContext;
+        listAdapter = new ListAdapter(context, R.layout.forums, listItems);
 
-        public GestureHelper(Context ctx) {
-            mContext = ctx;
-            mGestureDetector = new GestureDetector(ctx, new GestureListener(this));
-        }
+        ListView lv = (ListView) findViewById(R.id.listview);
 
-        public void onSwipeRight() {
-            Toast.makeText(mContext, "right", Toast.LENGTH_SHORT).show();
-        };
+        lv.setAdapter(listAdapter);
 
-        public void onSwipeLeft() {
-            Toast.makeText(mContext, "left", Toast.LENGTH_SHORT).show();
-        };
+        fetchFromCollection("forumsGeneral");
 
-        public void onSwipeTop() {
-            Toast.makeText(mContext, "up", Toast.LENGTH_SHORT).show();
-        };
+        final EditText title = (EditText) findViewById(R.id.post_title);
+        final EditText body = (EditText) findViewById(R.id.body);
+        final EditText collection = (EditText) findViewById(R.id.collection);
 
-        public void onSwipeBottom() {
-            Toast.makeText(mContext, "down", Toast.LENGTH_SHORT).show();
-        };
-
-        public void onDoubleTap() {
-            Toast.makeText(mContext, "not once but twice!", Toast.LENGTH_SHORT).show();
-        };
-
-        public void onClick() {
-            Toast.makeText(mContext, "click", Toast.LENGTH_SHORT).show();
-            Intent forumsDetailActivity = new Intent(context, ForumsDetailActivity.class);
-            startActivity(forumsDetailActivity);
-        };
-
-        @Override
-        public boolean onTouch(View v, MotionEvent event) {
-            return mGestureDetector.onTouchEvent(event);
-        }
-
-        private final class GestureListener extends GestureDetector.SimpleOnGestureListener {
-
-            private static final int SWIPE_THRESHOLD = 100;
-            private static final int SWIPE_VELOCITY_THRESHOLD = 100;
-            private GestureHelper mHelper;
-
-            public GestureListener(GestureHelper helper) {
-                mHelper = helper;
-            }
-
+        post.setOnClickListener(new View.OnClickListener() {
             @Override
-            public boolean onDown(MotionEvent e) {
-                return true;
-            }
+            public void onClick(View v) {
+                BaasDocument doc = new BaasDocument("forumsGeneral");
+                doc.put("title", title.getText().toString());
+                doc.put("body", body.getText().toString());
+                doc.put("collection", collection.getText().toString());
 
-            @Override
-            public boolean onSingleTapUp(MotionEvent e) {
-                mHelper.onClick();
-                return true;
-            }
+                //ForumItem item = new ForumItem();
+                //item.title = title.getText().toString();
+                //item.body = body.getText().toString();
 
-            @Override
-            public boolean onDoubleTap(MotionEvent e) {
-                mHelper.onDoubleTap();
-                return true;
-            }
+                //listItems.add(item);
+                //listAdapter.notifyDataSetChanged();
+                //updateListView(listItems);
 
-            @Override
-            public boolean onFling(MotionEvent e1, MotionEvent e2, float velocityX, float velocityY) {
-                boolean result = false;
-                try {
-                    float diffY = e2.getY() - e1.getY();
-                    float diffX = e2.getX() - e1.getX();
-                    if (Math.abs(diffX) > Math.abs(diffY)) {
-                        if (Math.abs(diffX) > SWIPE_THRESHOLD && Math.abs(velocityX) > SWIPE_VELOCITY_THRESHOLD) {
-                            if (diffX > 0) {
-                                mHelper.onSwipeRight();
-                            } else {
-                                mHelper.onSwipeLeft();
+                doc.save(new BaasHandler<BaasDocument>() {
+                    @Override
+                    public void handle(BaasResult<BaasDocument> baasResult) {
+                        if (baasResult.isSuccess()) {
+                            try {
+                                baasResult.value().grantAll(Grant.ALL, Role.REGISTERED, new BaasHandler<Void>() {
+                                    @Override
+                                    public void handle(BaasResult<Void> baasResult) {
+                                        if (baasResult.isSuccess()) {
+                                            Log.e("T", "successfully granted permission");
+                                        } else {
+                                            Log.e("T", "unable to grant permission");
+                                        }
+                                    }
+                                });
+
+                            } catch (Exception e) {
+                                e.getMessage();
                             }
-                        }
-                    } else {
-                        if (Math.abs(diffY) > SWIPE_THRESHOLD && Math.abs(velocityY) > SWIPE_VELOCITY_THRESHOLD) {
-                            if (diffY > 0) {
-                                mHelper.onSwipeBottom();
-                            } else {
-                                mHelper.onSwipeTop();
-                            }
+                            fetchFromCollection("forumsGeneral");
+                            Log.e("F", "successfully saved document");
+                        } else {
+                            Log.e("F", "failed to create document");
                         }
                     }
-                } catch (Exception ex) {
-                    ex.printStackTrace();
-                }
-                return result;
+                });
+
             }
+        });
+
+        lv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                Intent detailsActivity = new Intent(context, ForumsDetailedServer.class);
+                detailsActivity.putExtra("collection", "myCollection");
+                startActivity(detailsActivity);
+            }
+        });
+
+    }
+
+    private void updateListView(ArrayList<ForumItem> items) {
+        listItems.clear();
+        listItems.addAll(items);
+        listAdapter.notifyDataSetChanged();
+    }
+
+    private void fetchFromCollection(String collection) {
+        BaasDocument.fetchAll(collection, new BaasHandler<List<BaasDocument>>() {
+            @Override
+            public void handle(BaasResult<List<BaasDocument>> baasResult) {
+                if (baasResult.isSuccess()) {
+                    ArrayList<ForumItem> items = new ArrayList<ForumItem>();
+                    for (BaasDocument doc : baasResult.value()) {
+                        Log.e("F", "document is: " + doc);
+                        ForumItem item = new ForumItem();
+                        Log.e("T", doc.getString("title"));
+                        item.title = doc.getString("title");
+                        item.body = doc.getString("body");
+                        item.collection = doc.getString("collection");
+                        items.add(item);
+                    }
+                    updateListView(items);
+                } else {
+                    Log.e("F", "failed to retrieve documents from forums-general");
+                }
+            }
+        });
+    }
+
+    private class ListAdapter extends ArrayAdapter<ForumItem> {
+        private List<ForumItem> items;
+
+        public ListAdapter(Context context, int textViewResourceId, List<ForumItem> items) {
+            super(context, textViewResourceId, items);
+            this.items = items;
         }
 
+        public View getView(int position, View convertView, ViewGroup parent) {
+            View v = convertView;
+
+            Holder holder = null;
+            if (v == null) {
+                LayoutInflater vi = (LayoutInflater)getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+                v = vi.inflate(R.layout.forums_item, null);
+
+                holder = new Holder();
+                holder.title = (TextView) v.findViewById(R.id.forum_title);
+                holder.body = (TextView) v.findViewById(R.id.forum_body);
+
+                v.setTag(holder);
+
+            } else {
+                holder = (Holder) v.getTag();
+            }
+
+            ForumItem item = items.get(position);
+
+            if (item != null) {
+                TextView title = (TextView) v.findViewById(R.id.forum_title);
+                TextView body = (TextView) v.findViewById(R.id.forum_body);
+                holder.title.setText(item.title);
+                holder.body.setText(item.body);
+            }
+
+            return v;
+        }
+    }
+
+    public class Holder {
+        TextView title;
+        TextView body;
+    }
+
+    public class ForumItem {
+        public String title;
+        public String body;
+        public String collection;
     }
 
 }

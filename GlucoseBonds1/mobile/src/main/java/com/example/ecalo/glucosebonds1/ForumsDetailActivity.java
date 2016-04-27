@@ -21,7 +21,7 @@ public class ForumsDetailActivity extends AppCompatActivity {
         context = this;
         setContentView(R.layout.activity_main);
         button = (ImageButton) findViewById(R.id.img_btn);
-        button.setImageResource(R.drawable.forum_detail_screen);
+        button.setImageResource(R.drawable.updated_forum_detail);
 
         button.setOnTouchListener(new GestureHelper(context));
     }

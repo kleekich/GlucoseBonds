@@ -42,7 +42,25 @@
                 android:value="com.example.ecalo.glucosebonds1.MainActivity" />
         </activity>
         <activity
-            android:name=".ForumsDetailActivity"
+            android:name=".ForumsDetailedServer"
+            android:label="@string/title_activity_three_mains"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.ecalo.glucosebonds1.ForumsActivity" />
+        </activity>
+        <activity
+            android:name=".MessageServer"
+            android:label="@string/title_activity_three_mains"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.ecalo.glucosebonds1.MainActivity" />
+        </activity>
+        <activity
+            android:name=".DetailedForumActivity"
             android:label="@string/title_activity_three_mains"
             android:parentActivityName=".ForumsActivity"
             android:theme="@style/AppTheme.NoActionBar">
@@ -79,6 +97,24 @@
         </activity>
         <activity
             android:name=".QuicktipsActivity"
+            android:label="@string/title_activity_three_mains"
+            android:parentActivityName=".EducationActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.ecalo.glucosebonds1.EducationActivity" />
+        </activity>
+        <activity
+            android:name=".BeMentorActivity"
+            android:label="@string/title_activity_three_mains"
+            android:parentActivityName=".EducationActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.ecalo.glucosebonds1.EducationActivity" />
+        </activity>
+        <activity
+            android:name=".FindMentorActivity"
             android:label="@string/title_activity_three_mains"
             android:parentActivityName=".EducationActivity"
             android:theme="@style/AppTheme.NoActionBar">
