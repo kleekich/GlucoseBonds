@@ -1,9 +1,12 @@
 package com.example.ecalo.glucosebonds1;
 
+import android.app.AlertDialog;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.text.InputType;
 import android.util.Log;
 import android.view.GestureDetector;
 import android.view.LayoutInflater;
@@ -15,6 +18,7 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
+import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -40,87 +44,117 @@ public class ForumsActivity extends AppCompatActivity {
 
     ArrayList<ForumItem> listItems;
     private TextView question;
+    private String mCollection = "forumsGeneral";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         context = this;
 
-        setContentView(R.layout.forums);
-
-        Button post = (Button) findViewById(R.id.create_question);
-
         setContentView(R.layout.general_forum);
-        //question = (TextView) findViewById(R.id.question);
-        //question.setOnClickListener(new View.OnClickListener() {
-        //    @Override
-        //    public void onClick(View v) {
-        //        Intent forumsDetailActivity = new Intent(context, DetailedForumActivity.class);
-        //        startActivity(forumsDetailActivity);
-        //    }
-        //});
+
+        Button createNew = (Button) findViewById(R.id.new_question);
+        createNew.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                AlertDialog.Builder builder = new AlertDialog.Builder(context);
+                builder.setTitle("Input Question Title and Content");
+
+                LinearLayout layout = new LinearLayout(context);
+                layout.setOrientation(LinearLayout.VERTICAL);
+
+
+                // Set up the input
+                final EditText title = new EditText(context);
+                title.setInputType(InputType.TYPE_CLASS_TEXT);
+                title.setHint("Question Title");
+
+                final EditText question = new EditText(context);
+                question.setInputType(InputType.TYPE_CLASS_TEXT);
+                question.setHint("Question Details");
+
+                layout.addView(title);
+                layout.addView(question);
+
+                builder.setView(layout);
+
+                // Set up the buttons
+                builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        createDoc(title.getText().toString(), question.getText().toString(), "");
+                        fetchFromCollection(mCollection);
+                        //m_Text = input.getText().toString();
+                    }
+                });
+                builder.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        dialog.cancel();
+                    }
+                });
+
+                builder.show();
+            }
+        });
 
         listItems = new ArrayList<>();
 
-        listAdapter = new ListAdapter(context, R.layout.forums, listItems);
+        listAdapter = new ListAdapter(context, R.layout.general_forum, listItems);
 
         ListView lv = (ListView) findViewById(R.id.listview);
 
         lv.setAdapter(listAdapter);
 
-        fetchFromCollection("forumsGeneral");
-
-        final EditText title = (EditText) findViewById(R.id.post_title);
-        final EditText body = (EditText) findViewById(R.id.body);
-        final EditText collection = (EditText) findViewById(R.id.collection);
-
-        post.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                BaasDocument doc = new BaasDocument("forumsGeneral");
-                doc.put("title", title.getText().toString());
-                doc.put("body", body.getText().toString());
-                doc.put("collection", collection.getText().toString());
-
-                doc.save(new BaasHandler<BaasDocument>() {
-                    @Override
-                    public void handle(BaasResult<BaasDocument> baasResult) {
-                        if (baasResult.isSuccess()) {
-                            try {
-                                baasResult.value().grantAll(Grant.ALL, Role.REGISTERED, new BaasHandler<Void>() {
-                                    @Override
-                                    public void handle(BaasResult<Void> baasResult) {
-                                        if (baasResult.isSuccess()) {
-                                            Log.e("T", "successfully granted permission");
-                                        } else {
-                                            Log.e("T", "unable to grant permission");
-                                        }
-                                    }
-                                });
-
-                            } catch (Exception e) {
-                                e.getMessage();
-                            }
-                            fetchFromCollection("forumsGeneral");
-                            Log.e("F", "successfully saved document");
-                        } else {
-                            Log.e("F", "failed to create document");
-                        }
-                    }
-                });
-
-            }
-        });
+        fetchFromCollection(mCollection);
 
         lv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                Intent detailsActivity = new Intent(context, ForumsDetailedServer.class);
-                detailsActivity.putExtra("collection", "myCollection");
+                //Intent detailsActivity = new Intent(context, ForumsDetailedServer.class);
+                Intent detailsActivity = new Intent(context, DetailedForumActivity.class);
+                detailsActivity.putExtra("title", listItems.get(position).title);
+                detailsActivity.putExtra("question", listItems.get(position).body);
+
+                // WARNING: CAN ONLY USE UP TO 3 FORUMS AS OF NOW
+                detailsActivity.putExtra("collection", "forum" + String.valueOf(position));
                 startActivity(detailsActivity);
             }
         });
 
+    }
+
+    private void createDoc(String title, String body, String collection) {
+        BaasDocument doc = new BaasDocument(mCollection);
+        doc.put("title", title);
+        doc.put("body", body);
+
+        doc.save(new BaasHandler<BaasDocument>() {
+            @Override
+            public void handle(BaasResult<BaasDocument> baasResult) {
+                if (baasResult.isSuccess()) {
+                    try {
+                        baasResult.value().grantAll(Grant.ALL, Role.REGISTERED, new BaasHandler<Void>() {
+                            @Override
+                            public void handle(BaasResult<Void> baasResult) {
+                                if (baasResult.isSuccess()) {
+                                    Log.e("T", "successfully granted permission");
+                                } else {
+                                    Log.e("T", "unable to grant permission");
+                                }
+                            }
+                        });
+
+                    } catch (Exception e) {
+                        e.getMessage();
+                    }
+                    fetchFromCollection(mCollection);
+                    Log.e("F", "successfully saved document");
+                } else {
+                    Log.e("F", "failed to create document");
+                }
+            }
+        });
     }
 
     private void updateListView(ArrayList<ForumItem> items) {
@@ -130,6 +164,7 @@ public class ForumsActivity extends AppCompatActivity {
     }
 
     private void fetchFromCollection(String collection) {
+        Log.e("T", "getting documents from " + collection);
         BaasDocument.fetchAll(collection, new BaasHandler<List<BaasDocument>>() {
             @Override
             public void handle(BaasResult<List<BaasDocument>> baasResult) {
@@ -141,7 +176,7 @@ public class ForumsActivity extends AppCompatActivity {
                         Log.e("T", doc.getString("title"));
                         item.title = doc.getString("title");
                         item.body = doc.getString("body");
-                        item.collection = doc.getString("collection");
+                        //item.collection = doc.getString("collection");
                         items.add(item);
                     }
                     updateListView(items);

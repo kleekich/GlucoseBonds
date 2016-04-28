@@ -28,11 +28,12 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="1 weeks ago"
+                android:text="Just Now"
                 android:paddingLeft="10dp"
                 android:textColor="#9a9a9a" />
         </LinearLayout>
         <TextView
+            android:id="@+id/comment"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="just for testing"

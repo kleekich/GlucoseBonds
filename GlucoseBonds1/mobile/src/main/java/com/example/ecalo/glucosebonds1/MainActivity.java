@@ -26,8 +26,8 @@ public class MainActivity extends AppCompatActivity {
         home_screen.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent welcomeActivity = new Intent(context, WelcomeActivity.class);
-                startActivity(welcomeActivity);            }
+                Intent loginActivity = new Intent(context, Login.class);
+                startActivity(loginActivity);            }
         });
 
 //        button = (ImageButton) findViewById(R.id.img_btn);

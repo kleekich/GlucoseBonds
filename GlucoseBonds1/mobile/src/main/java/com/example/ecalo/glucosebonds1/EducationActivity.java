@@ -36,7 +36,7 @@ public class EducationActivity extends AppCompatActivity implements View.OnClick
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.imageButton6:
-                Intent quickTipActivity = new Intent(context, ForumsActivity.class);
+                Intent quickTipActivity = new Intent(context, QuicktipsActivity.class);
                 startActivity(quickTipActivity);
                 break;
             case R.id.imageButton7:
@@ -44,7 +44,7 @@ public class EducationActivity extends AppCompatActivity implements View.OnClick
                 startActivity(videoActivity);
                 break;
             case R.id.imageButton8:
-                Intent linksActivity = new Intent(context, VideoActivity.class);
+                Intent linksActivity = new Intent(context, LinksActivity.class);
                 startActivity(linksActivity);
                 break;
         }
