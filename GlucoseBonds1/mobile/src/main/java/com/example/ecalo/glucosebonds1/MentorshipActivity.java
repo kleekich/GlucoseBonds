@@ -14,6 +14,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageButton;
+import android.widget.LinearLayout;
 import android.widget.Toast;
 
 import com.google.android.gms.common.ConnectionResult;
@@ -42,7 +43,7 @@ public class MentorshipActivity extends AppCompatActivity implements View.OnClic
     private static int DISPLACEMENT = 10;
     private static final String TAG = "myMessage";
 
-
+    private LinearLayout layout1, layout2;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         System.out.println("=============================");
@@ -51,10 +52,12 @@ public class MentorshipActivity extends AppCompatActivity implements View.OnClic
         super.onCreate(savedInstanceState);
         context = this;
         setContentView(R.layout.mentorship_homepage);
-        findMentor = (ImageButton) findViewById(R.id.imageButton);
-        beMentor = (ImageButton) findViewById(R.id.imageButton2);
+        findMentor = (ImageButton) findViewById(R.id.findButton);
+        beMentor = (ImageButton) findViewById(R.id.beButton);
         findMentor.setOnClickListener(this);
         beMentor.setOnClickListener(this);
+        layout1 = (LinearLayout) findViewById(R.id.findMentorLayout);
+        layout2 = (LinearLayout) findViewById(R.id.beMentorLayout);
 
         mGoogleApiClient = new GoogleApiClient.Builder(this)
                 .addApi(LocationServices.API)
@@ -73,7 +76,7 @@ public class MentorshipActivity extends AppCompatActivity implements View.OnClic
     @Override
     public void onClick(View v) {
         switch (v.getId()) {
-            case R.id.imageButton:
+            case R.id.findButton:
                 Intent MentorsListIntent = new Intent(context, MentorsListActivity.class);
                 if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
                     // TODO: Consider calling
@@ -107,7 +110,7 @@ public class MentorshipActivity extends AppCompatActivity implements View.OnClic
                 }
 
                 break;
-            case R.id.imageButton2:
+            case R.id.beButton:
                 Intent beMentorActivity = new Intent(context, BeMentorActivity.class);
                 startActivity(beMentorActivity);
                 break;
