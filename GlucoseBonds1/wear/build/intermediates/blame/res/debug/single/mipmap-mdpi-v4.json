@@ -1,5 +1,9 @@
 [
     {
+        "merged": "/Users/Kangsik/Documents/cs160/Group-10-Project/GlucoseBonds1/wear/build/intermediates/res/merged/debug/mipmap-mdpi-v4/ic_launcher.png",
+        "source": "/Users/Kangsik/Documents/cs160/Group-10-Project/GlucoseBonds1/wear/src/main/res/mipmap-mdpi/ic_launcher.png"
+    },
+    {
         "merged": "/Users/joel/AndroidStudioProjects/GlucoseBonds1/wear/build/intermediates/res/merged/debug/mipmap-mdpi-v4/ic_launcher.png",
         "source": "/Users/joel/AndroidStudioProjects/GlucoseBonds1/wear/src/main/res/mipmap-mdpi/ic_launcher.png"
     }
