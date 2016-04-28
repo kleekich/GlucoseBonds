@@ -15,9 +15,9 @@ public class BeMentorActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         context = this;
-        setContentView(R.layout.activity_main);
-        button = (ImageButton) findViewById(R.id.img_btn);
-        button.setImageResource(R.drawable.be_mentor);
+        setContentView(R.layout.be_a_mentor);
+//        button = (ImageButton) findViewById(R.id.img_btn);
+//        button.setImageResource(R.drawable.be_mentor);
 
     }
 }

@@ -95,6 +95,15 @@
                 android:value="com.example.ecalo.glucosebonds1.MainActivity" />
         </activity>
         <activity
+            android:name="com.example.ecalo.glucosebonds1.Login"
+            android:label="@string/title_activity_three_mains"
+            android:parentActivityName="com.example.ecalo.glucosebonds1.MainActivity"
+            android:theme="@style/AppTheme.NoActionBar" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.ecalo.glucosebonds1.MainActivity" />
+        </activity>
+        <activity
             android:name="com.example.ecalo.glucosebonds1.MessageActivity"
             android:label="@string/title_activity_three_mains"
             android:parentActivityName="com.example.ecalo.glucosebonds1.MainActivity"
@@ -148,15 +157,6 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.ecalo.glucosebonds1.EducationActivity" />
         </activity>
-        <activity
-            android:name="com.example.ecalo.glucosebonds1.LinksActivity"
-            android:label="@string/title_activity_three_mains"
-            android:parentActivityName="com.example.ecalo.glucosebonds1.EducationActivity"
-            android:theme="@style/AppTheme.NoActionBar" >
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.example.ecalo.glucosebonds1.EducationActivity" />
-        </activity>
 
         <service android:name="com.example.ecalo.glucosebonds1.PhoneToWatchService" />
         <service android:name="com.example.ecalo.glucosebonds1.PhoneListenerService" >
@@ -165,6 +165,10 @@
             </intent-filter>
         </service>
 
+        <activity
+            android:name="com.example.ecalo.glucosebonds1.Main2Activity"
+            android:label="@string/title_activity_main2"
+            android:theme="@style/AppTheme.NoActionBar" />
         <!-- Include the AdActivity and InAppPurchaseActivity configChanges and themes. -->
         <activity
             android:name="com.google.android.gms.ads.AdActivity"

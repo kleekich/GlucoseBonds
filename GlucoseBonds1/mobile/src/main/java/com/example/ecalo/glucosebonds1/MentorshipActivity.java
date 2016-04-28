@@ -11,20 +11,38 @@ import android.view.View;
 import android.widget.ImageButton;
 import android.widget.Toast;
 
-public class MentorshipActivity extends AppCompatActivity {
+public class MentorshipActivity extends AppCompatActivity implements View.OnClickListener {
 
-    ImageButton button;
     Context context;
-
+    private ImageButton findMentor, beMentor;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         context = this;
-        setContentView(R.layout.activity_main);
-        button = (ImageButton) findViewById(R.id.img_btn);
-        button.setImageResource(R.drawable.mentorship_screen);
+        setContentView(R.layout.mentorship_homepage);
+        findMentor = (ImageButton) findViewById(R.id.imageButton);
+        beMentor = (ImageButton) findViewById(R.id.imageButton2);
+        findMentor.setOnClickListener(this);
+        beMentor.setOnClickListener(this);
+//        button = (ImageButton) findViewById(R.id.img_btn);
+//        button.setImageResource(R.drawable.mentorship_screen);
+//
+//        button.setOnTouchListener(new GestureHelper(context));
+    }
 
-        button.setOnTouchListener(new GestureHelper(context));
+    @Override
+    public void onClick(View v) {
+        switch (v.getId()) {
+            case R.id.imageButton:
+                Intent findMentorActivity = new Intent(context, FindMentorActivity.class);
+                startActivity(findMentorActivity);
+                break;
+            case R.id.imageButton2:
+                Intent beMentorActivity = new Intent(context, BeMentorActivity.class);
+                startActivity(beMentorActivity);
+                break;
+
+        }
     }
 
     public class GestureHelper implements View.OnTouchListener {

@@ -19,11 +19,11 @@ public class MessageActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         context = this;
-        setContentView(R.layout.activity_main);
-        button = (ImageButton) findViewById(R.id.img_btn);
-        button.setImageResource(R.drawable.message_screen);
-
-        button.setOnTouchListener(new GestureHelper(context));
+//        setContentView(R.layout.activity_main);
+//        button = (ImageButton) findViewById(R.id.img_btn);
+//        button.setImageResource(R.drawable.message_screen);
+//
+//        button.setOnTouchListener(new GestureHelper(context));
     }
 
     public class GestureHelper implements View.OnTouchListener {

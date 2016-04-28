@@ -19,11 +19,11 @@ public class QuicktipsActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         context = this;
-        setContentView(R.layout.activity_main);
-        button = (ImageButton) findViewById(R.id.img_btn);
-        button.setImageResource(R.drawable.quick_tips_screen);
-
-        button.setOnTouchListener(new GestureHelper(context));
+        setContentView(R.layout.general_forum);
+//        button = (ImageButton) findViewById(R.id.img_btn);
+//        button.setImageResource(R.drawable.quick_tips_screen);
+//
+//        button.setOnTouchListener(new GestureHelper(context));
 
         // start quicktips activity on watch
         Intent watchQuicktips = new Intent(context, PhoneToWatchService.class);

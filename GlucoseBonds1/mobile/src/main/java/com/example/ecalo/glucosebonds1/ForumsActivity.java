@@ -35,19 +35,30 @@ import java.util.List;
 
 public class ForumsActivity extends AppCompatActivity {
 
-    ImageButton button;
     Context context;
     ListAdapter listAdapter;
 
     ArrayList<ForumItem> listItems;
+    private TextView question;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         context = this;
+
         setContentView(R.layout.forums);
 
         Button post = (Button) findViewById(R.id.create_question);
+
+        setContentView(R.layout.general_forum);
+        //question = (TextView) findViewById(R.id.question);
+        //question.setOnClickListener(new View.OnClickListener() {
+        //    @Override
+        //    public void onClick(View v) {
+        //        Intent forumsDetailActivity = new Intent(context, DetailedForumActivity.class);
+        //        startActivity(forumsDetailActivity);
+        //    }
+        //});
 
         listItems = new ArrayList<>();
 
@@ -70,14 +81,6 @@ public class ForumsActivity extends AppCompatActivity {
                 doc.put("title", title.getText().toString());
                 doc.put("body", body.getText().toString());
                 doc.put("collection", collection.getText().toString());
-
-                //ForumItem item = new ForumItem();
-                //item.title = title.getText().toString();
-                //item.body = body.getText().toString();
-
-                //listItems.add(item);
-                //listAdapter.notifyDataSetChanged();
-                //updateListView(listItems);
 
                 doc.save(new BaasHandler<BaasDocument>() {
                     @Override
@@ -163,11 +166,11 @@ public class ForumsActivity extends AppCompatActivity {
             Holder holder = null;
             if (v == null) {
                 LayoutInflater vi = (LayoutInflater)getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-                v = vi.inflate(R.layout.forums_item, null);
+                v = vi.inflate(R.layout.general_forum_item, null);
 
                 holder = new Holder();
-                holder.title = (TextView) v.findViewById(R.id.forum_title);
-                holder.body = (TextView) v.findViewById(R.id.forum_body);
+                holder.title = (TextView) v.findViewById(R.id.question);
+                //holder.body = (TextView) v.findViewById(R.id.forum_body);
 
                 v.setTag(holder);
 
@@ -179,9 +182,9 @@ public class ForumsActivity extends AppCompatActivity {
 
             if (item != null) {
                 TextView title = (TextView) v.findViewById(R.id.forum_title);
-                TextView body = (TextView) v.findViewById(R.id.forum_body);
+                //TextView body = (TextView) v.findViewById(R.id.forum_body);
                 holder.title.setText(item.title);
-                holder.body.setText(item.body);
+                //holder.body.setText(item.body);
             }
 
             return v;

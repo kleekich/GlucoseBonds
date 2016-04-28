@@ -4,27 +4,41 @@ import android.content.Context;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.text.Layout;
 import android.view.GestureDetector;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.ImageButton;
+import android.widget.LinearLayout;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
     ImageButton button;
     Context context;
-
+    private LinearLayout home_screen;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         context = this;
-        setContentView(R.layout.activity_main);
-        button = (ImageButton) findViewById(R.id.img_btn);
-        button.setImageResource(R.drawable.gb_loading);
+        setContentView(R.layout.home_screen);
+        home_screen = (LinearLayout) findViewById(R.id.homeScreen);
+        home_screen.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent welcomeActivity = new Intent(context, WelcomeActivity.class);
+                startActivity(welcomeActivity);            }
+        });
 
-        button.setOnTouchListener(new GestureHelper(context));
+//        button = (ImageButton) findViewById(R.id.img_btn);
+//        button.setImageResource(R.drawable.gb_loading);
+//
+//        button.setOnTouchListener(new GestureHelper(context));
     }
+
+
+
+
 
     public class GestureHelper implements View.OnTouchListener {
 

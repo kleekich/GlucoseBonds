@@ -23,12 +23,14 @@
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
         <activity android:name=".WelcomeActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
@@ -70,6 +72,15 @@
         </activity>
         <activity
             android:name=".MentorshipActivity"
+            android:label="@string/title_activity_three_mains"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.ecalo.glucosebonds1.MainActivity" />
+        </activity>
+        <activity
+            android:name=".Login"
             android:label="@string/title_activity_three_mains"
             android:parentActivityName=".MainActivity"
             android:theme="@style/AppTheme.NoActionBar">
@@ -131,22 +142,18 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.ecalo.glucosebonds1.EducationActivity" />
         </activity>
-        <activity
-            android:name=".LinksActivity"
-            android:label="@string/title_activity_three_mains"
-            android:parentActivityName=".EducationActivity"
-            android:theme="@style/AppTheme.NoActionBar">
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.example.ecalo.glucosebonds1.EducationActivity" />
-        </activity>
-        <service android:name=".PhoneToWatchService"/>
+
+        <service android:name=".PhoneToWatchService" />
         <service android:name=".PhoneListenerService">
             <intent-filter>
                 <action android:name="com.google.android.gms.wearable.BIND_LISTENER" />
             </intent-filter>
         </service>
 
+        <activity
+            android:name=".Main2Activity"
+            android:label="@string/title_activity_main2"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
 </manifest>
