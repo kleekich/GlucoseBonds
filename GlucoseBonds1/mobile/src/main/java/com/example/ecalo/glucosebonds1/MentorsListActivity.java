@@ -21,6 +21,8 @@ import com.google.android.gms.maps.MapFragment;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
+import com.google.android.gms.maps.model.TileOverlayOptions;
+import com.google.maps.android.heatmaps.HeatmapTileProvider;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -43,6 +45,9 @@ public class MentorsListActivity extends AppCompatActivity {
 
     //For Addresses
     private BaasBox client;
+    private ArrayList<LatLng> mentorsPointsList = new ArrayList<LatLng>();
+
+    private Long numDocs;
 
 
     @Override
@@ -60,9 +65,23 @@ public class MentorsListActivity extends AppCompatActivity {
         client =builder.setApiDomain("10.0.3.2")
                 .setPort(9000)
                 .setAppCode("1234567890")
-                .setHttpConnectionTimeout(30000)
+                .setHttpConnectionTimeout(3000)
                 .init();
 
+        BaasDocument.count("mentorAddresses",new BaasHandler<Long> () {
+            @Override
+            public void handle(BaasResult<Long> res) {
+                if (res.isSuccess()) {
+                    Log.d("LOG","visible document count is: "+res.value());
+                    numDocs = res.value();
+                } else {
+                    Log.e("LOG","Error!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
+                }
+            }
+        });
+
+
+        //Get mentor Addresses and put heat map when all addresses are pulled from server.
         BaasDocument.fetchAll("mentorAddresses",
                 new BaasHandler<List<BaasDocument>>() {
                     @Override
@@ -71,16 +90,27 @@ public class MentorsListActivity extends AppCompatActivity {
                         if (res.isSuccess()) {
                             for (BaasDocument doc : res.value()) {
                                 Log.d("LOG", "Doc: " + doc);
+                                /*this is so hacky way to do it, basically, if condition checks
+                                whether all documents are pulled from server by size of documents,
+                                then, if it is the last one, we put heat map.
+                                 */
+                                String address = doc.getString("body");
+                                mentorsPointsList.add(getLatLngFromAddress(address));
+                                if(mentorsPointsList.size() == numDocs){
+                                    HeatmapTileProvider mProvider = new HeatmapTileProvider.Builder()
+                                            .data(mentorsPointsList)
+                                            .radius(50)
+                                            .build();
+                                    // Add a tile overlay to the map, using the heat map tile provider.
+                                    googleMap.addTileOverlay(new TileOverlayOptions().tileProvider(mProvider));
+                                }else{
 
-                                System.out.println("read: "+ doc.getString("body"));
-
-                             
+                                }
+                                //
                             }
                         } else {
                             Log.e("LOG", "Error", res.error());
-                            System.out.println("=======================================================");
-                            System.out.println("FUCK");
-                            System.out.println("=======================================================");
+
                         }
                     }
                 });
@@ -113,7 +143,7 @@ public class MentorsListActivity extends AppCompatActivity {
         Marker TP = googleMap.addMarker(new MarkerOptions().position(currentLocation).title("Your Location"));
         googleMap.getUiSettings().setZoomGesturesEnabled(true);
         CameraUpdate center = CameraUpdateFactory.newLatLng(currentLocation);
-        CameraUpdate zoom = CameraUpdateFactory.zoomTo(13);
+        CameraUpdate zoom = CameraUpdateFactory.zoomTo(10);
         googleMap.moveCamera(center);
         googleMap.animateCamera(zoom);
 
@@ -121,7 +151,7 @@ public class MentorsListActivity extends AppCompatActivity {
 
 
 
-        ArrayList<LatLng> mentorsPointsList = new ArrayList<LatLng>();
+
 
         /* Original
         Double[] mentorPoint1 = getLocationFromAddress("2232 Durant Ave , CA");

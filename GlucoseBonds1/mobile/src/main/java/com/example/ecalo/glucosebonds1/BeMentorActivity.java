@@ -30,16 +30,16 @@ public class BeMentorActivity extends AppCompatActivity {
         client =builder.setApiDomain("10.0.3.2")
                 .setPort(9000)
                 .setAppCode("1234567890")
-                .setHttpConnectionTimeout(30000)
+                .setHttpConnectionTimeout(3000)
                 .init();
 
         BaasDocument doc = new BaasDocument("mentorAddresses");
-        doc.putString("title","2232 Durant Ave")
-                .putString("body","2232 Durant Ave");
+        doc.putString("title","6350Christie Ave, CA")
+                .putString("body","6350 Christie Ave, CA");
         doc.save(new BaasHandler<BaasDocument>() {
             @Override
             public void handle(BaasResult<BaasDocument> res) {
-                if(res.isSuccess()) {
+                if (res.isSuccess()) {
                     Log.d("LOG", "Saved: " + res.value());
                 } else {
 
