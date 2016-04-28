@@ -48,6 +48,15 @@
                 android:value="com.example.ecalo.glucosebonds1.MainActivity" />
         </activity>
         <activity
+            android:name="com.example.ecalo.glucosebonds1.LinksActivity"
+            android:label="@string/title_activity_three_mains"
+            android:parentActivityName="com.example.ecalo.glucosebonds1.MainActivity"
+            android:theme="@style/AppTheme.NoActionBar" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.ecalo.glucosebonds1.MainActivity" />
+        </activity>
+        <activity
             android:name="com.example.ecalo.glucosebonds1.SignUpActivity"
             android:label="@string/title_activity_three_mains"
             android:parentActivityName="com.example.ecalo.glucosebonds1.MainActivity"

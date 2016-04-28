@@ -44,7 +44,7 @@ public class EducationActivity extends AppCompatActivity implements View.OnClick
                 startActivity(videoActivity);
                 break;
             case R.id.imageButton8:
-                Intent linksActivity = new Intent(context, VideoActivity.class);
+                Intent linksActivity = new Intent(context, LinksActivity.class);
                 startActivity(linksActivity);
                 break;
         }

@@ -1,6 +1,6 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /Users/joel/AndroidStudioProjects/GlucoseBonds1/mobile/src/main/AndroidManifest.xml:2:1-138:12
+ADDED from /Users/joel/AndroidStudioProjects/GlucoseBonds1/mobile/src/main/AndroidManifest.xml:2:1-147:12
 	package
 		ADDED from /Users/joel/AndroidStudioProjects/GlucoseBonds1/mobile/src/main/AndroidManifest.xml:3:5-46
 		INJECTED from /Users/joel/AndroidStudioProjects/GlucoseBonds1/mobile/src/main/AndroidManifest.xml
@@ -14,7 +14,7 @@ ADDED from /Users/joel/AndroidStudioProjects/GlucoseBonds1/mobile/src/main/Andro
 		INJECTED from /Users/joel/AndroidStudioProjects/GlucoseBonds1/mobile/src/main/AndroidManifest.xml
 		INJECTED from /Users/joel/AndroidStudioProjects/GlucoseBonds1/mobile/src/main/AndroidManifest.xml
 application
-ADDED from /Users/joel/AndroidStudioProjects/GlucoseBonds1/mobile/src/main/AndroidManifest.xml:5:5-136:19
+ADDED from /Users/joel/AndroidStudioProjects/GlucoseBonds1/mobile/src/main/AndroidManifest.xml:5:5-145:19
 MERGED from [com.android.support:appcompat-v7:23.2.0] /Users/joel/AndroidStudioProjects/GlucoseBonds1/mobile/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.2.0/AndroidManifest.xml:25:5-20
 MERGED from [com.android.support:support-v4:23.2.0] /Users/joel/AndroidStudioProjects/GlucoseBonds1/mobile/build/intermediates/exploded-aar/com.android.support/support-v4/23.2.0/AndroidManifest.xml:22:5-20
 MERGED from [com.android.support:animated-vector-drawable:23.2.0] /Users/joel/AndroidStudioProjects/GlucoseBonds1/mobile/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/23.2.0/AndroidManifest.xml:7:5-20
@@ -176,7 +176,7 @@ ADDED from /Users/joel/AndroidStudioProjects/GlucoseBonds1/mobile/src/main/Andro
 		ADDED from /Users/joel/AndroidStudioProjects/GlucoseBonds1/mobile/src/main/AndroidManifest.xml:32:17-77
 	android:name
 		ADDED from /Users/joel/AndroidStudioProjects/GlucoseBonds1/mobile/src/main/AndroidManifest.xml:31:17-63
-activity#com.example.ecalo.glucosebonds1.SignUpActivity
+activity#com.example.ecalo.glucosebonds1.LinksActivity
 ADDED from /Users/joel/AndroidStudioProjects/GlucoseBonds1/mobile/src/main/AndroidManifest.xml:34:9-42:20
 	android:label
 		ADDED from /Users/joel/AndroidStudioProjects/GlucoseBonds1/mobile/src/main/AndroidManifest.xml:36:13-63
@@ -185,8 +185,8 @@ ADDED from /Users/joel/AndroidStudioProjects/GlucoseBonds1/mobile/src/main/Andro
 	android:theme
 		ADDED from /Users/joel/AndroidStudioProjects/GlucoseBonds1/mobile/src/main/AndroidManifest.xml:38:13-56
 	android:name
-		ADDED from /Users/joel/AndroidStudioProjects/GlucoseBonds1/mobile/src/main/AndroidManifest.xml:35:13-43
-activity#com.example.ecalo.glucosebonds1.ForumsActivity
+		ADDED from /Users/joel/AndroidStudioProjects/GlucoseBonds1/mobile/src/main/AndroidManifest.xml:35:13-42
+activity#com.example.ecalo.glucosebonds1.SignUpActivity
 ADDED from /Users/joel/AndroidStudioProjects/GlucoseBonds1/mobile/src/main/AndroidManifest.xml:43:9-51:20
 	android:label
 		ADDED from /Users/joel/AndroidStudioProjects/GlucoseBonds1/mobile/src/main/AndroidManifest.xml:45:13-63
@@ -196,27 +196,27 @@ ADDED from /Users/joel/AndroidStudioProjects/GlucoseBonds1/mobile/src/main/Andro
 		ADDED from /Users/joel/AndroidStudioProjects/GlucoseBonds1/mobile/src/main/AndroidManifest.xml:47:13-56
 	android:name
 		ADDED from /Users/joel/AndroidStudioProjects/GlucoseBonds1/mobile/src/main/AndroidManifest.xml:44:13-43
-activity#com.example.ecalo.glucosebonds1.DetailedForumActivity
+activity#com.example.ecalo.glucosebonds1.ForumsActivity
 ADDED from /Users/joel/AndroidStudioProjects/GlucoseBonds1/mobile/src/main/AndroidManifest.xml:52:9-60:20
 	android:label
 		ADDED from /Users/joel/AndroidStudioProjects/GlucoseBonds1/mobile/src/main/AndroidManifest.xml:54:13-63
 	android:parentActivityName
-		ADDED from /Users/joel/AndroidStudioProjects/GlucoseBonds1/mobile/src/main/AndroidManifest.xml:55:13-57
+		ADDED from /Users/joel/AndroidStudioProjects/GlucoseBonds1/mobile/src/main/AndroidManifest.xml:55:13-55
 	android:theme
 		ADDED from /Users/joel/AndroidStudioProjects/GlucoseBonds1/mobile/src/main/AndroidManifest.xml:56:13-56
 	android:name
-		ADDED from /Users/joel/AndroidStudioProjects/GlucoseBonds1/mobile/src/main/AndroidManifest.xml:53:13-50
-activity#com.example.ecalo.glucosebonds1.MentorshipActivity
+		ADDED from /Users/joel/AndroidStudioProjects/GlucoseBonds1/mobile/src/main/AndroidManifest.xml:53:13-43
+activity#com.example.ecalo.glucosebonds1.DetailedForumActivity
 ADDED from /Users/joel/AndroidStudioProjects/GlucoseBonds1/mobile/src/main/AndroidManifest.xml:61:9-69:20
 	android:label
 		ADDED from /Users/joel/AndroidStudioProjects/GlucoseBonds1/mobile/src/main/AndroidManifest.xml:63:13-63
 	android:parentActivityName
-		ADDED from /Users/joel/AndroidStudioProjects/GlucoseBonds1/mobile/src/main/AndroidManifest.xml:64:13-55
+		ADDED from /Users/joel/AndroidStudioProjects/GlucoseBonds1/mobile/src/main/AndroidManifest.xml:64:13-57
 	android:theme
 		ADDED from /Users/joel/AndroidStudioProjects/GlucoseBonds1/mobile/src/main/AndroidManifest.xml:65:13-56
 	android:name
-		ADDED from /Users/joel/AndroidStudioProjects/GlucoseBonds1/mobile/src/main/AndroidManifest.xml:62:13-47
-activity#com.example.ecalo.glucosebonds1.MessageActivity
+		ADDED from /Users/joel/AndroidStudioProjects/GlucoseBonds1/mobile/src/main/AndroidManifest.xml:62:13-50
+activity#com.example.ecalo.glucosebonds1.MentorshipActivity
 ADDED from /Users/joel/AndroidStudioProjects/GlucoseBonds1/mobile/src/main/AndroidManifest.xml:70:9-78:20
 	android:label
 		ADDED from /Users/joel/AndroidStudioProjects/GlucoseBonds1/mobile/src/main/AndroidManifest.xml:72:13-63
@@ -225,8 +225,8 @@ ADDED from /Users/joel/AndroidStudioProjects/GlucoseBonds1/mobile/src/main/Andro
 	android:theme
 		ADDED from /Users/joel/AndroidStudioProjects/GlucoseBonds1/mobile/src/main/AndroidManifest.xml:74:13-56
 	android:name
-		ADDED from /Users/joel/AndroidStudioProjects/GlucoseBonds1/mobile/src/main/AndroidManifest.xml:71:13-44
-activity#com.example.ecalo.glucosebonds1.EducationActivity
+		ADDED from /Users/joel/AndroidStudioProjects/GlucoseBonds1/mobile/src/main/AndroidManifest.xml:71:13-47
+activity#com.example.ecalo.glucosebonds1.MessageActivity
 ADDED from /Users/joel/AndroidStudioProjects/GlucoseBonds1/mobile/src/main/AndroidManifest.xml:79:9-87:20
 	android:label
 		ADDED from /Users/joel/AndroidStudioProjects/GlucoseBonds1/mobile/src/main/AndroidManifest.xml:81:13-63
@@ -235,18 +235,18 @@ ADDED from /Users/joel/AndroidStudioProjects/GlucoseBonds1/mobile/src/main/Andro
 	android:theme
 		ADDED from /Users/joel/AndroidStudioProjects/GlucoseBonds1/mobile/src/main/AndroidManifest.xml:83:13-56
 	android:name
-		ADDED from /Users/joel/AndroidStudioProjects/GlucoseBonds1/mobile/src/main/AndroidManifest.xml:80:13-46
-activity#com.example.ecalo.glucosebonds1.QuicktipsActivity
+		ADDED from /Users/joel/AndroidStudioProjects/GlucoseBonds1/mobile/src/main/AndroidManifest.xml:80:13-44
+activity#com.example.ecalo.glucosebonds1.EducationActivity
 ADDED from /Users/joel/AndroidStudioProjects/GlucoseBonds1/mobile/src/main/AndroidManifest.xml:88:9-96:20
 	android:label
 		ADDED from /Users/joel/AndroidStudioProjects/GlucoseBonds1/mobile/src/main/AndroidManifest.xml:90:13-63
 	android:parentActivityName
-		ADDED from /Users/joel/AndroidStudioProjects/GlucoseBonds1/mobile/src/main/AndroidManifest.xml:91:13-60
+		ADDED from /Users/joel/AndroidStudioProjects/GlucoseBonds1/mobile/src/main/AndroidManifest.xml:91:13-55
 	android:theme
 		ADDED from /Users/joel/AndroidStudioProjects/GlucoseBonds1/mobile/src/main/AndroidManifest.xml:92:13-56
 	android:name
 		ADDED from /Users/joel/AndroidStudioProjects/GlucoseBonds1/mobile/src/main/AndroidManifest.xml:89:13-46
-activity#com.example.ecalo.glucosebonds1.BeMentorActivity
+activity#com.example.ecalo.glucosebonds1.QuicktipsActivity
 ADDED from /Users/joel/AndroidStudioProjects/GlucoseBonds1/mobile/src/main/AndroidManifest.xml:97:9-105:20
 	android:label
 		ADDED from /Users/joel/AndroidStudioProjects/GlucoseBonds1/mobile/src/main/AndroidManifest.xml:99:13-63
@@ -255,8 +255,8 @@ ADDED from /Users/joel/AndroidStudioProjects/GlucoseBonds1/mobile/src/main/Andro
 	android:theme
 		ADDED from /Users/joel/AndroidStudioProjects/GlucoseBonds1/mobile/src/main/AndroidManifest.xml:101:13-56
 	android:name
-		ADDED from /Users/joel/AndroidStudioProjects/GlucoseBonds1/mobile/src/main/AndroidManifest.xml:98:13-45
-activity#com.example.ecalo.glucosebonds1.FindMentorActivity
+		ADDED from /Users/joel/AndroidStudioProjects/GlucoseBonds1/mobile/src/main/AndroidManifest.xml:98:13-46
+activity#com.example.ecalo.glucosebonds1.BeMentorActivity
 ADDED from /Users/joel/AndroidStudioProjects/GlucoseBonds1/mobile/src/main/AndroidManifest.xml:106:9-114:20
 	android:label
 		ADDED from /Users/joel/AndroidStudioProjects/GlucoseBonds1/mobile/src/main/AndroidManifest.xml:108:13-63
@@ -265,8 +265,8 @@ ADDED from /Users/joel/AndroidStudioProjects/GlucoseBonds1/mobile/src/main/Andro
 	android:theme
 		ADDED from /Users/joel/AndroidStudioProjects/GlucoseBonds1/mobile/src/main/AndroidManifest.xml:110:13-56
 	android:name
-		ADDED from /Users/joel/AndroidStudioProjects/GlucoseBonds1/mobile/src/main/AndroidManifest.xml:107:13-47
-activity#com.example.ecalo.glucosebonds1.VideoActivity
+		ADDED from /Users/joel/AndroidStudioProjects/GlucoseBonds1/mobile/src/main/AndroidManifest.xml:107:13-45
+activity#com.example.ecalo.glucosebonds1.FindMentorActivity
 ADDED from /Users/joel/AndroidStudioProjects/GlucoseBonds1/mobile/src/main/AndroidManifest.xml:115:9-123:20
 	android:label
 		ADDED from /Users/joel/AndroidStudioProjects/GlucoseBonds1/mobile/src/main/AndroidManifest.xml:117:13-63
@@ -275,29 +275,39 @@ ADDED from /Users/joel/AndroidStudioProjects/GlucoseBonds1/mobile/src/main/Andro
 	android:theme
 		ADDED from /Users/joel/AndroidStudioProjects/GlucoseBonds1/mobile/src/main/AndroidManifest.xml:119:13-56
 	android:name
-		ADDED from /Users/joel/AndroidStudioProjects/GlucoseBonds1/mobile/src/main/AndroidManifest.xml:116:13-42
-service#com.example.ecalo.glucosebonds1.PhoneToWatchService
-ADDED from /Users/joel/AndroidStudioProjects/GlucoseBonds1/mobile/src/main/AndroidManifest.xml:125:9-56
-	android:name
-		ADDED from /Users/joel/AndroidStudioProjects/GlucoseBonds1/mobile/src/main/AndroidManifest.xml:125:18-53
-service#com.example.ecalo.glucosebonds1.PhoneListenerService
-ADDED from /Users/joel/AndroidStudioProjects/GlucoseBonds1/mobile/src/main/AndroidManifest.xml:126:9-130:19
-	android:name
-		ADDED from /Users/joel/AndroidStudioProjects/GlucoseBonds1/mobile/src/main/AndroidManifest.xml:126:18-54
-intent-filter#com.google.android.gms.wearable.BIND_LISTENER
-ADDED from /Users/joel/AndroidStudioProjects/GlucoseBonds1/mobile/src/main/AndroidManifest.xml:127:13-129:29
-action#com.google.android.gms.wearable.BIND_LISTENER
-ADDED from /Users/joel/AndroidStudioProjects/GlucoseBonds1/mobile/src/main/AndroidManifest.xml:128:17-88
-	android:name
-		ADDED from /Users/joel/AndroidStudioProjects/GlucoseBonds1/mobile/src/main/AndroidManifest.xml:128:25-85
-activity#com.example.ecalo.glucosebonds1.Main2Activity
-ADDED from /Users/joel/AndroidStudioProjects/GlucoseBonds1/mobile/src/main/AndroidManifest.xml:132:9-135:68
+		ADDED from /Users/joel/AndroidStudioProjects/GlucoseBonds1/mobile/src/main/AndroidManifest.xml:116:13-47
+activity#com.example.ecalo.glucosebonds1.VideoActivity
+ADDED from /Users/joel/AndroidStudioProjects/GlucoseBonds1/mobile/src/main/AndroidManifest.xml:124:9-132:20
 	android:label
-		ADDED from /Users/joel/AndroidStudioProjects/GlucoseBonds1/mobile/src/main/AndroidManifest.xml:134:13-57
+		ADDED from /Users/joel/AndroidStudioProjects/GlucoseBonds1/mobile/src/main/AndroidManifest.xml:126:13-63
+	android:parentActivityName
+		ADDED from /Users/joel/AndroidStudioProjects/GlucoseBonds1/mobile/src/main/AndroidManifest.xml:127:13-60
 	android:theme
-		ADDED from /Users/joel/AndroidStudioProjects/GlucoseBonds1/mobile/src/main/AndroidManifest.xml:135:13-56
+		ADDED from /Users/joel/AndroidStudioProjects/GlucoseBonds1/mobile/src/main/AndroidManifest.xml:128:13-56
 	android:name
-		ADDED from /Users/joel/AndroidStudioProjects/GlucoseBonds1/mobile/src/main/AndroidManifest.xml:133:13-42
+		ADDED from /Users/joel/AndroidStudioProjects/GlucoseBonds1/mobile/src/main/AndroidManifest.xml:125:13-42
+service#com.example.ecalo.glucosebonds1.PhoneToWatchService
+ADDED from /Users/joel/AndroidStudioProjects/GlucoseBonds1/mobile/src/main/AndroidManifest.xml:134:9-56
+	android:name
+		ADDED from /Users/joel/AndroidStudioProjects/GlucoseBonds1/mobile/src/main/AndroidManifest.xml:134:18-53
+service#com.example.ecalo.glucosebonds1.PhoneListenerService
+ADDED from /Users/joel/AndroidStudioProjects/GlucoseBonds1/mobile/src/main/AndroidManifest.xml:135:9-139:19
+	android:name
+		ADDED from /Users/joel/AndroidStudioProjects/GlucoseBonds1/mobile/src/main/AndroidManifest.xml:135:18-54
+intent-filter#com.google.android.gms.wearable.BIND_LISTENER
+ADDED from /Users/joel/AndroidStudioProjects/GlucoseBonds1/mobile/src/main/AndroidManifest.xml:136:13-138:29
+action#com.google.android.gms.wearable.BIND_LISTENER
+ADDED from /Users/joel/AndroidStudioProjects/GlucoseBonds1/mobile/src/main/AndroidManifest.xml:137:17-88
+	android:name
+		ADDED from /Users/joel/AndroidStudioProjects/GlucoseBonds1/mobile/src/main/AndroidManifest.xml:137:25-85
+activity#com.example.ecalo.glucosebonds1.Main2Activity
+ADDED from /Users/joel/AndroidStudioProjects/GlucoseBonds1/mobile/src/main/AndroidManifest.xml:141:9-144:68
+	android:label
+		ADDED from /Users/joel/AndroidStudioProjects/GlucoseBonds1/mobile/src/main/AndroidManifest.xml:143:13-57
+	android:theme
+		ADDED from /Users/joel/AndroidStudioProjects/GlucoseBonds1/mobile/src/main/AndroidManifest.xml:144:13-56
+	android:name
+		ADDED from /Users/joel/AndroidStudioProjects/GlucoseBonds1/mobile/src/main/AndroidManifest.xml:142:13-42
 uses-sdk
 INJECTED from /Users/joel/AndroidStudioProjects/GlucoseBonds1/mobile/src/main/AndroidManifest.xml reason: use-sdk injection requested
 MERGED from [com.android.support:appcompat-v7:23.2.0] /Users/joel/AndroidStudioProjects/GlucoseBonds1/mobile/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.2.0/AndroidManifest.xml:21:5-23:78
