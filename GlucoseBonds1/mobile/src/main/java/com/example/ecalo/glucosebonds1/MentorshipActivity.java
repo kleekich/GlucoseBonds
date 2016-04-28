@@ -16,6 +16,7 @@ import android.view.View;
 import android.widget.ImageButton;
 import android.widget.Toast;
 
+import com.baasbox.android.BaasBox;
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.GooglePlayServicesUtil;
 import com.google.android.gms.common.api.GoogleApiClient;
@@ -25,6 +26,8 @@ import com.google.android.gms.wearable.Wearable;
 
 public class MentorshipActivity extends AppCompatActivity implements View.OnClickListener, GoogleApiClient.ConnectionCallbacks,
         GoogleApiClient.OnConnectionFailedListener, LocationListener {
+
+    private BaasBox client;
 
     Context context;
     private ImageButton findMentor, beMentor;
@@ -68,6 +71,7 @@ public class MentorshipActivity extends AppCompatActivity implements View.OnClic
             createLocationRequest();
         }
 
+
     }
 
     @Override
@@ -102,7 +106,7 @@ public class MentorshipActivity extends AppCompatActivity implements View.OnClic
 
                 }else{
 
-                    System.out.println("fuuukkkk");
+                    System.out.println("No Last Location Detected");
                     System.out.println("==================================================");
                 }
 

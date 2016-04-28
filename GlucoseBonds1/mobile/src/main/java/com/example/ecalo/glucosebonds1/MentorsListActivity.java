@@ -7,8 +7,13 @@ import android.location.Address;
 import android.location.Geocoder;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.widget.TextView;
 
+import com.baasbox.android.BaasBox;
+import com.baasbox.android.BaasDocument;
+import com.baasbox.android.BaasHandler;
+import com.baasbox.android.BaasResult;
 import com.google.android.gms.maps.CameraUpdate;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
@@ -16,8 +21,6 @@ import com.google.android.gms.maps.MapFragment;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
-import com.google.android.gms.maps.model.TileOverlayOptions;
-import com.google.maps.android.heatmaps.HeatmapTileProvider;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -38,16 +41,55 @@ public class MentorsListActivity extends AppCompatActivity {
     private String currentLatString;
     private String currentLngString;
 
+    //For Addresses
+    private BaasBox client;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        //For View
+        setContentView(R.layout.mentors_list);
+
         System.out.println("=============================");
         System.out.println("This is MentorsListActivity");
         System.out.println("=============================");
-        super.onCreate(savedInstanceState);
+        //Mentors List Heatmap
 
-        //For View
-        setContentView(R.layout.mentors_list);
+        BaasBox.Builder builder = new BaasBox.Builder(this);
+        client =builder.setApiDomain("10.0.3.2")
+                .setPort(9000)
+                .setAppCode("1234567890")
+                .setHttpConnectionTimeout(30000)
+                .init();
+
+        BaasDocument.fetchAll("mentorAddresses",
+                new BaasHandler<List<BaasDocument>>() {
+                    @Override
+                    public void handle(BaasResult<List<BaasDocument>> res) {
+
+                        if (res.isSuccess()) {
+                            for (BaasDocument doc : res.value()) {
+                                Log.d("LOG", "Doc: " + doc);
+
+                                System.out.println("read: "+ doc.getString("body"));
+
+                             
+                            }
+                        } else {
+                            Log.e("LOG", "Error", res.error());
+                            System.out.println("=======================================================");
+                            System.out.println("FUCK");
+                            System.out.println("=======================================================");
+                        }
+                    }
+                });
+
+
+
+
+
+
         mLatitudeText = (TextView)findViewById(R.id.latText);
         mLongitudeText = (TextView)findViewById(R.id.lngText);
 
@@ -68,7 +110,7 @@ public class MentorsListActivity extends AppCompatActivity {
         //Get map & user's current location
         googleMap = ((MapFragment) getFragmentManager().findFragmentById(R.id.map)).getMap();
         final LatLng currentLocation = new LatLng(latitude , longitude);
-        Marker TP = googleMap.addMarker(new MarkerOptions().position(currentLocation).title("Current Location"));
+        Marker TP = googleMap.addMarker(new MarkerOptions().position(currentLocation).title("Your Location"));
         googleMap.getUiSettings().setZoomGesturesEnabled(true);
         CameraUpdate center = CameraUpdateFactory.newLatLng(currentLocation);
         CameraUpdate zoom = CameraUpdateFactory.zoomTo(13);
@@ -76,7 +118,9 @@ public class MentorsListActivity extends AppCompatActivity {
         googleMap.animateCamera(zoom);
 
 
-        //Mentors List Heatmap
+
+
+
         ArrayList<LatLng> mentorsPointsList = new ArrayList<LatLng>();
 
         /* Original
@@ -89,6 +133,8 @@ public class MentorsListActivity extends AppCompatActivity {
         */
 
 
+
+        /*/////
         final LatLng point1 = getLatLngFromAddress("2232 Durant Ave , CA");
         final LatLng point2 = getLatLngFromAddress("2234 Durant Ave , CA");
         final LatLng point3 = getLatLngFromAddress("2236 Durant Ave , CA");
@@ -111,7 +157,7 @@ public class MentorsListActivity extends AppCompatActivity {
         // Add a tile overlay to the map, using the heat map tile provider.
         googleMap.addTileOverlay(new TileOverlayOptions().tileProvider(mProvider));
 
-
+        */////
 
 
 

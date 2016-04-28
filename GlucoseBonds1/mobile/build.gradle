@@ -36,5 +36,8 @@ dependencies {
     compile 'com.google.maps:google-maps-services:0.1.7'
     compile 'com.google.android.gms:play-services:7.5.0'
     compile 'com.google.maps.android:android-maps-utils:0.4+'
+    compile 'com.baasbox:baasbox-android:0.9.0'
+
+
 
 }
