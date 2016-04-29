@@ -8,6 +8,7 @@ import android.location.Geocoder;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
+import android.widget.ListView;
 import android.widget.TextView;
 
 import com.baasbox.android.BaasBox;
@@ -48,6 +49,11 @@ public class MentorsListActivity extends AppCompatActivity {
     private ArrayList<LatLng> mentorsPointsList = new ArrayList<LatLng>();
 
     private Long numDocs;
+
+
+    //for ListView
+    private ListView mentorListView;
+    private ArrayList<String> mentorNames;
 
 
     @Override
@@ -146,6 +152,9 @@ public class MentorsListActivity extends AppCompatActivity {
         CameraUpdate zoom = CameraUpdateFactory.zoomTo(10);
         googleMap.moveCamera(center);
         googleMap.animateCamera(zoom);
+
+
+        final MyAdapter mentorAdapter = new MyAdapter(MentorsListActivity.this, mentorNames);
 
 
 
