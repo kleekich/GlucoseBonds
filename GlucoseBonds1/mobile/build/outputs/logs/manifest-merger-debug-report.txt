@@ -1,6 +1,6 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /Users/Kangsik/Documents/cs160/Group-10-Project/GlucoseBonds1/mobile/src/main/AndroidManifest.xml:2:1-174:12
+ADDED from /Users/Kangsik/Documents/cs160/Group-10-Project/GlucoseBonds1/mobile/src/main/AndroidManifest.xml:2:1-183:12
 	xmlns:android
 		ADDED from /Users/Kangsik/Documents/cs160/Group-10-Project/GlucoseBonds1/mobile/src/main/AndroidManifest.xml:2:11-69
 	package
@@ -72,7 +72,7 @@ ADDED from /Users/Kangsik/Documents/cs160/Group-10-Project/GlucoseBonds1/mobile/
 	android:name
 		ADDED from /Users/Kangsik/Documents/cs160/Group-10-Project/GlucoseBonds1/mobile/src/main/AndroidManifest.xml:9:22-78
 application
-ADDED from /Users/Kangsik/Documents/cs160/Group-10-Project/GlucoseBonds1/mobile/src/main/AndroidManifest.xml:11:5-172:19
+ADDED from /Users/Kangsik/Documents/cs160/Group-10-Project/GlucoseBonds1/mobile/src/main/AndroidManifest.xml:11:5-181:19
 MERGED from [com.android.support:appcompat-v7:23.2.0] /Users/Kangsik/Documents/cs160/Group-10-Project/GlucoseBonds1/mobile/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.2.0/AndroidManifest.xml:25:5-20
 MERGED from [com.android.support:support-v4:23.2.0] /Users/Kangsik/Documents/cs160/Group-10-Project/GlucoseBonds1/mobile/build/intermediates/exploded-aar/com.android.support/support-v4/23.2.0/AndroidManifest.xml:22:5-20
 MERGED from [com.android.support:animated-vector-drawable:23.2.0] /Users/Kangsik/Documents/cs160/Group-10-Project/GlucoseBonds1/mobile/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/23.2.0/AndroidManifest.xml:7:5-20
@@ -501,58 +501,68 @@ ADDED from /Users/Kangsik/Documents/cs160/Group-10-Project/GlucoseBonds1/mobile/
 		ADDED from /Users/Kangsik/Documents/cs160/Group-10-Project/GlucoseBonds1/mobile/src/main/AndroidManifest.xml:124:13-60
 	android:name
 		ADDED from /Users/Kangsik/Documents/cs160/Group-10-Project/GlucoseBonds1/mobile/src/main/AndroidManifest.xml:122:13-45
-activity#com.example.ecalo.glucosebonds1.FindMentorActivity
+activity#com.example.ecalo.glucosebonds1.RegisteredMentorActivity
 ADDED from /Users/Kangsik/Documents/cs160/Group-10-Project/GlucoseBonds1/mobile/src/main/AndroidManifest.xml:130:9-138:20
 	android:label
 		ADDED from /Users/Kangsik/Documents/cs160/Group-10-Project/GlucoseBonds1/mobile/src/main/AndroidManifest.xml:132:13-63
 	android:theme
 		ADDED from /Users/Kangsik/Documents/cs160/Group-10-Project/GlucoseBonds1/mobile/src/main/AndroidManifest.xml:134:13-56
 	android:parentActivityName
-		ADDED from /Users/Kangsik/Documents/cs160/Group-10-Project/GlucoseBonds1/mobile/src/main/AndroidManifest.xml:133:13-60
+		ADDED from /Users/Kangsik/Documents/cs160/Group-10-Project/GlucoseBonds1/mobile/src/main/AndroidManifest.xml:133:13-59
 	android:name
-		ADDED from /Users/Kangsik/Documents/cs160/Group-10-Project/GlucoseBonds1/mobile/src/main/AndroidManifest.xml:131:13-47
-activity#com.example.ecalo.glucosebonds1.MentorsListActivity
-ADDED from /Users/Kangsik/Documents/cs160/Group-10-Project/GlucoseBonds1/mobile/src/main/AndroidManifest.xml:139:9-151:20
+		ADDED from /Users/Kangsik/Documents/cs160/Group-10-Project/GlucoseBonds1/mobile/src/main/AndroidManifest.xml:131:13-53
+activity#com.example.ecalo.glucosebonds1.FindMentorActivity
+ADDED from /Users/Kangsik/Documents/cs160/Group-10-Project/GlucoseBonds1/mobile/src/main/AndroidManifest.xml:139:9-147:20
 	android:label
 		ADDED from /Users/Kangsik/Documents/cs160/Group-10-Project/GlucoseBonds1/mobile/src/main/AndroidManifest.xml:141:13-63
 	android:theme
 		ADDED from /Users/Kangsik/Documents/cs160/Group-10-Project/GlucoseBonds1/mobile/src/main/AndroidManifest.xml:143:13-56
 	android:parentActivityName
-		ADDED from /Users/Kangsik/Documents/cs160/Group-10-Project/GlucoseBonds1/mobile/src/main/AndroidManifest.xml:142:13-55
+		ADDED from /Users/Kangsik/Documents/cs160/Group-10-Project/GlucoseBonds1/mobile/src/main/AndroidManifest.xml:142:13-60
 	android:name
-		ADDED from /Users/Kangsik/Documents/cs160/Group-10-Project/GlucoseBonds1/mobile/src/main/AndroidManifest.xml:140:13-48
-activity#com.example.ecalo.glucosebonds1.VideoActivity
-ADDED from /Users/Kangsik/Documents/cs160/Group-10-Project/GlucoseBonds1/mobile/src/main/AndroidManifest.xml:152:9-160:20
+		ADDED from /Users/Kangsik/Documents/cs160/Group-10-Project/GlucoseBonds1/mobile/src/main/AndroidManifest.xml:140:13-47
+activity#com.example.ecalo.glucosebonds1.MentorsListActivity
+ADDED from /Users/Kangsik/Documents/cs160/Group-10-Project/GlucoseBonds1/mobile/src/main/AndroidManifest.xml:148:9-160:20
 	android:label
-		ADDED from /Users/Kangsik/Documents/cs160/Group-10-Project/GlucoseBonds1/mobile/src/main/AndroidManifest.xml:154:13-63
+		ADDED from /Users/Kangsik/Documents/cs160/Group-10-Project/GlucoseBonds1/mobile/src/main/AndroidManifest.xml:150:13-63
 	android:theme
-		ADDED from /Users/Kangsik/Documents/cs160/Group-10-Project/GlucoseBonds1/mobile/src/main/AndroidManifest.xml:156:13-56
+		ADDED from /Users/Kangsik/Documents/cs160/Group-10-Project/GlucoseBonds1/mobile/src/main/AndroidManifest.xml:152:13-56
 	android:parentActivityName
-		ADDED from /Users/Kangsik/Documents/cs160/Group-10-Project/GlucoseBonds1/mobile/src/main/AndroidManifest.xml:155:13-60
+		ADDED from /Users/Kangsik/Documents/cs160/Group-10-Project/GlucoseBonds1/mobile/src/main/AndroidManifest.xml:151:13-55
 	android:name
-		ADDED from /Users/Kangsik/Documents/cs160/Group-10-Project/GlucoseBonds1/mobile/src/main/AndroidManifest.xml:153:13-42
-service#com.example.ecalo.glucosebonds1.PhoneToWatchService
-ADDED from /Users/Kangsik/Documents/cs160/Group-10-Project/GlucoseBonds1/mobile/src/main/AndroidManifest.xml:161:9-56
-	android:name
-		ADDED from /Users/Kangsik/Documents/cs160/Group-10-Project/GlucoseBonds1/mobile/src/main/AndroidManifest.xml:161:18-53
-service#com.example.ecalo.glucosebonds1.PhoneListenerService
-ADDED from /Users/Kangsik/Documents/cs160/Group-10-Project/GlucoseBonds1/mobile/src/main/AndroidManifest.xml:162:9-166:19
-	android:name
-		ADDED from /Users/Kangsik/Documents/cs160/Group-10-Project/GlucoseBonds1/mobile/src/main/AndroidManifest.xml:162:18-54
-intent-filter#com.google.android.gms.wearable.BIND_LISTENER
-ADDED from /Users/Kangsik/Documents/cs160/Group-10-Project/GlucoseBonds1/mobile/src/main/AndroidManifest.xml:163:13-165:29
-action#com.google.android.gms.wearable.BIND_LISTENER
-ADDED from /Users/Kangsik/Documents/cs160/Group-10-Project/GlucoseBonds1/mobile/src/main/AndroidManifest.xml:164:17-88
-	android:name
-		ADDED from /Users/Kangsik/Documents/cs160/Group-10-Project/GlucoseBonds1/mobile/src/main/AndroidManifest.xml:164:25-85
-activity#com.example.ecalo.glucosebonds1.Main2Activity
-ADDED from /Users/Kangsik/Documents/cs160/Group-10-Project/GlucoseBonds1/mobile/src/main/AndroidManifest.xml:168:9-171:68
+		ADDED from /Users/Kangsik/Documents/cs160/Group-10-Project/GlucoseBonds1/mobile/src/main/AndroidManifest.xml:149:13-48
+activity#com.example.ecalo.glucosebonds1.VideoActivity
+ADDED from /Users/Kangsik/Documents/cs160/Group-10-Project/GlucoseBonds1/mobile/src/main/AndroidManifest.xml:161:9-169:20
 	android:label
-		ADDED from /Users/Kangsik/Documents/cs160/Group-10-Project/GlucoseBonds1/mobile/src/main/AndroidManifest.xml:170:13-57
+		ADDED from /Users/Kangsik/Documents/cs160/Group-10-Project/GlucoseBonds1/mobile/src/main/AndroidManifest.xml:163:13-63
 	android:theme
-		ADDED from /Users/Kangsik/Documents/cs160/Group-10-Project/GlucoseBonds1/mobile/src/main/AndroidManifest.xml:171:13-56
+		ADDED from /Users/Kangsik/Documents/cs160/Group-10-Project/GlucoseBonds1/mobile/src/main/AndroidManifest.xml:165:13-56
+	android:parentActivityName
+		ADDED from /Users/Kangsik/Documents/cs160/Group-10-Project/GlucoseBonds1/mobile/src/main/AndroidManifest.xml:164:13-60
 	android:name
-		ADDED from /Users/Kangsik/Documents/cs160/Group-10-Project/GlucoseBonds1/mobile/src/main/AndroidManifest.xml:169:13-42
+		ADDED from /Users/Kangsik/Documents/cs160/Group-10-Project/GlucoseBonds1/mobile/src/main/AndroidManifest.xml:162:13-42
+service#com.example.ecalo.glucosebonds1.PhoneToWatchService
+ADDED from /Users/Kangsik/Documents/cs160/Group-10-Project/GlucoseBonds1/mobile/src/main/AndroidManifest.xml:170:9-56
+	android:name
+		ADDED from /Users/Kangsik/Documents/cs160/Group-10-Project/GlucoseBonds1/mobile/src/main/AndroidManifest.xml:170:18-53
+service#com.example.ecalo.glucosebonds1.PhoneListenerService
+ADDED from /Users/Kangsik/Documents/cs160/Group-10-Project/GlucoseBonds1/mobile/src/main/AndroidManifest.xml:171:9-175:19
+	android:name
+		ADDED from /Users/Kangsik/Documents/cs160/Group-10-Project/GlucoseBonds1/mobile/src/main/AndroidManifest.xml:171:18-54
+intent-filter#com.google.android.gms.wearable.BIND_LISTENER
+ADDED from /Users/Kangsik/Documents/cs160/Group-10-Project/GlucoseBonds1/mobile/src/main/AndroidManifest.xml:172:13-174:29
+action#com.google.android.gms.wearable.BIND_LISTENER
+ADDED from /Users/Kangsik/Documents/cs160/Group-10-Project/GlucoseBonds1/mobile/src/main/AndroidManifest.xml:173:17-88
+	android:name
+		ADDED from /Users/Kangsik/Documents/cs160/Group-10-Project/GlucoseBonds1/mobile/src/main/AndroidManifest.xml:173:25-85
+activity#com.example.ecalo.glucosebonds1.Main2Activity
+ADDED from /Users/Kangsik/Documents/cs160/Group-10-Project/GlucoseBonds1/mobile/src/main/AndroidManifest.xml:177:9-180:68
+	android:label
+		ADDED from /Users/Kangsik/Documents/cs160/Group-10-Project/GlucoseBonds1/mobile/src/main/AndroidManifest.xml:179:13-57
+	android:theme
+		ADDED from /Users/Kangsik/Documents/cs160/Group-10-Project/GlucoseBonds1/mobile/src/main/AndroidManifest.xml:180:13-56
+	android:name
+		ADDED from /Users/Kangsik/Documents/cs160/Group-10-Project/GlucoseBonds1/mobile/src/main/AndroidManifest.xml:178:13-42
 uses-sdk
 INJECTED from /Users/Kangsik/Documents/cs160/Group-10-Project/GlucoseBonds1/mobile/src/main/AndroidManifest.xml reason: use-sdk injection requested
 MERGED from [com.android.support:appcompat-v7:23.2.0] /Users/Kangsik/Documents/cs160/Group-10-Project/GlucoseBonds1/mobile/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.2.0/AndroidManifest.xml:21:5-23:78

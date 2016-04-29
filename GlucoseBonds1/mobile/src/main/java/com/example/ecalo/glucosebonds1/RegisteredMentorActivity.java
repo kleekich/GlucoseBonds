@@ -15,17 +15,17 @@ import com.baasbox.android.BaasResult;
 import com.baasbox.android.BaasUser;
 
 /**
- * Created by joel on 4/19/16.
+ * Created by Kangsik on 4/29/16.
  */
-public class BeMentorActivity extends AppCompatActivity {
+public class RegisteredMentorActivity extends AppCompatActivity {
     private BaasBox client;
-    ImageButton buttonRegister;
+    ImageButton buttonMentorship;
     Context context;
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        context = this;
-        setContentView(R.layout.be_a_mentor);
-        buttonRegister = (ImageButton) findViewById(R.id.buttonRegister);
+        context= this;
+        setContentView(R.layout.activity_registered_mentor);
+        buttonMentorship = (ImageButton)findViewById(R.id.buttonMentorship);
         //buttonRegister.setImageResource(R.drawable.be_mentor);
 
 
@@ -54,11 +54,11 @@ public class BeMentorActivity extends AppCompatActivity {
             }
         });
 
-        buttonRegister.setOnClickListener(new View.OnClickListener() {
+        buttonMentorship.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent registeredIntent = new Intent(context, RegisteredMentorActivity.class);
-                startActivity(registeredIntent);
+                Intent mentorshipIntent = new Intent(context, MentorshipActivity.class);
+                startActivity(mentorshipIntent);
             }
         });
     }

@@ -155,7 +155,7 @@ public class MentorsListActivity extends AppCompatActivity {
         Marker TP = googleMap.addMarker(new MarkerOptions().position(currentLocation).title("Your Location"));
         googleMap.getUiSettings().setZoomGesturesEnabled(true);
         CameraUpdate center = CameraUpdateFactory.newLatLng(currentLocation);
-        CameraUpdate zoom = CameraUpdateFactory.zoomTo(10);
+        CameraUpdate zoom = CameraUpdateFactory.zoomTo(12);
         googleMap.moveCamera(center);
         googleMap.animateCamera(zoom);
 
