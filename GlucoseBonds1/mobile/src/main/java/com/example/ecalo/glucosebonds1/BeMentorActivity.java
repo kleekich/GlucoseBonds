@@ -10,6 +10,7 @@ import com.baasbox.android.BaasBox;
 import com.baasbox.android.BaasDocument;
 import com.baasbox.android.BaasHandler;
 import com.baasbox.android.BaasResult;
+import com.baasbox.android.BaasUser;
 
 /**
  * Created by joel on 4/19/16.
@@ -33,9 +34,13 @@ public class BeMentorActivity extends AppCompatActivity {
                 .setHttpConnectionTimeout(3000)
                 .init();
 
+        BaasUser user = BaasUser.current();
+        String address = user.getScope(BaasUser.Scope.REGISTERED).getString("Address");
+        String name = user.getScope(BaasUser.Scope.REGISTERED).getString("Name");
+
         BaasDocument doc = new BaasDocument("mentorAddresses");
-        doc.putString("title","6350Christie Ave, CA")
-                .putString("body","6350 Christie Ave, CA");
+        doc.putString("Name",name)
+                .putString("Address",address);
         doc.save(new BaasHandler<BaasDocument>() {
             @Override
             public void handle(BaasResult<BaasDocument> res) {

@@ -49,14 +49,14 @@ public class MentorsListActivity extends AppCompatActivity {
     //For Addresses
     private BaasBox client;
     private ArrayList<LatLng> mentorsPointsList = new ArrayList<LatLng>();
-
     private Long numDocs;
 
 
     //for ListView
     private ListView mentorListView;
     private ArrayList<String> mentorsNames;
-
+    private String name;
+    private String address;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -89,6 +89,8 @@ public class MentorsListActivity extends AppCompatActivity {
             }
         });
 
+        mentorsNames = new ArrayList<String>();
+
 
         //Get mentor Addresses and put heat map when all addresses are pulled from server.
         BaasDocument.fetchAll("mentorAddresses",
@@ -103,8 +105,12 @@ public class MentorsListActivity extends AppCompatActivity {
                                 whether all documents are pulled from server by size of documents,
                                 then, if it is the last one, we put heat map.
                                  */
-                                String address = doc.getString("body");
+                                address = doc.getString("Address");
+                                name = doc.getString("Name");
+                                //For Map
                                 mentorsPointsList.add(getLatLngFromAddress(address));
+                                //For ListView
+                                mentorsNames.add(name);
                                 if(mentorsPointsList.size() == numDocs){
                                     HeatmapTileProvider mProvider = new HeatmapTileProvider.Builder()
                                             .data(mentorsPointsList)
@@ -157,10 +163,8 @@ public class MentorsListActivity extends AppCompatActivity {
         //For List View
 
         mentorListView = (ListView) findViewById(R.id.listViewMentors);
-        mentorsNames = new ArrayList<String>();
-        mentorsNames.add("Eric");
-        mentorsNames.add("Allen");
-        mentorsNames.add("Kevin");
+
+
 
         final MyAdapter mentorAdapter = new MyAdapter(MentorsListActivity.this, mentorsNames);
 
@@ -170,15 +174,15 @@ public class MentorsListActivity extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int position, long id) {
 
-                Intent discussIntent = new Intent(context, MessageActivity.class);
+                Intent disscussIntent = new Intent(context, MessageActivity.class);
                 Bundle extras = new Bundle();
                 String mentorName = (String) adapterView.getItemAtPosition(position);
 
 
                 extras.putString("MENTOR_NAME", mentorName);
 
-                discussIntent.putExtras(extras);
-                startActivity(discussIntent);
+                disscussIntent.putExtras(extras);
+                startActivity(disscussIntent);
 
             }
         });
