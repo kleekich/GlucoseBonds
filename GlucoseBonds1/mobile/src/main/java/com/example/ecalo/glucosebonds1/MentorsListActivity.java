@@ -2,14 +2,16 @@
 
 package com.example.ecalo.glucosebonds1;
 
+import android.content.Context;
 import android.content.Intent;
 import android.location.Address;
 import android.location.Geocoder;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ListView;
-import android.widget.TextView;
 
 import com.baasbox.android.BaasBox;
 import com.baasbox.android.BaasDocument;
@@ -33,10 +35,10 @@ import java.util.List;
  * Created by Kangsik on 4/27/16.
  */
 public class MentorsListActivity extends AppCompatActivity {
-    private TextView mLatitudeText;
-    private TextView mLongitudeText;
+
     private Double latitude;
     private Double longitude;
+    private Context context;
 
 
     //For map
@@ -53,12 +55,13 @@ public class MentorsListActivity extends AppCompatActivity {
 
     //for ListView
     private ListView mentorListView;
-    private ArrayList<String> mentorNames;
+    private ArrayList<String> mentorsNames;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        context = this;
         //For View
         setContentView(R.layout.mentors_list);
 
@@ -126,8 +129,6 @@ public class MentorsListActivity extends AppCompatActivity {
 
 
 
-        mLatitudeText = (TextView)findViewById(R.id.latText);
-        mLongitudeText = (TextView)findViewById(R.id.lngText);
 
 
         //Get Intent
@@ -139,8 +140,7 @@ public class MentorsListActivity extends AppCompatActivity {
         longitude = Double.parseDouble(currentLngString);
 
 
-        mLatitudeText.setText(currentLatString);
-        mLongitudeText.setText(currentLngString);
+
 
 
         //Get map & user's current location
@@ -154,11 +154,34 @@ public class MentorsListActivity extends AppCompatActivity {
         googleMap.animateCamera(zoom);
 
 
-        final MyAdapter mentorAdapter = new MyAdapter(MentorsListActivity.this, mentorNames);
+        //For List View
+
+        mentorListView = (ListView) findViewById(R.id.listViewMentors);
+        mentorsNames = new ArrayList<String>();
+        mentorsNames.add("Eric");
+        mentorsNames.add("Allen");
+        mentorsNames.add("Kevin");
+
+        final MyAdapter mentorAdapter = new MyAdapter(MentorsListActivity.this, mentorsNames);
+
+        mentorListView.setAdapter(mentorAdapter);
+
+        mentorListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int position, long id) {
+
+                Intent discussIntent = new Intent(context, MessageActivity.class);
+                Bundle extras = new Bundle();
+                String mentorName = (String) adapterView.getItemAtPosition(position);
 
 
+                extras.putString("MENTOR_NAME", mentorName);
 
+                discussIntent.putExtras(extras);
+                startActivity(discussIntent);
 
+            }
+        });
 
 
 

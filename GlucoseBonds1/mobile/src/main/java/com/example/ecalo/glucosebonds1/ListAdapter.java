@@ -19,7 +19,7 @@ public class ListAdapter extends ArrayAdapter<String> {
     LayoutInflater inflater;
 
     public ListAdapter(Context context, String[] mentNames, int[] mentPics, String[] menMessages) {
-        super(context, R.layout.mentor_list_view, mentNames);
+        super(context, R.layout.mentors_list, mentNames);
         this.context = context;
         this.mentorImages = mentPics;
         this.mentorNames = mentNames;
@@ -35,12 +35,10 @@ public class ListAdapter extends ArrayAdapter<String> {
     public View getView(int position, View convertView, ViewGroup vgroup) {
         if (convertView == null) {
             inflater = (LayoutInflater)context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-            convertView = inflater.inflate(R.layout.mentor_list_view, null);
+            convertView = inflater.inflate(R.layout.mentors_list, null);
         }
         final ViewHolder holder = new ViewHolder();
-        holder.pic = (ImageView) convertView.findViewById(R.id.imageButton5);
-        holder.message = (TextView) convertView.findViewById(R.id.textView9);
-        holder.name = (TextView) convertView.findViewById(R.id.textView10);
+
 
         return convertView;
     }

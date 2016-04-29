@@ -148,6 +148,10 @@
         "source": "/Users/Kangsik/Documents/cs160/Group-10-Project/GlucoseBonds1/mobile/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.2.0/res/layout/abc_list_menu_item_checkbox.xml"
     },
     {
+        "merged": "/Users/Kangsik/Documents/cs160/Group-10-Project/GlucoseBonds1/mobile/build/intermediates/res/merged/debug/layout/general_forum_item.xml",
+        "source": "/Users/Kangsik/Documents/cs160/Group-10-Project/GlucoseBonds1/mobile/src/main/res/layout/general_forum_item.xml"
+    },
+    {
         "merged": "/Users/Kangsik/Documents/cs160/Group-10-Project/GlucoseBonds1/mobile/build/intermediates/res/merged/debug/layout/login_screen.xml",
         "source": "/Users/Kangsik/Documents/cs160/Group-10-Project/GlucoseBonds1/mobile/src/main/res/layout/login_screen.xml"
     },
@@ -168,6 +172,10 @@
         "source": "/Users/Kangsik/Documents/cs160/Group-10-Project/GlucoseBonds1/mobile/src/main/res/layout/map.xml"
     },
     {
+        "merged": "/Users/Kangsik/Documents/cs160/Group-10-Project/GlucoseBonds1/mobile/build/intermediates/res/merged/debug/layout/activity_discuss.xml",
+        "source": "/Users/Kangsik/Documents/cs160/Group-10-Project/GlucoseBonds1/mobile/src/main/res/layout/activity_discuss.xml"
+    },
+    {
         "merged": "/Users/Kangsik/Documents/cs160/Group-10-Project/GlucoseBonds1/mobile/build/intermediates/res/merged/debug/layout/activity_main2.xml",
         "source": "/Users/Kangsik/Documents/cs160/Group-10-Project/GlucoseBonds1/mobile/src/main/res/layout/activity_main2.xml"
     },
@@ -186,6 +194,10 @@
     {
         "merged": "/Users/Kangsik/Documents/cs160/Group-10-Project/GlucoseBonds1/mobile/build/intermediates/res/merged/debug/layout/abc_action_bar_view_list_nav_layout.xml",
         "source": "/Users/Kangsik/Documents/cs160/Group-10-Project/GlucoseBonds1/mobile/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.2.0/res/layout/abc_action_bar_view_list_nav_layout.xml"
+    },
+    {
+        "merged": "/Users/Kangsik/Documents/cs160/Group-10-Project/GlucoseBonds1/mobile/build/intermediates/res/merged/debug/layout/row_mentors_layout.xml",
+        "source": "/Users/Kangsik/Documents/cs160/Group-10-Project/GlucoseBonds1/mobile/src/main/res/layout/row_mentors_layout.xml"
     },
     {
         "merged": "/Users/Kangsik/Documents/cs160/Group-10-Project/GlucoseBonds1/mobile/build/intermediates/res/merged/debug/layout/notification_template_part_time.xml",
@@ -238,10 +250,6 @@
     {
         "merged": "/Users/Kangsik/Documents/cs160/Group-10-Project/GlucoseBonds1/mobile/build/intermediates/res/merged/debug/layout/general_forum.xml",
         "source": "/Users/Kangsik/Documents/cs160/Group-10-Project/GlucoseBonds1/mobile/src/main/res/layout/general_forum.xml"
-    },
-    {
-        "merged": "/Users/Kangsik/Documents/cs160/Group-10-Project/GlucoseBonds1/mobile/build/intermediates/res/merged/debug/layout/mentor_list_view.xml",
-        "source": "/Users/Kangsik/Documents/cs160/Group-10-Project/GlucoseBonds1/mobile/src/main/res/layout/mentor_list_view.xml"
     },
     {
         "merged": "/Users/Kangsik/Documents/cs160/Group-10-Project/GlucoseBonds1/mobile/build/intermediates/res/merged/debug/layout/design_bottom_sheet_dialog.xml",
@@ -334,6 +342,10 @@
     {
         "merged": "/Users/Kangsik/Documents/cs160/Group-10-Project/GlucoseBonds1/mobile/build/intermediates/res/merged/debug/layout/place_autocomplete_fragment.xml",
         "source": "/Users/Kangsik/Documents/cs160/Group-10-Project/GlucoseBonds1/mobile/build/intermediates/exploded-aar/com.google.android.gms/play-services-location/8.4.0/res/layout/place_autocomplete_fragment.xml"
+    },
+    {
+        "merged": "/Users/Kangsik/Documents/cs160/Group-10-Project/GlucoseBonds1/mobile/build/intermediates/res/merged/debug/layout/listitem_discuss.xml",
+        "source": "/Users/Kangsik/Documents/cs160/Group-10-Project/GlucoseBonds1/mobile/src/main/res/layout/listitem_discuss.xml"
     },
     {
         "merged": "/Users/Kangsik/Documents/cs160/Group-10-Project/GlucoseBonds1/mobile/build/intermediates/res/merged/debug/layout/select_dialog_item_material.xml",
