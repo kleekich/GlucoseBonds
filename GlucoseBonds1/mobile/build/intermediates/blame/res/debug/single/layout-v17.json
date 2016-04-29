@@ -1,6 +1,10 @@
 [
     {
-        "merged": "/Users/Kangsik/Documents/cs160/Group-10-Project/GlucoseBonds1/mobile/build/intermediates/res/merged/debug/layout-v17/mr_media_route_list_item.xml",
-        "source": "/Users/Kangsik/Documents/cs160/Group-10-Project/GlucoseBonds1/mobile/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/23.0.0/res/layout-v17/mr_media_route_list_item.xml"
+        "merged": "C:\\Users\\Kangsik\\Documents\\cs160\\Group-10-Project\\GlucoseBonds1\\mobile\\build\\intermediates\\res\\merged\\debug\\layout-v17\\mr_media_route_list_item.xml",
+        "source": "C:\\Users\\Kangsik\\Documents\\cs160\\Group-10-Project\\GlucoseBonds1\\mobile\\build\\intermediates\\exploded-aar\\com.android.support\\mediarouter-v7\\23.0.0\\res\\layout-v17\\mr_media_route_list_item.xml"
+    },
+    {
+        "merged": "C:\\Users\\Allen\\Desktop\\Glucose Bonds\\GlucoseBonds1\\mobile\\build\\intermediates\\res\\merged\\debug\\layout-v17\\mr_media_route_list_item.xml",
+        "source": "C:\\Users\\Allen\\Desktop\\Glucose Bonds\\GlucoseBonds1\\mobile\\build\\intermediates\\exploded-aar\\com.android.support\\mediarouter-v7\\23.0.0\\res\\layout-v17\\mr_media_route_list_item.xml"
     }
 ]

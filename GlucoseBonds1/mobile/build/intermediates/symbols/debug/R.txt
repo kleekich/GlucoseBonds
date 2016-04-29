@@ -852,7 +852,6 @@ int id action_menu_presenter 0x7f0e0003
 int id action_mode_bar 0x7f0e007f
 int id action_mode_bar_stub 0x7f0e007e
 int id action_mode_close_button 0x7f0e0064
-int id action_settings 0x7f0e0107
 int id activity_chooser_view_content 0x7f0e0065
 int id address 0x7f0e00f1
 int id adjust_height 0x7f0e0036
@@ -986,6 +985,7 @@ int id media_route_list 0x7f0e00cc
 int id media_route_volume_layout 0x7f0e00d5
 int id media_route_volume_slider 0x7f0e00d6
 int id mentorship 0x7f0e0100
+int id messages 0x7f0e0107
 int id middle 0x7f0e0035
 int id mini 0x7f0e0033
 int id monochrome 0x7f0e0060

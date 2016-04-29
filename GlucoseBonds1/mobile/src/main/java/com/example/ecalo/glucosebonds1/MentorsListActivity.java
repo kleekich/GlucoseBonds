@@ -108,10 +108,10 @@ public class MentorsListActivity extends AppCompatActivity {
                                 address = doc.getString("Address");
                                 name = doc.getString("Name");
                                 //For Map
-                                mentorsPointsList.add(getLatLngFromAddress(address));
+                                //mentorsPointsList.add(getLatLngFromAddress(address));
                                 //For ListView
                                 mentorsNames.add(name);
-                                if(mentorsPointsList.size() == numDocs){
+                                if(false){
                                     HeatmapTileProvider mProvider = new HeatmapTileProvider.Builder()
                                             .data(mentorsPointsList)
                                             .radius(50)
@@ -180,6 +180,7 @@ public class MentorsListActivity extends AppCompatActivity {
 
 
                 extras.putString("MENTOR_NAME", mentorName);
+                extras.putBoolean("IS_MENTOR", false);
 
                 disscussIntent.putExtras(extras);
                 startActivity(disscussIntent);
@@ -268,7 +269,7 @@ public class MentorsListActivity extends AppCompatActivity {
         Geocoder coder = new Geocoder(this);
         List<Address> address;
         try {
-            address = coder.getFromLocationName(strAddress,5);
+            address = coder.getFromLocationName(strAddress,1);
             if (address==null) {
                 return null;
             }

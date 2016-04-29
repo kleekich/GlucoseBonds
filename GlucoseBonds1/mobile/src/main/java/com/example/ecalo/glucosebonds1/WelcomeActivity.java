@@ -5,6 +5,9 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.LinearLayout;
 
@@ -67,6 +70,28 @@ public class WelcomeActivity extends AppCompatActivity implements View.OnClickLi
                 }
             }
         });
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        // Handle item selection
+        switch (item.getItemId()) {
+            case R.id.messages:
+                Intent messageActivity = new Intent(context, MessageActivity.class);
+                messageActivity.putExtra("MENTOR_NAME", BaasUser.current().getScope(BaasUser.Scope.REGISTERED).getString("Name"));
+                messageActivity.putExtra("IS_MENTOR", true);
+                startActivity(messageActivity);
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
+        }
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.main2, menu);
+        return true;
     }
 
     public void goBack() {

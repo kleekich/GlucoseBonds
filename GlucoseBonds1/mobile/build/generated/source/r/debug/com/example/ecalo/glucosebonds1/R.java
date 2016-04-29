@@ -2940,7 +2940,6 @@ containing a value of this type.
         public static final int action_mode_bar=0x7f0e007f;
         public static final int action_mode_bar_stub=0x7f0e007e;
         public static final int action_mode_close_button=0x7f0e0064;
-        public static final int action_settings=0x7f0e0107;
         public static final int activity_chooser_view_content=0x7f0e0065;
         public static final int address=0x7f0e00f1;
         public static final int adjust_height=0x7f0e0036;
@@ -3074,6 +3073,7 @@ containing a value of this type.
         public static final int media_route_volume_layout=0x7f0e00d5;
         public static final int media_route_volume_slider=0x7f0e00d6;
         public static final int mentorship=0x7f0e0100;
+        public static final int messages=0x7f0e0107;
         public static final int middle=0x7f0e0035;
         public static final int mini=0x7f0e0033;
         public static final int monochrome=0x7f0e0060;
