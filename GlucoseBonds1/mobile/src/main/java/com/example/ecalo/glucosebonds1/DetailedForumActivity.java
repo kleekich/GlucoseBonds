@@ -91,7 +91,7 @@ public class DetailedForumActivity extends AppCompatActivity{
         title.setText(contentTitle);
         questionContent.setText(contentQuestion);
 
-        Button createNew = (Button) findViewById(R.id.new_question);
+        View createNew = (View) findViewById(R.id.new_question);
         createNew.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

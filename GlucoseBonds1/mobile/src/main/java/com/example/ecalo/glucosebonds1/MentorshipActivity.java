@@ -1,43 +1,116 @@
 package com.example.ecalo.glucosebonds1;
 
+import android.Manifest;
 import android.content.Context;
 import android.content.Intent;
-import android.os.Message;
-import android.support.v7.app.AppCompatActivity;
+import android.content.pm.PackageManager;
+import android.location.Location;
+import android.location.LocationListener;
 import android.os.Bundle;
-import android.view.GestureDetector;
-import android.view.MotionEvent;
+import android.support.v4.app.ActivityCompat;
+import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageButton;
+import android.widget.LinearLayout;
 import android.widget.Toast;
 
-public class MentorshipActivity extends AppCompatActivity implements View.OnClickListener {
+import com.google.android.gms.common.ConnectionResult;
+import com.google.android.gms.common.GooglePlayServicesUtil;
+import com.google.android.gms.common.api.GoogleApiClient;
+import com.google.android.gms.location.LocationRequest;
+import com.google.android.gms.location.LocationServices;
+import com.google.android.gms.wearable.Wearable;
+
+public class MentorshipActivity extends AppCompatActivity implements View.OnClickListener, GoogleApiClient.ConnectionCallbacks,
+        GoogleApiClient.OnConnectionFailedListener, LocationListener {
 
     Context context;
     private ImageButton findMentor, beMentor;
+    // Note: Your consumer key and secret should be obfuscated in your source code before shipping.
+    private final static int PLAY_SERVICE_RESOLUTION_REQUEST = 1000;
+
+
+    //FOR CURRENT LOCATION
+    private Location mLastLocation;
+    private GoogleApiClient mGoogleApiClient;
+    private boolean mRequestLocationUpdates = false;
+    private LocationRequest mLocationRequest;
+    private static int UPDATE_INTERVAL = 10000;
+    private static int FATEST_INTERVAL = 5000;
+    private static int DISPLACEMENT = 10;
+    private static final String TAG = "myMessage";
+
+    private LinearLayout layout1, layout2;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        System.out.println("=============================");
+        System.out.println("This is MentorshipActivity");
+        System.out.println("=============================");
         super.onCreate(savedInstanceState);
         context = this;
         setContentView(R.layout.mentorship_homepage);
-        findMentor = (ImageButton) findViewById(R.id.imageButton);
-        beMentor = (ImageButton) findViewById(R.id.imageButton2);
+        findMentor = (ImageButton) findViewById(R.id.findButton);
+        beMentor = (ImageButton) findViewById(R.id.beButton);
         findMentor.setOnClickListener(this);
         beMentor.setOnClickListener(this);
-//        button = (ImageButton) findViewById(R.id.img_btn);
-//        button.setImageResource(R.drawable.mentorship_screen);
-//
-//        button.setOnTouchListener(new GestureHelper(context));
+        layout1 = (LinearLayout) findViewById(R.id.findMentorLayout);
+        layout2 = (LinearLayout) findViewById(R.id.beMentorLayout);
+
+        mGoogleApiClient = new GoogleApiClient.Builder(this)
+                .addApi(LocationServices.API)
+                .addApi(Wearable.API)  // used for data layer API
+                .addConnectionCallbacks(this)
+                .addOnConnectionFailedListener(this)
+                .build();
+
+        if (this.checkPlayServices()) {
+            buildGoogleApiClient();
+            createLocationRequest();
+        }
+
     }
 
     @Override
     public void onClick(View v) {
         switch (v.getId()) {
-            case R.id.imageButton:
-                Intent findMentorActivity = new Intent(context, FindMentorActivity.class);
-                startActivity(findMentorActivity);
+            case R.id.findButton:
+                Intent MentorsListIntent = new Intent(context, MentorsListActivity.class);
+                if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
+                    // TODO: Consider calling
+                    //    ActivityCompat#requestPermissions
+                    // here to request the missing permissions, and then overriding
+                    //   public void onRequestPermissionsResult(int requestCode, String[] permissions,
+                    //                                          int[] grantResults)
+                    // to handle the case where the user grants the permission. See the documentation
+                    // for ActivityCompat#requestPermissions for more details.
+                    return;
+                }
+                mLastLocation = LocationServices.FusedLocationApi.getLastLocation(
+                        mGoogleApiClient);
+                if(mLastLocation != null){
+                    mLastLocation = LocationServices.FusedLocationApi.getLastLocation(mGoogleApiClient);
+
+                    double latitude = mLastLocation.getLatitude();
+                    double longitude = mLastLocation.getLongitude();
+                    System.out.println("==================================================");
+                    System.out.println(latitude);
+                    System.out.println("==================================================");
+                    MentorsListIntent.putExtra("LATITUDE",Double.toString(latitude) );
+                    MentorsListIntent.putExtra("LONGITUDE",Double.toString(longitude) );
+
+                    startActivity(MentorsListIntent);
+
+                }else{
+
+                    System.out.println("fuuukkkk");
+                    System.out.println("==================================================");
+                }
+
                 break;
-            case R.id.imageButton2:
+            case R.id.beButton:
                 Intent beMentorActivity = new Intent(context, BeMentorActivity.class);
                 startActivity(beMentorActivity);
                 break;
@@ -45,109 +118,169 @@ public class MentorshipActivity extends AppCompatActivity implements View.OnClic
         }
     }
 
-    public class GestureHelper implements View.OnTouchListener {
+    protected synchronized void buildGoogleApiClient() {
+        mGoogleApiClient = new GoogleApiClient.Builder(this)
+                .addConnectionCallbacks(this)
+                .addOnConnectionFailedListener(this)
+                .addApi(LocationServices.API).build();
+    }
 
-        private final GestureDetector mGestureDetector;
-        Context mContext;
-
-        public GestureHelper(Context ctx) {
-            mContext = ctx;
-            mGestureDetector = new GestureDetector(ctx, new GestureListener(this));
-        }
-
-        public void onSwipeRight() {
-            Toast.makeText(mContext, "right is always right!", Toast.LENGTH_SHORT).show();
-            Intent beMentor = new Intent(context, BeMentorActivity.class);
-            startActivity(beMentor);
-        };
-
-        public void onSwipeLeft() {
-            Toast.makeText(mContext, "left is best!", Toast.LENGTH_SHORT).show();
-        };
-
-        public void onSwipeTop() {
-            Toast.makeText(mContext, "up up and away!", Toast.LENGTH_SHORT).show();
-            Intent findMentor = new Intent(context, FindMentorActivity.class);
-            startActivity(findMentor);
-        };
-
-        public void onSwipeBottom() {
-            Toast.makeText(mContext, "what's down there?", Toast.LENGTH_SHORT).show();
-        };
-
-        public void onDoubleTap() {
-            Toast.makeText(mContext, "not once but twice!", Toast.LENGTH_SHORT).show();
-        };
-
-        public void onClick() {
-            Intent messageActivity = new Intent(context, MessageActivity.class);
-            startActivity(messageActivity);
-        };
-
-        @Override
-        public boolean onTouch(View v, MotionEvent event) {
-            return mGestureDetector.onTouchEvent(event);
-        }
-
-        private final class GestureListener extends GestureDetector.SimpleOnGestureListener {
-
-            private static final int SWIPE_THRESHOLD = 100;
-            private static final int SWIPE_VELOCITY_THRESHOLD = 100;
-            private GestureHelper mHelper;
-
-            public GestureListener(GestureHelper helper) {
-                mHelper = helper;
-            }
-
-            @Override
-            public boolean onDown(MotionEvent e) {
-                return true;
-            }
-
-            @Override
-            public boolean onSingleTapUp(MotionEvent e) {
-                mHelper.onClick();
-                return true;
-            }
-
-            @Override
-            public boolean onDoubleTap(MotionEvent e) {
-                mHelper.onDoubleTap();
-                return true;
-            }
-
-
-
-            @Override
-            public boolean onFling(MotionEvent e1, MotionEvent e2, float velocityX, float velocityY) {
-                boolean result = false;
-                try {
-                    float diffY = e2.getY() - e1.getY();
-                    float diffX = e2.getX() - e1.getX();
-                    if (Math.abs(diffX) > Math.abs(diffY)) {
-                        if (Math.abs(diffX) > SWIPE_THRESHOLD && Math.abs(velocityX) > SWIPE_VELOCITY_THRESHOLD) {
-                            if (diffX > 0) {
-                                mHelper.onSwipeRight();
-                            } else {
-                                mHelper.onSwipeLeft();
-                            }
-                        }
-                    } else {
-                        if (Math.abs(diffY) > SWIPE_THRESHOLD && Math.abs(velocityY) > SWIPE_VELOCITY_THRESHOLD) {
-                            if (diffY > 0) {
-                                mHelper.onSwipeBottom();
-                            } else {
-                                mHelper.onSwipeTop();
-                            }
-                        }
-                    }
-                } catch (Exception ex) {
-                    ex.printStackTrace();
-                }
-                return result;
-            }
-        }
+    protected void createLocationRequest() {
+        mLocationRequest = new LocationRequest();
+        mLocationRequest.setInterval(UPDATE_INTERVAL);
+        mLocationRequest.setFastestInterval(FATEST_INTERVAL);
+        mLocationRequest.setPriority(LocationRequest.PRIORITY_HIGH_ACCURACY);
+        mLocationRequest.setSmallestDisplacement(DISPLACEMENT);
 
     }
+
+    private boolean checkPlayServices() {
+        int resultCode = GooglePlayServicesUtil.isGooglePlayServicesAvailable(this);
+        if (resultCode != ConnectionResult.SUCCESS) {
+            if (GooglePlayServicesUtil.isUserRecoverableError(resultCode)) {
+                GooglePlayServicesUtil.getErrorDialog(resultCode, this, PLAY_SERVICE_RESOLUTION_REQUEST).show();
+            } else {
+                Toast.makeText(getApplicationContext(), "This device is not supported", Toast.LENGTH_SHORT).show();
+                finish();
+            }
+            return false;
+
+        }
+        return true;
+    }
+
+    @Override
+    protected void onStart() {
+        mGoogleApiClient.connect();
+        super.onStart();
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        Log.i(TAG, "onResume");
+        mGoogleApiClient.connect();
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        Log.i(TAG, "onPause");
+        mGoogleApiClient.disconnect();
+    }
+
+    @Override
+    protected void onStop() {
+        mGoogleApiClient.disconnect();
+        super.onStop();
+    }
+
+    @Override
+    protected void onRestart() {
+        super.onRestart();
+        Log.i(TAG, "onRestart");
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        Log.i(TAG, "onDestroy");
+    }
+
+    @Override
+    protected void onSaveInstanceState(Bundle outState) {
+        super.onSaveInstanceState(outState);
+        Log.i(TAG, "onSaveInstanceState");
+    }
+
+    @Override
+    protected void onRestoreInstanceState(Bundle savedInstanceState) {
+        super.onRestoreInstanceState(savedInstanceState);
+        Log.i(TAG, "onRestoreInstanceState");
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        // Inflate the menu; this adds items to the action bar if it is present.
+        //getMenuInflater().inflate(R.menu.menu_main, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        // Handle action bar item clicks here. The action bar will
+        // automatically handle clicks on the Home/Up button, so long
+        // as you specify a parent activity in AndroidManifest.xml.
+        int id = item.getItemId();
+
+        //noinspection SimplifiableIfStatement
+        if (id == R.id.action_settings) {
+            return true;
+        }
+
+        return super.onOptionsItemSelected(item);
+    }
+
+    @Override
+    public void onConnected(Bundle bundle) {
+        if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
+            // TODO: Consider calling
+            //    ActivityCompat#requestPermissions
+            // here to request the missing permissions, and then overriding
+            //   public void onRequestPermissionsResult(int requestCode, String[] permissions,
+            //                                          int[] grantResults)
+            // to handle the case where the user grants the permission. See the documentation
+            // for ActivityCompat#requestPermissions for more details.
+            return;
+        }
+        mLastLocation = LocationServices.FusedLocationApi.getLastLocation(
+                mGoogleApiClient);
+        if (mLastLocation != null) {
+            double latitude = mLastLocation.getLatitude();
+            double longitude = mLastLocation.getLongitude();
+            System.out.println("==================================================");
+            System.out.println("Successfully Got current Location by Google API");
+            System.out.println(latitude);
+            System.out.println(longitude);
+            System.out.println("==================================================");
+        }else{
+            System.out.println("mLastLocation is null!!!!!!!!");
+        }
+    }
+
+    @Override
+    public void onConnectionSuspended(int i) {
+        mGoogleApiClient.connect();
+    }
+
+    @Override
+    public void onLocationChanged(Location location) {
+        mLastLocation = location;
+
+        Toast.makeText(getApplicationContext(), "Location Changed!", Toast.LENGTH_SHORT).show();
+    }
+
+    @Override
+    public void onStatusChanged(String provider, int status, Bundle extras) {
+
+    }
+
+    @Override
+    public void onProviderEnabled(String provider) {
+
+    }
+
+    @Override
+    public void onProviderDisabled(String provider) {
+
+    }
+
+    @Override
+    public void onConnectionFailed(ConnectionResult connectionResult) {
+        Log.i(TAG, "Connection Failed: " + connectionResult.getErrorCode());
+    }
+
+
+
 
 }
