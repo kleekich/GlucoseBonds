@@ -44,7 +44,7 @@
             android:value="@integer/google_play_services_version" />
         <meta-data
             android:name="com.google.android.geo.API_KEY"
-            android:value="AIzaSyBo3S4m5_nQOEXtk0Gu2efnmkV606niFyo" />
+            android:value="AIzaSyDpQuH3rwibX2Yj4JWBHgV9yHzrxLwIizc" />
 
         <activity android:name="com.example.ecalo.glucosebonds1.MainActivity" >
             <intent-filter>

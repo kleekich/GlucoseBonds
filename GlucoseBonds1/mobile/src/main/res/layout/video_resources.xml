@@ -6,63 +6,62 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="60dp"
-        android:id="@+id/linearLayout3"
-        android:background="@color/small_bck">
-
+        android:layout_height="wrap_content"
+        android:id="@+id/linearLayout3">
 
         <ImageView
             android:layout_width="50dp"
-            android:layout_height="50dp"
+            android:layout_height="58dp"
+            android:id="@+id/imageView5"
             android:src="@drawable/glucosebondicon"
             android:layout_alignParentTop="true"
-            android:layout_alignParentStart="true"
-            android:layout_gravity="center_vertical" />
+            android:layout_alignParentStart="true" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceMedium"
             android:text="Video Resources"
-            android:textColor="#fcf9f9"
+            android:id="@+id/textView"
+            android:textColor="#fefbfb"
             android:paddingTop="10dp"
             android:layout_alignTop="@+id/imageView2"
             android:layout_toEndOf="@+id/imageView2"
             android:layout_marginTop="15dp" />
-        <ImageView
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:src="@drawable/more"
-            android:layout_gravity="center_vertical"
-            android:layout_marginLeft="140dp"/>
+
     </LinearLayout>
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="Title of the Video"
+        android:text="Type 1 Diabetes: A Guide for Children"
         android:id="@+id/textView7"
+        android:textColor="#fbf9f9"
+        android:textSize="30dp"
         android:layout_below="@+id/linearLayout3"
-        android:layout_centerHorizontal="true"
-        android:textColor="#fbf9f9" />
+        android:layout_alignParentStart="true"
+        android:layout_margin="10dp" />
 
-    <VideoView
-        android:layout_width="350dp"
-        android:layout_height="225dp"
-        android:id="@+id/videoView"
+
+    <com.google.android.youtube.player.YouTubePlayerView
+        android:id="@+id/youtube_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:layout_below="@+id/textView7"
-        android:layout_centerHorizontal="true" />
+        android:layout_alignParentStart="true" />
 
     <TextView
-        android:layout_width="350dp"
-        android:layout_height="150dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="Description of the Video Goes Here"
+        android:text="This short film from Diabetes UK aims to explain type 1 diabetes to children and show those living with type 1 that they are not alone. The film shows a little girl who has this form of the condition and wants to know what it means. A talking ball of light appears and shows her what's happening inside her body by telling a simple love story between cell wall and glucose. The cell wall pines for glucose until the genial insulin genie swoops across the cells and unlocks them so they can be reunited with glucose, their long-lost friend"
+        android:textSize="15dp"
         android:id="@+id/textView8"
-        android:layout_below="@+id/videoView"
-        android:layout_centerHorizontal="true"
-        android:textColor="#fdfbfb" />
+        android:textColor="#fdfbfb"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_margin="10dp" />
 
 
 </RelativeLayout>

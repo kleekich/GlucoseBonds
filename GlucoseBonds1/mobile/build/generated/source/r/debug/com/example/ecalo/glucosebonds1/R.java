@@ -3210,7 +3210,6 @@ containing a value of this type.
         public static final int up=0x7f0e000b;
         public static final int useLogo=0x7f0e0016;
         public static final int username=0x7f0e00c4;
-        public static final int videoView=0x7f0e0112;
         public static final int view_offset_helper=0x7f0e000c;
         public static final int webview=0x7f0e0114;
         public static final int wide=0x7f0e0042;
@@ -3218,6 +3217,7 @@ containing a value of this type.
         public static final int withText=0x7f0e003f;
         public static final int wrap_content=0x7f0e001c;
         public static final int wrapper=0x7f0e00c3;
+        public static final int youtube_view=0x7f0e0112;
     }
     public static final class integer {
         public static final int abc_config_activityDefaultDur=0x7f0b0002;
@@ -3423,7 +3423,9 @@ containing a value of this type.
         public static final int decline=0x7f07004d;
         public static final int dummy_button=0x7f07004e;
         public static final int dummy_content=0x7f07004f;
-        public static final int logolabel=0x7f070050;
+        public static final int google_app_id=0x7f070050;
+        public static final int hello_world=0x7f070051;
+        public static final int logolabel=0x7f070052;
         public static final int mr_media_route_button_content_description=0x7f070030;
         public static final int mr_media_route_chooser_searching=0x7f070031;
         public static final int mr_media_route_chooser_title=0x7f070032;
@@ -3435,17 +3437,20 @@ containing a value of this type.
         public static final int mr_media_route_controller_stop=0x7f070038;
         public static final int mr_system_route_name=0x7f070039;
         public static final int mr_user_route_category_name=0x7f07003a;
-        public static final int navigation_drawer_close=0x7f070051;
-        public static final int navigation_drawer_open=0x7f070052;
-        public static final int num_likes=0x7f070053;
+        public static final int navigation_drawer_close=0x7f070053;
+        public static final int navigation_drawer_open=0x7f070054;
+        public static final int num_likes=0x7f070055;
         public static final int place_autocomplete_clear_button=0x7f07003b;
         public static final int place_autocomplete_search_hint=0x7f07003c;
+        public static final int player_error=0x7f070056;
+        public static final int seek_to=0x7f070057;
+        public static final int seek_to_hint=0x7f070058;
         public static final int status_bar_notification_info_overflow=0x7f07003d;
-        public static final int store_picture_message=0x7f070054;
-        public static final int store_picture_title=0x7f070055;
-        public static final int title_activity_login=0x7f070056;
-        public static final int title_activity_main2=0x7f070057;
-        public static final int title_activity_three_mains=0x7f070058;
+        public static final int store_picture_message=0x7f070059;
+        public static final int store_picture_title=0x7f07005a;
+        public static final int title_activity_login=0x7f07005b;
+        public static final int title_activity_main2=0x7f07005c;
+        public static final int title_activity_three_mains=0x7f07005d;
         public static final int wallet_buy_button_place_holder=0x7f07003e;
     }
     public static final class style {
