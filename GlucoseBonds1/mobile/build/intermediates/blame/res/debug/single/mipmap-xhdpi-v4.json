@@ -1,26 +1,10 @@
 [
     {
-        "merged": "C:\\Users\\Kangsik\\Documents\\cs160\\Group-10-Project\\GlucoseBonds1\\mobile\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi-v4\\ic_launcher.png",
-        "source": "C:\\Users\\Kangsik\\Documents\\cs160\\Group-10-Project\\GlucoseBonds1\\mobile\\src\\main\\res\\mipmap-xhdpi\\ic_launcher.png"
-    },
-    {
         "merged": "C:\\Users\\Allen\\Desktop\\Glucose Bonds\\GlucoseBonds1\\mobile\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi-v4\\ic_launcher.png",
         "source": "C:\\Users\\Allen\\Desktop\\Glucose Bonds\\GlucoseBonds1\\mobile\\src\\main\\res\\mipmap-xhdpi\\ic_launcher.png"
     },
     {
-        "merged": "C:\\Users\\joel\\AndroidStudioProjects\\GlucoseBonds1\\mobile\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi-v4\\logo.png",
-        "source": "C:\\Users\\joel\\AndroidStudioProjects\\GlucoseBonds1\\mobile\\src\\main\\res\\mipmap-xhdpi\\logo.png"
-    },
-    {
         "merged": "C:\\Users\\Allen\\Desktop\\Glucose Bonds\\GlucoseBonds1\\mobile\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi-v4\\logo.png",
         "source": "C:\\Users\\Allen\\Desktop\\Glucose Bonds\\GlucoseBonds1\\mobile\\src\\main\\res\\mipmap-xhdpi\\logo.png"
-    },
-    {
-        "merged": "C:\\Users\\Kangsik\\Documents\\cs160\\Group-10-Project\\GlucoseBonds1\\mobile\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi-v4\\logo.png",
-        "source": "C:\\Users\\Kangsik\\Documents\\cs160\\Group-10-Project\\GlucoseBonds1\\mobile\\src\\main\\res\\mipmap-xhdpi\\logo.png"
-    },
-    {
-        "merged": "C:\\Users\\joel\\AndroidStudioProjects\\GlucoseBonds1\\mobile\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi-v4\\ic_launcher.png",
-        "source": "C:\\Users\\joel\\AndroidStudioProjects\\GlucoseBonds1\\mobile\\src\\main\\res\\mipmap-xhdpi\\ic_launcher.png"
     }
 ]

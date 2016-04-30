@@ -28,6 +28,7 @@
             android:layout_gravity="center_horizontal">
 
             <EditText
+                android:id="@+id/username"
                 android:layout_width="286dp"
                 android:layout_height="40dp"
                 android:hint="Username"
@@ -37,14 +38,7 @@
                 android:layout_marginTop="5dp" />
 
             <EditText
-                android:layout_width="286dp"
-                android:layout_height="40dp"
-                android:hint="Last Name"
-                android:background="@drawable/text_box"
-                android:layout_gravity="center"
-                android:layout_marginLeft="0dp"
-                android:layout_marginTop="5dp" />
-            <EditText
+                android:id="@+id/first_name"
                 android:layout_width="286dp"
                 android:layout_height="40dp"
                 android:hint="First Name"
@@ -53,14 +47,16 @@
                 android:layout_marginLeft="0dp"
                 android:layout_marginTop="5dp" />
             <EditText
+                android:id="@+id/last_name"
                 android:layout_width="286dp"
                 android:layout_height="40dp"
-                android:hint="Child Name"
+                android:hint="Last Name"
                 android:background="@drawable/text_box"
                 android:layout_gravity="center"
                 android:layout_marginLeft="0dp"
                 android:layout_marginTop="5dp" />
             <EditText
+                android:id="@+id/password"
                 android:layout_width="286dp"
                 android:layout_height="40dp"
                 android:hint="Passwords"
@@ -69,9 +65,19 @@
                 android:layout_marginLeft="0dp"
                 android:layout_marginTop="5dp" />
             <EditText
+                android:id="@+id/address"
                 android:layout_width="286dp"
                 android:layout_height="40dp"
                 android:hint="Address"
+                android:background="@drawable/text_box"
+                android:layout_gravity="center"
+                android:layout_marginLeft="0dp"
+                android:layout_marginTop="5dp" />
+            <EditText
+                android:id="@+id/child_name"
+                android:layout_width="286dp"
+                android:layout_height="40dp"
+                android:hint="Child Name"
                 android:background="@drawable/text_box"
                 android:layout_gravity="center"
                 android:layout_marginLeft="0dp"
@@ -105,6 +111,7 @@
                 android:orientation="horizontal"
                 android:layout_gravity="center_horizontal">
                 <EditText
+                    android:id="@+id/diag_month"
                     android:layout_width="50dp"
                     android:layout_height="30dp"
                     android:background="@drawable/text_box"
@@ -119,6 +126,7 @@
                     android:textSize="30dp"
                     android:layout_gravity="center_vertical" />
                 <EditText
+                    android:id="@+id/diag_day"
                     android:layout_width="50dp"
                     android:layout_height="30dp"
                     android:background="@drawable/text_box"
@@ -134,6 +142,7 @@
                     android:textSize="30dp"
                     android:layout_gravity="center_vertical" />
                 <EditText
+                    android:id="@+id/diag_year"
                     android:layout_width="50dp"
                     android:layout_height="30dp"
                     android:background="@drawable/text_box"

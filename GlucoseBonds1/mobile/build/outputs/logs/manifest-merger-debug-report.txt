@@ -1,6 +1,6 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\Users\Allen\Desktop\Glucose Bonds\GlucoseBonds1\mobile\src\main\AndroidManifest.xml:2:1-204:12
+ADDED from C:\Users\Allen\Desktop\Glucose Bonds\GlucoseBonds1\mobile\src\main\AndroidManifest.xml:2:1-213:12
 	xmlns:android
 		ADDED from C:\Users\Allen\Desktop\Glucose Bonds\GlucoseBonds1\mobile\src\main\AndroidManifest.xml:2:11-69
 	package
@@ -72,7 +72,7 @@ ADDED from C:\Users\Allen\Desktop\Glucose Bonds\GlucoseBonds1\mobile\src\main\An
 	android:name
 		ADDED from C:\Users\Allen\Desktop\Glucose Bonds\GlucoseBonds1\mobile\src\main\AndroidManifest.xml:9:22-78
 application
-ADDED from C:\Users\Allen\Desktop\Glucose Bonds\GlucoseBonds1\mobile\src\main\AndroidManifest.xml:11:5-202:19
+ADDED from C:\Users\Allen\Desktop\Glucose Bonds\GlucoseBonds1\mobile\src\main\AndroidManifest.xml:11:5-211:19
 MERGED from [com.android.support:appcompat-v7:23.2.0] C:\Users\Allen\Desktop\Glucose Bonds\GlucoseBonds1\mobile\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.2.0\AndroidManifest.xml:25:5-20
 MERGED from [com.android.support:support-v4:23.2.0] C:\Users\Allen\Desktop\Glucose Bonds\GlucoseBonds1\mobile\build\intermediates\exploded-aar\com.android.support\support-v4\23.2.0\AndroidManifest.xml:22:5-20
 MERGED from [com.android.support:animated-vector-drawable:23.2.0] C:\Users\Allen\Desktop\Glucose Bonds\GlucoseBonds1\mobile\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\23.2.0\AndroidManifest.xml:7:5-20
@@ -529,58 +529,68 @@ ADDED from C:\Users\Allen\Desktop\Glucose Bonds\GlucoseBonds1\mobile\src\main\An
 		ADDED from C:\Users\Allen\Desktop\Glucose Bonds\GlucoseBonds1\mobile\src\main\AndroidManifest.xml:150:13-60
 	android:name
 		ADDED from C:\Users\Allen\Desktop\Glucose Bonds\GlucoseBonds1\mobile\src\main\AndroidManifest.xml:148:13-45
-activity#com.example.ecalo.glucosebonds1.FindMentorActivity
+activity#com.example.ecalo.glucosebonds1.RegisteredMentorActivity
 ADDED from C:\Users\Allen\Desktop\Glucose Bonds\GlucoseBonds1\mobile\src\main\AndroidManifest.xml:156:9-164:20
 	android:label
 		ADDED from C:\Users\Allen\Desktop\Glucose Bonds\GlucoseBonds1\mobile\src\main\AndroidManifest.xml:158:13-63
 	android:theme
 		ADDED from C:\Users\Allen\Desktop\Glucose Bonds\GlucoseBonds1\mobile\src\main\AndroidManifest.xml:160:13-56
 	android:parentActivityName
-		ADDED from C:\Users\Allen\Desktop\Glucose Bonds\GlucoseBonds1\mobile\src\main\AndroidManifest.xml:159:13-60
+		ADDED from C:\Users\Allen\Desktop\Glucose Bonds\GlucoseBonds1\mobile\src\main\AndroidManifest.xml:159:13-59
 	android:name
-		ADDED from C:\Users\Allen\Desktop\Glucose Bonds\GlucoseBonds1\mobile\src\main\AndroidManifest.xml:157:13-47
-activity#com.example.ecalo.glucosebonds1.MentorsListActivity
-ADDED from C:\Users\Allen\Desktop\Glucose Bonds\GlucoseBonds1\mobile\src\main\AndroidManifest.xml:165:9-177:20
+		ADDED from C:\Users\Allen\Desktop\Glucose Bonds\GlucoseBonds1\mobile\src\main\AndroidManifest.xml:157:13-53
+activity#com.example.ecalo.glucosebonds1.FindMentorActivity
+ADDED from C:\Users\Allen\Desktop\Glucose Bonds\GlucoseBonds1\mobile\src\main\AndroidManifest.xml:165:9-173:20
 	android:label
 		ADDED from C:\Users\Allen\Desktop\Glucose Bonds\GlucoseBonds1\mobile\src\main\AndroidManifest.xml:167:13-63
 	android:theme
 		ADDED from C:\Users\Allen\Desktop\Glucose Bonds\GlucoseBonds1\mobile\src\main\AndroidManifest.xml:169:13-56
 	android:parentActivityName
-		ADDED from C:\Users\Allen\Desktop\Glucose Bonds\GlucoseBonds1\mobile\src\main\AndroidManifest.xml:168:13-55
+		ADDED from C:\Users\Allen\Desktop\Glucose Bonds\GlucoseBonds1\mobile\src\main\AndroidManifest.xml:168:13-60
 	android:name
-		ADDED from C:\Users\Allen\Desktop\Glucose Bonds\GlucoseBonds1\mobile\src\main\AndroidManifest.xml:166:13-48
-activity#com.example.ecalo.glucosebonds1.VideoActivity
-ADDED from C:\Users\Allen\Desktop\Glucose Bonds\GlucoseBonds1\mobile\src\main\AndroidManifest.xml:178:9-186:20
+		ADDED from C:\Users\Allen\Desktop\Glucose Bonds\GlucoseBonds1\mobile\src\main\AndroidManifest.xml:166:13-47
+activity#com.example.ecalo.glucosebonds1.MentorsListActivity
+ADDED from C:\Users\Allen\Desktop\Glucose Bonds\GlucoseBonds1\mobile\src\main\AndroidManifest.xml:174:9-186:20
 	android:label
-		ADDED from C:\Users\Allen\Desktop\Glucose Bonds\GlucoseBonds1\mobile\src\main\AndroidManifest.xml:180:13-63
+		ADDED from C:\Users\Allen\Desktop\Glucose Bonds\GlucoseBonds1\mobile\src\main\AndroidManifest.xml:176:13-63
 	android:theme
-		ADDED from C:\Users\Allen\Desktop\Glucose Bonds\GlucoseBonds1\mobile\src\main\AndroidManifest.xml:182:13-56
+		ADDED from C:\Users\Allen\Desktop\Glucose Bonds\GlucoseBonds1\mobile\src\main\AndroidManifest.xml:178:13-56
 	android:parentActivityName
-		ADDED from C:\Users\Allen\Desktop\Glucose Bonds\GlucoseBonds1\mobile\src\main\AndroidManifest.xml:181:13-60
+		ADDED from C:\Users\Allen\Desktop\Glucose Bonds\GlucoseBonds1\mobile\src\main\AndroidManifest.xml:177:13-55
 	android:name
-		ADDED from C:\Users\Allen\Desktop\Glucose Bonds\GlucoseBonds1\mobile\src\main\AndroidManifest.xml:179:13-42
-service#com.example.ecalo.glucosebonds1.PhoneToWatchService
-ADDED from C:\Users\Allen\Desktop\Glucose Bonds\GlucoseBonds1\mobile\src\main\AndroidManifest.xml:187:9-56
-	android:name
-		ADDED from C:\Users\Allen\Desktop\Glucose Bonds\GlucoseBonds1\mobile\src\main\AndroidManifest.xml:187:18-53
-service#com.example.ecalo.glucosebonds1.PhoneListenerService
-ADDED from C:\Users\Allen\Desktop\Glucose Bonds\GlucoseBonds1\mobile\src\main\AndroidManifest.xml:188:9-192:19
-	android:name
-		ADDED from C:\Users\Allen\Desktop\Glucose Bonds\GlucoseBonds1\mobile\src\main\AndroidManifest.xml:188:18-54
-intent-filter#com.google.android.gms.wearable.BIND_LISTENER
-ADDED from C:\Users\Allen\Desktop\Glucose Bonds\GlucoseBonds1\mobile\src\main\AndroidManifest.xml:189:13-191:29
-action#com.google.android.gms.wearable.BIND_LISTENER
-ADDED from C:\Users\Allen\Desktop\Glucose Bonds\GlucoseBonds1\mobile\src\main\AndroidManifest.xml:190:17-88
-	android:name
-		ADDED from C:\Users\Allen\Desktop\Glucose Bonds\GlucoseBonds1\mobile\src\main\AndroidManifest.xml:190:25-85
-activity#com.example.ecalo.glucosebonds1.Main2Activity
-ADDED from C:\Users\Allen\Desktop\Glucose Bonds\GlucoseBonds1\mobile\src\main\AndroidManifest.xml:194:9-201:20
+		ADDED from C:\Users\Allen\Desktop\Glucose Bonds\GlucoseBonds1\mobile\src\main\AndroidManifest.xml:175:13-48
+activity#com.example.ecalo.glucosebonds1.VideoActivity
+ADDED from C:\Users\Allen\Desktop\Glucose Bonds\GlucoseBonds1\mobile\src\main\AndroidManifest.xml:187:9-195:20
 	android:label
-		ADDED from C:\Users\Allen\Desktop\Glucose Bonds\GlucoseBonds1\mobile\src\main\AndroidManifest.xml:196:13-57
+		ADDED from C:\Users\Allen\Desktop\Glucose Bonds\GlucoseBonds1\mobile\src\main\AndroidManifest.xml:189:13-63
 	android:theme
-		ADDED from C:\Users\Allen\Desktop\Glucose Bonds\GlucoseBonds1\mobile\src\main\AndroidManifest.xml:197:13-56
+		ADDED from C:\Users\Allen\Desktop\Glucose Bonds\GlucoseBonds1\mobile\src\main\AndroidManifest.xml:191:13-56
+	android:parentActivityName
+		ADDED from C:\Users\Allen\Desktop\Glucose Bonds\GlucoseBonds1\mobile\src\main\AndroidManifest.xml:190:13-60
 	android:name
-		ADDED from C:\Users\Allen\Desktop\Glucose Bonds\GlucoseBonds1\mobile\src\main\AndroidManifest.xml:195:13-42
+		ADDED from C:\Users\Allen\Desktop\Glucose Bonds\GlucoseBonds1\mobile\src\main\AndroidManifest.xml:188:13-42
+service#com.example.ecalo.glucosebonds1.PhoneToWatchService
+ADDED from C:\Users\Allen\Desktop\Glucose Bonds\GlucoseBonds1\mobile\src\main\AndroidManifest.xml:196:9-56
+	android:name
+		ADDED from C:\Users\Allen\Desktop\Glucose Bonds\GlucoseBonds1\mobile\src\main\AndroidManifest.xml:196:18-53
+service#com.example.ecalo.glucosebonds1.PhoneListenerService
+ADDED from C:\Users\Allen\Desktop\Glucose Bonds\GlucoseBonds1\mobile\src\main\AndroidManifest.xml:197:9-201:19
+	android:name
+		ADDED from C:\Users\Allen\Desktop\Glucose Bonds\GlucoseBonds1\mobile\src\main\AndroidManifest.xml:197:18-54
+intent-filter#com.google.android.gms.wearable.BIND_LISTENER
+ADDED from C:\Users\Allen\Desktop\Glucose Bonds\GlucoseBonds1\mobile\src\main\AndroidManifest.xml:198:13-200:29
+action#com.google.android.gms.wearable.BIND_LISTENER
+ADDED from C:\Users\Allen\Desktop\Glucose Bonds\GlucoseBonds1\mobile\src\main\AndroidManifest.xml:199:17-88
+	android:name
+		ADDED from C:\Users\Allen\Desktop\Glucose Bonds\GlucoseBonds1\mobile\src\main\AndroidManifest.xml:199:25-85
+activity#com.example.ecalo.glucosebonds1.Main2Activity
+ADDED from C:\Users\Allen\Desktop\Glucose Bonds\GlucoseBonds1\mobile\src\main\AndroidManifest.xml:203:9-210:20
+	android:label
+		ADDED from C:\Users\Allen\Desktop\Glucose Bonds\GlucoseBonds1\mobile\src\main\AndroidManifest.xml:205:13-57
+	android:theme
+		ADDED from C:\Users\Allen\Desktop\Glucose Bonds\GlucoseBonds1\mobile\src\main\AndroidManifest.xml:206:13-56
+	android:name
+		ADDED from C:\Users\Allen\Desktop\Glucose Bonds\GlucoseBonds1\mobile\src\main\AndroidManifest.xml:204:13-42
 uses-sdk
 INJECTED from C:\Users\Allen\Desktop\Glucose Bonds\GlucoseBonds1\mobile\src\main\AndroidManifest.xml reason: use-sdk injection requested
 MERGED from [com.android.support:appcompat-v7:23.2.0] C:\Users\Allen\Desktop\Glucose Bonds\GlucoseBonds1\mobile\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.2.0\AndroidManifest.xml:21:5-23:78

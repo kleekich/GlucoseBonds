@@ -15,6 +15,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.LinearLayout;
+import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
 
@@ -28,7 +29,9 @@ import com.baasbox.android.Role;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
-import org.json.JSONTokener;
+
+import java.util.ArrayList;
+import java.util.List;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -59,6 +62,9 @@ public class DetailedForumActivity extends AppCompatActivity{
 
     public TextView title;
     public TextView questionContent;
+    public TextView nameDate;
+    public ImageView m_img;
+
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         context = this;
@@ -67,6 +73,8 @@ public class DetailedForumActivity extends AppCompatActivity{
 //        button.setImageResource(R.drawable.education_screen);
         title = (TextView) findViewById(R.id.title);
         questionContent = (TextView) findViewById(R.id.questionContent);
+        nameDate = (TextView) findViewById(R.id.name_date);
+        m_img = (ImageView) findViewById(R.id.main_img);
 
         mCollection = getIntent().getStringExtra("collection");
         listItems = new ArrayList<>();
@@ -92,6 +100,16 @@ public class DetailedForumActivity extends AppCompatActivity{
         questionContent.setText(contentQuestion);
 
         View createNew = (View) findViewById(R.id.new_question);
+
+        int main_img = getIntent().getIntExtra("img", -1);
+
+        String name = getIntent().getStringExtra("user");
+
+        m_img.setImageResource(main_img);
+        title.setText(contentTitle);
+        questionContent.setText(contentQuestion);
+        nameDate.setText(name + " Posted 4/28/16");
+
         createNew.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -108,7 +126,8 @@ public class DetailedForumActivity extends AppCompatActivity{
                 builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
-                        createDoc(title.getText().toString(), comment.getText().toString(), "");
+                        //createDoc(title.getText().toString(), comment.getText().toString(), "");
+                        createDoc(comment.getText().toString(), "", "");
                         fetchFromCollection(mCollection);
                         //m_Text = input.getText().toString();
                     }
@@ -128,15 +147,15 @@ public class DetailedForumActivity extends AppCompatActivity{
 
     }
 
-    public void testJSON() throws JSONException {
 
+    public void testJSON() throws JSONException {
 
         //This creates the new json object which represents the specific question that you want to see in
         //forum page
         JSONObject forumQuestion = new JSONObject();
-        forumQuestion.put("firstName", "John");
+        forumQuestion.put("firstName", "blah");
         forumQuestion.put("lastName", "Smith");
-        forumQuestion.put("dayPosted", "4/14/16");
+        forumQuestion.put("dayPosted", "4/28/16");
         forumQuestion.put("likes", "6");
         forumQuestion.put("question", "What are some ways to get your child to exercise more?");
         forumQuestion.put("comments", 7);
@@ -148,8 +167,8 @@ public class DetailedForumActivity extends AppCompatActivity{
 
         //you use this to extract information and population the text boxes
         JSONObject subObject = forumQuestionArray.getJSONObject(0);
-        FirstName = subObject.getString("firstName");
-        LastName = subObject.getString("lastName");
+        //FirstName = subObject.getString("firstName");
+        //LastName = subObject.getString("lastName");
         DayPosted = subObject.getString("dayPosted");
         likes = subObject.getString("likes");
         question = subObject.getString("question");
@@ -163,7 +182,21 @@ public class DetailedForumActivity extends AppCompatActivity{
     private void createDoc(String title, String body, String collection) {
         BaasDocument doc = new BaasDocument(mCollection);
         doc.put("title", title);
-        doc.put("body", body);
+
+        BaasUser user = BaasUser.current();
+
+        try {
+            JSONObject bodyJSON = new JSONObject();
+            bodyJSON.put("user", user.getScope(BaasUser.Scope.REGISTERED).getString("Name"));
+            bodyJSON.put("img", user.getScope(BaasUser.Scope.REGISTERED).getInt("img"));
+            bodyJSON.put("body", title);
+
+            doc.put("body", bodyJSON.toString());
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
 
         doc.save(new BaasHandler<BaasDocument>() {
             @Override
@@ -236,6 +269,8 @@ public class DetailedForumActivity extends AppCompatActivity{
                 v = vi.inflate(R.layout.comments, null);
 
                 holder = new Holder();
+                holder.img = (ImageView) v.findViewById(R.id.img);
+                holder.name = (TextView) v.findViewById(R.id.name);
                 holder.content = (TextView) v.findViewById(R.id.comment);
 
                 v.setTag(holder);
@@ -244,10 +279,20 @@ public class DetailedForumActivity extends AppCompatActivity{
                 holder = (Holder) v.getTag();
             }
 
-            String item = items.get(position);
+            String stringJSON = items.get(position);
+            try {
+                JSONObject bodyJSON = new JSONObject(stringJSON);
+                String name = bodyJSON.getString("user");
+                int img = bodyJSON.getInt("img");
+                String body = bodyJSON.getString("body");
 
-            if (item != null) {
-                holder.content.setText(item);
+                holder.img.setImageResource(img);
+                holder.name.setText(name);
+                holder.content.setText(body);
+
+            } catch (Exception e) {
+                Log.e("T", e.getMessage());
+                e.printStackTrace();
             }
 
             return v;
@@ -255,6 +300,8 @@ public class DetailedForumActivity extends AppCompatActivity{
     }
 
     private class Holder {
+        ImageView img;
+        TextView name;
         TextView content;
     }
 

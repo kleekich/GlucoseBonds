@@ -8,6 +8,7 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal">
         <ImageView
+            android:id="@+id/img"
             android:layout_width="70dp"
             android:layout_height="70dp"
             android:src="@drawable/img"
@@ -41,7 +42,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textColor="@color/mainRed"
-                    android:text="10 Likes"
+                    android:text="0 Likes"
                     android:layout_marginTop="15dp"
                     android:paddingStart="5dp"
                     android:paddingEnd="10dp"
@@ -55,7 +56,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textColor="#9a9a9a"
-                    android:text="7 Comments"
+                    android:text="0 Comments"
                     android:layout_marginTop="15dp"
                     android:paddingStart="10dp"
                     android:textSize="12dp" />
@@ -63,7 +64,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textColor="#9a9a9a"
-                    android:text="Posted 4/14/16"
+                    android:text="Posted 4/28/16"
                     android:layout_marginTop="15dp"
                     android:paddingStart="10dp"
                     android:textSize="12dp" />

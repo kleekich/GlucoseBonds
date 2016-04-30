@@ -2,13 +2,21 @@
 
 package com.example.ecalo.glucosebonds1;
 
+import android.content.Context;
 import android.content.Intent;
 import android.location.Address;
 import android.location.Geocoder;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.widget.TextView;
+import android.util.Log;
+import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ListView;
 
+import com.baasbox.android.BaasBox;
+import com.baasbox.android.BaasDocument;
+import com.baasbox.android.BaasHandler;
+import com.baasbox.android.BaasResult;
 import com.google.android.gms.maps.CameraUpdate;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
@@ -27,10 +35,10 @@ import java.util.List;
  * Created by Kangsik on 4/27/16.
  */
 public class MentorsListActivity extends AppCompatActivity {
-    private TextView mLatitudeText;
-    private TextView mLongitudeText;
+
     private Double latitude;
     private Double longitude;
+    private Context context;
 
 
     //For map
@@ -38,18 +46,95 @@ public class MentorsListActivity extends AppCompatActivity {
     private String currentLatString;
     private String currentLngString;
 
+    //For Addresses
+    private BaasBox client;
+    private ArrayList<LatLng> mentorsPointsList = new ArrayList<LatLng>();
+    private Long numDocs;
+
+
+    //for ListView
+    private ListView mentorListView;
+    private ArrayList<String> mentorsNames;
+    private String name;
+    private String address;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        context = this;
+        //For View
+        setContentView(R.layout.mentors_list);
+
         System.out.println("=============================");
         System.out.println("This is MentorsListActivity");
         System.out.println("=============================");
-        super.onCreate(savedInstanceState);
+        //Mentors List Heatmap
 
-        //For View
-        setContentView(R.layout.mentors_list);
-        mLatitudeText = (TextView)findViewById(R.id.latText);
-        mLongitudeText = (TextView)findViewById(R.id.lngText);
+        BaasBox.Builder builder = new BaasBox.Builder(this);
+        client =builder.setApiDomain("10.0.3.2")
+                .setPort(9000)
+                .setAppCode("1234567890")
+                .setHttpConnectionTimeout(3000)
+                .init();
+
+        BaasDocument.count("mentorAddresses",new BaasHandler<Long> () {
+            @Override
+            public void handle(BaasResult<Long> res) {
+                if (res.isSuccess()) {
+                    Log.d("LOG","visible document count is: "+res.value());
+                    numDocs = res.value();
+                } else {
+                    Log.e("LOG","Error!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
+                }
+            }
+        });
+
+        mentorsNames = new ArrayList<String>();
+
+
+        //Get mentor Addresses and put heat map when all addresses are pulled from server.
+        BaasDocument.fetchAll("mentorAddresses",
+                new BaasHandler<List<BaasDocument>>() {
+                    @Override
+                    public void handle(BaasResult<List<BaasDocument>> res) {
+
+                        if (res.isSuccess()) {
+                            for (BaasDocument doc : res.value()) {
+                                Log.d("LOG", "Doc: " + doc);
+                                /*this is so hacky way to do it, basically, if condition checks
+                                whether all documents are pulled from server by size of documents,
+                                then, if it is the last one, we put heat map.
+                                 */
+                                address = doc.getString("Address");
+                                name = doc.getString("Name");
+                                //For Map
+                                //mentorsPointsList.add(getLatLngFromAddress(address));
+                                //For ListView
+                                mentorsNames.add(name);
+                                if(false){
+                                    HeatmapTileProvider mProvider = new HeatmapTileProvider.Builder()
+                                            .data(mentorsPointsList)
+                                            .radius(50)
+                                            .build();
+                                    // Add a tile overlay to the map, using the heat map tile provider.
+                                    googleMap.addTileOverlay(new TileOverlayOptions().tileProvider(mProvider));
+                                }else{
+
+                                }
+                                //
+                            }
+                        } else {
+                            Log.e("LOG", "Error", res.error());
+
+                        }
+                    }
+                });
+
+
+
+
+
+
 
 
         //Get Intent
@@ -61,23 +146,49 @@ public class MentorsListActivity extends AppCompatActivity {
         longitude = Double.parseDouble(currentLngString);
 
 
-        mLatitudeText.setText(currentLatString);
-        mLongitudeText.setText(currentLngString);
+
 
 
         //Get map & user's current location
         googleMap = ((MapFragment) getFragmentManager().findFragmentById(R.id.map)).getMap();
         final LatLng currentLocation = new LatLng(latitude , longitude);
-        Marker TP = googleMap.addMarker(new MarkerOptions().position(currentLocation).title("Current Location"));
+        Marker TP = googleMap.addMarker(new MarkerOptions().position(currentLocation).title("Your Location"));
         googleMap.getUiSettings().setZoomGesturesEnabled(true);
         CameraUpdate center = CameraUpdateFactory.newLatLng(currentLocation);
-        CameraUpdate zoom = CameraUpdateFactory.zoomTo(13);
+        CameraUpdate zoom = CameraUpdateFactory.zoomTo(12);
         googleMap.moveCamera(center);
         googleMap.animateCamera(zoom);
 
 
-        //Mentors List Heatmap
-        ArrayList<LatLng> mentorsPointsList = new ArrayList<LatLng>();
+        //For List View
+
+        mentorListView = (ListView) findViewById(R.id.listViewMentors);
+
+
+
+        final MyAdapter mentorAdapter = new MyAdapter(MentorsListActivity.this, mentorsNames);
+
+        mentorListView.setAdapter(mentorAdapter);
+
+        mentorListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int position, long id) {
+
+                Intent disscussIntent = new Intent(context, MessageActivity.class);
+                Bundle extras = new Bundle();
+                String mentorName = (String) adapterView.getItemAtPosition(position);
+
+
+                extras.putString("MENTOR_NAME", mentorName);
+                extras.putBoolean("IS_MENTOR", false);
+
+                disscussIntent.putExtras(extras);
+                startActivity(disscussIntent);
+
+            }
+        });
+
+
 
         /* Original
         Double[] mentorPoint1 = getLocationFromAddress("2232 Durant Ave , CA");
@@ -89,6 +200,8 @@ public class MentorsListActivity extends AppCompatActivity {
         */
 
 
+
+        /*/////
         final LatLng point1 = getLatLngFromAddress("2232 Durant Ave , CA");
         final LatLng point2 = getLatLngFromAddress("2234 Durant Ave , CA");
         final LatLng point3 = getLatLngFromAddress("2236 Durant Ave , CA");
@@ -111,7 +224,7 @@ public class MentorsListActivity extends AppCompatActivity {
         // Add a tile overlay to the map, using the heat map tile provider.
         googleMap.addTileOverlay(new TileOverlayOptions().tileProvider(mProvider));
 
-
+        */////
 
 
 
@@ -156,7 +269,7 @@ public class MentorsListActivity extends AppCompatActivity {
         Geocoder coder = new Geocoder(this);
         List<Address> address;
         try {
-            address = coder.getFromLocationName(strAddress,5);
+            address = coder.getFromLocationName(strAddress,1);
             if (address==null) {
                 return null;
             }

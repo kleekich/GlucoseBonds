@@ -17,6 +17,7 @@ import android.widget.ImageButton;
 import android.widget.LinearLayout;
 import android.widget.Toast;
 
+import com.baasbox.android.BaasBox;
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.GooglePlayServicesUtil;
 import com.google.android.gms.common.api.GoogleApiClient;
@@ -26,6 +27,8 @@ import com.google.android.gms.wearable.Wearable;
 
 public class MentorshipActivity extends AppCompatActivity implements View.OnClickListener, GoogleApiClient.ConnectionCallbacks,
         GoogleApiClient.OnConnectionFailedListener, LocationListener {
+
+    private BaasBox client;
 
     Context context;
     private ImageButton findMentor, beMentor;
@@ -71,6 +74,7 @@ public class MentorshipActivity extends AppCompatActivity implements View.OnClic
             createLocationRequest();
         }
 
+
     }
 
     @Override
@@ -86,6 +90,7 @@ public class MentorshipActivity extends AppCompatActivity implements View.OnClic
                     //                                          int[] grantResults)
                     // to handle the case where the user grants the permission. See the documentation
                     // for ActivityCompat#requestPermissions for more details.
+                    Log.e("T", "failing permissions");
                     return;
                 }
                 mLastLocation = LocationServices.FusedLocationApi.getLastLocation(
@@ -105,7 +110,7 @@ public class MentorshipActivity extends AppCompatActivity implements View.OnClic
 
                 }else{
 
-                    System.out.println("fuuukkkk");
+                    System.out.println("No Last Location Detected");
                     System.out.println("==================================================");
                 }
 
@@ -212,11 +217,6 @@ public class MentorshipActivity extends AppCompatActivity implements View.OnClic
         // automatically handle clicks on the Home/Up button, so long
         // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
-
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
-        }
 
         return super.onOptionsItemSelected(item);
     }

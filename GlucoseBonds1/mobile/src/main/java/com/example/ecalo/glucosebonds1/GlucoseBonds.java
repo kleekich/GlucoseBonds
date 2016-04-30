@@ -26,4 +26,5 @@ public class GlucoseBonds extends Application {
                 .setHttpConnectionTimeout(30000)
                 .init();
     }
+
 }

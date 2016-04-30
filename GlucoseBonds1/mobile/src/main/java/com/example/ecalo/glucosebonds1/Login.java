@@ -62,8 +62,6 @@ public class Login extends AppCompatActivity {
             }
         });
 
-
-
         createNew = (TextView) findViewById(R.id.create_new);
         createNew.setOnClickListener(new View.OnClickListener() {
             @Override
