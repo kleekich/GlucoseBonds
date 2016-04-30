@@ -119,10 +119,11 @@
         android:orientation="horizontal"
         android:layout_gravity="center"
         android:layout_marginTop="20dp">
-        <ImageView
+        <ImageButton
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:src="@drawable/medical"
+            android:id="@+id/med_button"
             android:layout_margin="10dp" />
         <TextView
             android:layout_width="wrap_content"

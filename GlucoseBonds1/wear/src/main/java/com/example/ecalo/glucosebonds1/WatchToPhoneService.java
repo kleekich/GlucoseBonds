@@ -42,17 +42,16 @@ public class WatchToPhoneService extends Service implements GoogleApiClient.Conn
     public int onStartCommand(Intent intent, int flags, int startId) {
         // Which cat do we want to feed? Grab this info from INTENT
         // which was passed over when we called startService
-        Bundle extras = intent.getExtras();
-        final String position = String.valueOf(extras.getInt("position"));
-
         // Send the message with the cat name
+        Bundle extras = intent.getExtras();
+        final String pdata = extras.getString("pdata");
         new Thread(new Runnable() {
             @Override
             public void run() {
                 //first, connect to the apiclient
                 mWatchApiClient.connect();
                 //now that you're connected, send a massage with the cat name
-                sendMessage("/position", position);
+                sendMessage("/pdata", pdata);
             }
         }).start();
 
@@ -67,7 +66,6 @@ public class WatchToPhoneService extends Service implements GoogleApiClient.Conn
     @Override //alternate method to connecting: no longer create this in a new thread, but as a callback
     public void onConnected(Bundle bundle) {
         Log.d("T", "in onconnected");
-        //Log.e("T", "position is: " + bundle.getString("position"));
         Wearable.NodeApi.getConnectedNodes(mWatchApiClient)
                 .setResultCallback(new ResultCallback<NodeApi.GetConnectedNodesResult>() {
                     @Override
@@ -76,7 +74,6 @@ public class WatchToPhoneService extends Service implements GoogleApiClient.Conn
                         Log.d("T", "found nodes");
                         //when we find a connected node, we populate the list declared above
                         //finally, we can send a message
-                        //sendMessage("/position", "0");
                         Log.d("T", "sent");
                     }
                 });

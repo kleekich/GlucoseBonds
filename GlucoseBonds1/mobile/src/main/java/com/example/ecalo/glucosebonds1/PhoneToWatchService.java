@@ -44,10 +44,7 @@ public class PhoneToWatchService extends Service {
 
     @Override
     public int onStartCommand(Intent intent, int flags, int startId) {
-        // Grab info from INTENT
-        // which was passed over when we called startService
         Bundle extras = intent.getExtras();
-        //final String location = extras.getString("Location");
         final String data = extras.getString("data");
 
         // Send the message
