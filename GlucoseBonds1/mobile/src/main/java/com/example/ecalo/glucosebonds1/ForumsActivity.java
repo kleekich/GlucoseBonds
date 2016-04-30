@@ -68,7 +68,7 @@ public class ForumsActivity extends AppCompatActivity {
 
         setContentView(R.layout.general_forum);
 
-        Button createNew = (Button) findViewById(R.id.new_question);
+        View createNew = (View) findViewById(R.id.new_question);
         createNew.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

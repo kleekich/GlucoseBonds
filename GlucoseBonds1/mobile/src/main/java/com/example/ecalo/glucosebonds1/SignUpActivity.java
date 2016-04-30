@@ -64,6 +64,12 @@ public class SignUpActivity extends AppCompatActivity {
 
                 String username = ((EditText) findViewById(R.id.username)).getText().toString();
                 String password = ((EditText) findViewById(R.id.password)).getText().toString();
+
+                if (username.isEmpty() || password.isEmpty()) {
+                    Toast.makeText(context, "Invalid Credentials", Toast.LENGTH_SHORT).show();
+                    return;
+                }
+
                 BaasUser user = BaasUser.withUserName(username).setPassword(password);
 
                 user.getScope(BaasUser.Scope.REGISTERED).put("Name", firstname + " " + lastname);
@@ -77,8 +83,9 @@ public class SignUpActivity extends AppCompatActivity {
                     @Override
                     public void handle(BaasResult<BaasUser> baasResult) {
                         if (baasResult.isSuccess()) {
-                            Intent goWelcome = new Intent(context, WelcomeActivity.class);
-                            startActivity(goWelcome);
+                            //Intent goWelcome = new Intent(context, WelcomeActivity.class);
+                            //startActivity(goWelcome);
+                            finish();
                         } else {
                             Toast.makeText(SignUpActivity.this, "Failed to Sign Up", Toast.LENGTH_SHORT).show();
                         }

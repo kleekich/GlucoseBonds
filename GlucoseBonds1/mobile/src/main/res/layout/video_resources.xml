@@ -55,12 +55,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="This short film from Diabetes UK aims to explain type 1 diabetes to children and show those living with type 1 that they are not alone. The film shows a little girl who has this form of the condition and wants to know what it means. A talking ball of light appears and shows her what's happening inside her body by telling a simple love story between cell wall and glucose. The cell wall pines for glucose until the genial insulin genie swoops across the cells and unlocks them so they can be reunited with glucose, their long-lost friend"
+        android:text="This short film from Diabetes UK aims to explain type 1 diabetes to children and show those living with type 1 that they are not alone."
         android:textSize="15dp"
         android:id="@+id/textView8"
         android:textColor="#fdfbfb"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentEnd="true"
+        android:layout_below="@id/youtube_view"
         android:layout_margin="10dp" />
 
 

@@ -36,6 +36,12 @@ public class Login extends AppCompatActivity {
             public void onClick(View v) {
                 String username = ((EditText) findViewById(R.id.username)).getText().toString();
                 String password = ((EditText) findViewById(R.id.password)).getText().toString();
+
+                if (username.isEmpty() || password.isEmpty()) {
+                    Toast.makeText(context, "Invalid Login Credentials", Toast.LENGTH_SHORT).show();
+                    return;
+                }
+
                 BaasUser user = BaasUser.withUserName(username).setPassword(password);
 
                 user.login(new BaasHandler<BaasUser>() {
@@ -51,14 +57,6 @@ public class Login extends AppCompatActivity {
                     }
                 });
 
-            }
-        });
-
-        loginBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent welcomeActivity = new Intent(context, WelcomeActivity.class);
-                startActivity(welcomeActivity);
             }
         });
 

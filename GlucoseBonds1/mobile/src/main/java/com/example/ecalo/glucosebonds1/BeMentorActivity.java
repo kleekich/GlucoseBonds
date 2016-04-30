@@ -59,6 +59,7 @@ public class BeMentorActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent registeredIntent = new Intent(context, RegisteredMentorActivity.class);
                 startActivity(registeredIntent);
+                finish();
             }
         });
     }

@@ -29,36 +29,30 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme" >
-        <activity
-            android:name="com.example.ecalo.glucosebonds1.TestLoginActivity"
-            android:label="@string/title_activity_three_mains"
-            android:parentActivityName="com.example.ecalo.glucosebonds1.MainActivity"
-            android:theme="@style/AppTheme.NoActionBar" >
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.example.ecalo.glucosebonds1.MainActivity" />
-        </activity>
-
         <meta-data
             android:name="com.google.android.gms.version"
             android:value="@integer/google_play_services_version" />
         <meta-data
             android:name="com.google.android.geo.API_KEY"
-            android:value="AIzaSyDpQuH3rwibX2Yj4JWBHgV9yHzrxLwIizc" />
+            android:value="AIzaSyBo3S4m5_nQOEXtk0Gu2efnmkV606niFyo" />
 
-        <activity android:name="com.example.ecalo.glucosebonds1.MainActivity" >
+        <activity
+            android:name="com.example.ecalo.glucosebonds1.MainActivity"
+            android:theme="@style/AppTheme.NoActionBar" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="com.example.ecalo.glucosebonds1.WelcomeActivity" >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+        <activity
+            android:name="com.example.ecalo.glucosebonds1.WelcomeActivity"
+            android:label="@string/title_activity_three_mains"
+            android:parentActivityName="com.example.ecalo.glucosebonds1.MainActivity"
+            android:theme="@style/AppTheme.NoActionBar" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.ecalo.glucosebonds1.Login" />
         </activity>
         <activity
             android:name="com.example.ecalo.glucosebonds1.Login"

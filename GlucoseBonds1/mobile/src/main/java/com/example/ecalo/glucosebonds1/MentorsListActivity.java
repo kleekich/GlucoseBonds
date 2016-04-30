@@ -70,13 +70,6 @@ public class MentorsListActivity extends AppCompatActivity {
         System.out.println("=============================");
         //Mentors List Heatmap
 
-        BaasBox.Builder builder = new BaasBox.Builder(this);
-        client =builder.setApiDomain("10.0.3.2")
-                .setPort(9000)
-                .setAppCode("1234567890")
-                .setHttpConnectionTimeout(3000)
-                .init();
-
         BaasDocument.count("mentorAddresses",new BaasHandler<Long> () {
             @Override
             public void handle(BaasResult<Long> res) {
@@ -108,10 +101,10 @@ public class MentorsListActivity extends AppCompatActivity {
                                 address = doc.getString("Address");
                                 name = doc.getString("Name");
                                 //For Map
-                                //mentorsPointsList.add(getLatLngFromAddress(address));
+                                mentorsPointsList.add(getLatLngFromAddress(address));
                                 //For ListView
                                 mentorsNames.add(name);
-                                if(false){
+                                if(mentorsPointsList.size() == numDocs){
                                     HeatmapTileProvider mProvider = new HeatmapTileProvider.Builder()
                                             .data(mentorsPointsList)
                                             .radius(50)

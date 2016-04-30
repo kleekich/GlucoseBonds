@@ -7,6 +7,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
 import android.widget.ImageButton;
+import android.widget.LinearLayout;
 
 import com.baasbox.android.BaasBox;
 import com.baasbox.android.BaasDocument;
@@ -19,13 +20,13 @@ import com.baasbox.android.BaasUser;
  */
 public class RegisteredMentorActivity extends AppCompatActivity {
     private BaasBox client;
-    ImageButton buttonMentorship;
+    LinearLayout buttonMentorship;
     Context context;
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         context= this;
         setContentView(R.layout.activity_registered_mentor);
-        buttonMentorship = (ImageButton)findViewById(R.id.buttonMentorship);
+        buttonMentorship = (LinearLayout)findViewById(R.id.buttonMentorship);
         //buttonRegister.setImageResource(R.drawable.be_mentor);
 
 
@@ -57,8 +58,9 @@ public class RegisteredMentorActivity extends AppCompatActivity {
         buttonMentorship.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent mentorshipIntent = new Intent(context, MentorshipActivity.class);
-                startActivity(mentorshipIntent);
+                finish();
+                //Intent mentorshipIntent = new Intent(context, MentorshipActivity.class);
+                //startActivity(mentorshipIntent);
             }
         });
     }
