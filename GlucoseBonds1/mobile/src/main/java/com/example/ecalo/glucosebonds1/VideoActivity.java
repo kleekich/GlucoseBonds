@@ -31,15 +31,6 @@ public class VideoActivity extends YouTubeBaseActivity implements YouTubePlayer.
         super.onCreate(savedInstanceState);
         context = this;
         setContentView(R.layout.video_resources);
-//        button = (ImageButton) findViewById(R.id.img_btn);
-//        button.setImageResource(R.drawable.videos_screen);
-//
-//        button.setOnTouchListener(new GestureHelper(context));
-
-        // start video activity on watch
-
-
-
         youTubeView = (YouTubePlayerView) findViewById(R.id.youtube_view);
         youTubeView.initialize(YOUTUBE_API_KEY, this);
 

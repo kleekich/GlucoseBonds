@@ -24,12 +24,6 @@ public class MainActivity extends AppCompatActivity {
         context = this;
         setContentView(R.layout.home_screen);
         home_screen = (LinearLayout) findViewById(R.id.homeScreen);
-        home_screen.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent loginActivity = new Intent(context, Login.class);
-                startActivity(loginActivity);            }
-        });
 
         Handler handler = new Handler();
         handler.postDelayed(new Runnable() {
