@@ -1,5 +1,4 @@
 
-
 package com.example.ecalo.glucosebonds1;
 
 import android.content.Context;
@@ -70,6 +69,13 @@ public class MentorsListActivity extends AppCompatActivity {
         System.out.println("=============================");
         //Mentors List Heatmap
 
+        BaasBox.Builder builder = new BaasBox.Builder(this);
+        client =builder.setApiDomain("10.0.3.2")
+                .setPort(9000)
+                .setAppCode("1234567890")
+                .setHttpConnectionTimeout(3000)
+                .init();
+
         BaasDocument.count("mentorAddresses",new BaasHandler<Long> () {
             @Override
             public void handle(BaasResult<Long> res) {
@@ -137,6 +143,11 @@ public class MentorsListActivity extends AppCompatActivity {
         currentLngString= extras.getString("LONGITUDE");
         latitude = Double.parseDouble(currentLatString);
         longitude = Double.parseDouble(currentLngString);
+        System.out.println("=============================");
+        System.out.println("This is MentorsListActivity");
+        System.out.println("Lat: "+ currentLatString);
+        System.out.println("Lng: "+ currentLngString);
+        System.out.println("=============================");
 
 
 
@@ -173,7 +184,6 @@ public class MentorsListActivity extends AppCompatActivity {
 
 
                 extras.putString("MENTOR_NAME", mentorName);
-                extras.putBoolean("IS_MENTOR", false);
 
                 disscussIntent.putExtras(extras);
                 startActivity(disscussIntent);
@@ -262,7 +272,7 @@ public class MentorsListActivity extends AppCompatActivity {
         Geocoder coder = new Geocoder(this);
         List<Address> address;
         try {
-            address = coder.getFromLocationName(strAddress,1);
+            address = coder.getFromLocationName(strAddress,5);
             if (address==null) {
                 return null;
             }

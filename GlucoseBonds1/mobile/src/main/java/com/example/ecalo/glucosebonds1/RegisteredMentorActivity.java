@@ -1,13 +1,11 @@
 package com.example.ecalo.glucosebonds1;
 
 import android.content.Context;
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
-import android.widget.ImageButton;
-import android.widget.LinearLayout;
+import android.widget.Button;
 
 import com.baasbox.android.BaasBox;
 import com.baasbox.android.BaasDocument;
@@ -20,17 +18,17 @@ import com.baasbox.android.BaasUser;
  */
 public class RegisteredMentorActivity extends AppCompatActivity {
     private BaasBox client;
-    LinearLayout buttonMentorship;
-    Context context;
+    Button buttonMentorship;
+    private static Context context;
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        context= this;
+        context= getApplicationContext();
         setContentView(R.layout.activity_registered_mentor);
-        buttonMentorship = (LinearLayout)findViewById(R.id.buttonMentorship);
+        buttonMentorship = (Button) findViewById(R.id.buttonMentorship);
         //buttonRegister.setImageResource(R.drawable.be_mentor);
 
 
-        BaasBox.Builder builder = new BaasBox.Builder(this);
+        BaasBox.Builder builder = new BaasBox.Builder(context);
         client =builder.setApiDomain("10.0.3.2")
                 .setPort(9000)
                 .setAppCode("1234567890")
