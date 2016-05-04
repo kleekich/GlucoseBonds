@@ -28,24 +28,24 @@
         "source": "/Users/Kangsik/Documents/cs160/Group-10-Project/GlucoseBonds1/mobile/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.2.0/res/layout/abc_action_bar_title_item.xml"
     },
     {
-        "merged": "/Users/Kangsik/Documents/cs160/Group-10-Project/GlucoseBonds1/mobile/build/intermediates/res/merged/debug/layout/select_dialog_singlechoice_material.xml",
-        "source": "/Users/Kangsik/Documents/cs160/Group-10-Project/GlucoseBonds1/mobile/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.2.0/res/layout/select_dialog_singlechoice_material.xml"
-    },
-    {
         "merged": "/Users/Kangsik/Documents/cs160/Group-10-Project/GlucoseBonds1/mobile/build/intermediates/res/merged/debug/layout/education_options.xml",
         "source": "/Users/Kangsik/Documents/cs160/Group-10-Project/GlucoseBonds1/mobile/src/main/res/layout/education_options.xml"
+    },
+    {
+        "merged": "/Users/Kangsik/Documents/cs160/Group-10-Project/GlucoseBonds1/mobile/build/intermediates/res/merged/debug/layout/select_dialog_singlechoice_material.xml",
+        "source": "/Users/Kangsik/Documents/cs160/Group-10-Project/GlucoseBonds1/mobile/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.2.0/res/layout/select_dialog_singlechoice_material.xml"
     },
     {
         "merged": "/Users/Kangsik/Documents/cs160/Group-10-Project/GlucoseBonds1/mobile/build/intermediates/res/merged/debug/layout/design_layout_snackbar.xml",
         "source": "/Users/Kangsik/Documents/cs160/Group-10-Project/GlucoseBonds1/mobile/build/intermediates/exploded-aar/com.android.support/design/23.2.0/res/layout/design_layout_snackbar.xml"
     },
     {
-        "merged": "/Users/Kangsik/Documents/cs160/Group-10-Project/GlucoseBonds1/mobile/build/intermediates/res/merged/debug/layout/abc_screen_content_include.xml",
-        "source": "/Users/Kangsik/Documents/cs160/Group-10-Project/GlucoseBonds1/mobile/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.2.0/res/layout/abc_screen_content_include.xml"
-    },
-    {
         "merged": "/Users/Kangsik/Documents/cs160/Group-10-Project/GlucoseBonds1/mobile/build/intermediates/res/merged/debug/layout/abc_search_dropdown_item_icons_2line.xml",
         "source": "/Users/Kangsik/Documents/cs160/Group-10-Project/GlucoseBonds1/mobile/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.2.0/res/layout/abc_search_dropdown_item_icons_2line.xml"
+    },
+    {
+        "merged": "/Users/Kangsik/Documents/cs160/Group-10-Project/GlucoseBonds1/mobile/build/intermediates/res/merged/debug/layout/abc_screen_content_include.xml",
+        "source": "/Users/Kangsik/Documents/cs160/Group-10-Project/GlucoseBonds1/mobile/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.2.0/res/layout/abc_screen_content_include.xml"
     },
     {
         "merged": "/Users/Kangsik/Documents/cs160/Group-10-Project/GlucoseBonds1/mobile/build/intermediates/res/merged/debug/layout/abc_dialog_title_material.xml",
@@ -60,12 +60,12 @@
         "source": "/Users/Kangsik/Documents/cs160/Group-10-Project/GlucoseBonds1/mobile/src/main/res/layout/quick_tips.xml"
     },
     {
-        "merged": "/Users/Kangsik/Documents/cs160/Group-10-Project/GlucoseBonds1/mobile/build/intermediates/res/merged/debug/layout/design_navigation_item_subheader.xml",
-        "source": "/Users/Kangsik/Documents/cs160/Group-10-Project/GlucoseBonds1/mobile/build/intermediates/exploded-aar/com.android.support/design/23.2.0/res/layout/design_navigation_item_subheader.xml"
-    },
-    {
         "merged": "/Users/Kangsik/Documents/cs160/Group-10-Project/GlucoseBonds1/mobile/build/intermediates/res/merged/debug/layout/notification_template_big_media.xml",
         "source": "/Users/Kangsik/Documents/cs160/Group-10-Project/GlucoseBonds1/mobile/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.2.0/res/layout/notification_template_big_media.xml"
+    },
+    {
+        "merged": "/Users/Kangsik/Documents/cs160/Group-10-Project/GlucoseBonds1/mobile/build/intermediates/res/merged/debug/layout/design_navigation_item_subheader.xml",
+        "source": "/Users/Kangsik/Documents/cs160/Group-10-Project/GlucoseBonds1/mobile/build/intermediates/exploded-aar/com.android.support/design/23.2.0/res/layout/design_navigation_item_subheader.xml"
     },
     {
         "merged": "/Users/Kangsik/Documents/cs160/Group-10-Project/GlucoseBonds1/mobile/build/intermediates/res/merged/debug/layout/abc_expanded_menu_layout.xml",
@@ -100,20 +100,20 @@
         "source": "/Users/Kangsik/Documents/cs160/Group-10-Project/GlucoseBonds1/mobile/src/main/res/layout/activity_main.xml"
     },
     {
-        "merged": "/Users/Kangsik/Documents/cs160/Group-10-Project/GlucoseBonds1/mobile/build/intermediates/res/merged/debug/layout/activity_login.xml",
-        "source": "/Users/Kangsik/Documents/cs160/Group-10-Project/GlucoseBonds1/mobile/src/main/res/layout/activity_login.xml"
-    },
-    {
         "merged": "/Users/Kangsik/Documents/cs160/Group-10-Project/GlucoseBonds1/mobile/build/intermediates/res/merged/debug/layout/forums_item.xml",
         "source": "/Users/Kangsik/Documents/cs160/Group-10-Project/GlucoseBonds1/mobile/src/main/res/layout/forums_item.xml"
     },
     {
-        "merged": "/Users/Kangsik/Documents/cs160/Group-10-Project/GlucoseBonds1/mobile/build/intermediates/res/merged/debug/layout/abc_popup_menu_item_layout.xml",
-        "source": "/Users/Kangsik/Documents/cs160/Group-10-Project/GlucoseBonds1/mobile/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.2.0/res/layout/abc_popup_menu_item_layout.xml"
+        "merged": "/Users/Kangsik/Documents/cs160/Group-10-Project/GlucoseBonds1/mobile/build/intermediates/res/merged/debug/layout/activity_login.xml",
+        "source": "/Users/Kangsik/Documents/cs160/Group-10-Project/GlucoseBonds1/mobile/src/main/res/layout/activity_login.xml"
     },
     {
         "merged": "/Users/Kangsik/Documents/cs160/Group-10-Project/GlucoseBonds1/mobile/build/intermediates/res/merged/debug/layout/content_three_mains.xml",
         "source": "/Users/Kangsik/Documents/cs160/Group-10-Project/GlucoseBonds1/mobile/src/main/res/layout/content_three_mains.xml"
+    },
+    {
+        "merged": "/Users/Kangsik/Documents/cs160/Group-10-Project/GlucoseBonds1/mobile/build/intermediates/res/merged/debug/layout/abc_popup_menu_item_layout.xml",
+        "source": "/Users/Kangsik/Documents/cs160/Group-10-Project/GlucoseBonds1/mobile/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.2.0/res/layout/abc_popup_menu_item_layout.xml"
     },
     {
         "merged": "/Users/Kangsik/Documents/cs160/Group-10-Project/GlucoseBonds1/mobile/build/intermediates/res/merged/debug/layout/abc_action_mode_bar.xml",
@@ -144,20 +144,20 @@
         "source": "/Users/Kangsik/Documents/cs160/Group-10-Project/GlucoseBonds1/mobile/src/main/res/layout/activity_three_mains.xml"
     },
     {
-        "merged": "/Users/Kangsik/Documents/cs160/Group-10-Project/GlucoseBonds1/mobile/build/intermediates/res/merged/debug/layout/activity_discuss.xml",
-        "source": "/Users/Kangsik/Documents/cs160/Group-10-Project/GlucoseBonds1/mobile/src/main/res/layout/activity_discuss.xml"
-    },
-    {
         "merged": "/Users/Kangsik/Documents/cs160/Group-10-Project/GlucoseBonds1/mobile/build/intermediates/res/merged/debug/layout/activity_main2.xml",
         "source": "/Users/Kangsik/Documents/cs160/Group-10-Project/GlucoseBonds1/mobile/src/main/res/layout/activity_main2.xml"
     },
     {
-        "merged": "/Users/Kangsik/Documents/cs160/Group-10-Project/GlucoseBonds1/mobile/build/intermediates/res/merged/debug/layout/mr_media_route_chooser_dialog.xml",
-        "source": "/Users/Kangsik/Documents/cs160/Group-10-Project/GlucoseBonds1/mobile/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/23.0.0/res/layout/mr_media_route_chooser_dialog.xml"
+        "merged": "/Users/Kangsik/Documents/cs160/Group-10-Project/GlucoseBonds1/mobile/build/intermediates/res/merged/debug/layout/activity_discuss.xml",
+        "source": "/Users/Kangsik/Documents/cs160/Group-10-Project/GlucoseBonds1/mobile/src/main/res/layout/activity_discuss.xml"
     },
     {
         "merged": "/Users/Kangsik/Documents/cs160/Group-10-Project/GlucoseBonds1/mobile/build/intermediates/res/merged/debug/layout/support_simple_spinner_dropdown_item.xml",
         "source": "/Users/Kangsik/Documents/cs160/Group-10-Project/GlucoseBonds1/mobile/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.2.0/res/layout/support_simple_spinner_dropdown_item.xml"
+    },
+    {
+        "merged": "/Users/Kangsik/Documents/cs160/Group-10-Project/GlucoseBonds1/mobile/build/intermediates/res/merged/debug/layout/mr_media_route_chooser_dialog.xml",
+        "source": "/Users/Kangsik/Documents/cs160/Group-10-Project/GlucoseBonds1/mobile/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/23.0.0/res/layout/mr_media_route_chooser_dialog.xml"
     },
     {
         "merged": "/Users/Kangsik/Documents/cs160/Group-10-Project/GlucoseBonds1/mobile/build/intermediates/res/merged/debug/layout/abc_search_view.xml",
@@ -172,12 +172,12 @@
         "source": "/Users/Kangsik/Documents/cs160/Group-10-Project/GlucoseBonds1/mobile/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/23.0.0/res/layout/mr_media_route_controller_material_dialog_b.xml"
     },
     {
-        "merged": "/Users/Kangsik/Documents/cs160/Group-10-Project/GlucoseBonds1/mobile/build/intermediates/res/merged/debug/layout/info_window.xml",
-        "source": "/Users/Kangsik/Documents/cs160/Group-10-Project/GlucoseBonds1/mobile/build/intermediates/exploded-aar/com.google.maps.android/android-maps-utils/0.4.3/res/layout/info_window.xml"
-    },
-    {
         "merged": "/Users/Kangsik/Documents/cs160/Group-10-Project/GlucoseBonds1/mobile/build/intermediates/res/merged/debug/layout/select_dialog_multichoice_material.xml",
         "source": "/Users/Kangsik/Documents/cs160/Group-10-Project/GlucoseBonds1/mobile/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.2.0/res/layout/select_dialog_multichoice_material.xml"
+    },
+    {
+        "merged": "/Users/Kangsik/Documents/cs160/Group-10-Project/GlucoseBonds1/mobile/build/intermediates/res/merged/debug/layout/info_window.xml",
+        "source": "/Users/Kangsik/Documents/cs160/Group-10-Project/GlucoseBonds1/mobile/build/intermediates/exploded-aar/com.google.maps.android/android-maps-utils/0.4.3/res/layout/info_window.xml"
     },
     {
         "merged": "/Users/Kangsik/Documents/cs160/Group-10-Project/GlucoseBonds1/mobile/build/intermediates/res/merged/debug/layout/forums_detail.xml",
@@ -208,20 +208,20 @@
         "source": "/Users/Kangsik/Documents/cs160/Group-10-Project/GlucoseBonds1/mobile/src/main/res/layout/message_items.xml"
     },
     {
-        "merged": "/Users/Kangsik/Documents/cs160/Group-10-Project/GlucoseBonds1/mobile/build/intermediates/res/merged/debug/layout/row_mentors_layout.xml",
-        "source": "/Users/Kangsik/Documents/cs160/Group-10-Project/GlucoseBonds1/mobile/src/main/res/layout/row_mentors_layout.xml"
-    },
-    {
         "merged": "/Users/Kangsik/Documents/cs160/Group-10-Project/GlucoseBonds1/mobile/build/intermediates/res/merged/debug/layout/abc_action_bar_view_list_nav_layout.xml",
         "source": "/Users/Kangsik/Documents/cs160/Group-10-Project/GlucoseBonds1/mobile/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.2.0/res/layout/abc_action_bar_view_list_nav_layout.xml"
     },
     {
-        "merged": "/Users/Kangsik/Documents/cs160/Group-10-Project/GlucoseBonds1/mobile/build/intermediates/res/merged/debug/layout/notification_template_part_time.xml",
-        "source": "/Users/Kangsik/Documents/cs160/Group-10-Project/GlucoseBonds1/mobile/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.2.0/res/layout/notification_template_part_time.xml"
+        "merged": "/Users/Kangsik/Documents/cs160/Group-10-Project/GlucoseBonds1/mobile/build/intermediates/res/merged/debug/layout/row_mentors_layout.xml",
+        "source": "/Users/Kangsik/Documents/cs160/Group-10-Project/GlucoseBonds1/mobile/src/main/res/layout/row_mentors_layout.xml"
     },
     {
         "merged": "/Users/Kangsik/Documents/cs160/Group-10-Project/GlucoseBonds1/mobile/build/intermediates/res/merged/debug/layout/notification_template_media.xml",
         "source": "/Users/Kangsik/Documents/cs160/Group-10-Project/GlucoseBonds1/mobile/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.2.0/res/layout/notification_template_media.xml"
+    },
+    {
+        "merged": "/Users/Kangsik/Documents/cs160/Group-10-Project/GlucoseBonds1/mobile/build/intermediates/res/merged/debug/layout/notification_template_part_time.xml",
+        "source": "/Users/Kangsik/Documents/cs160/Group-10-Project/GlucoseBonds1/mobile/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.2.0/res/layout/notification_template_part_time.xml"
     },
     {
         "merged": "/Users/Kangsik/Documents/cs160/Group-10-Project/GlucoseBonds1/mobile/build/intermediates/res/merged/debug/layout/abc_action_menu_layout.xml",
@@ -248,28 +248,28 @@
         "source": "/Users/Kangsik/Documents/cs160/Group-10-Project/GlucoseBonds1/mobile/src/main/res/layout/test_login.xml"
     },
     {
-        "merged": "/Users/Kangsik/Documents/cs160/Group-10-Project/GlucoseBonds1/mobile/build/intermediates/res/merged/debug/layout/comments.xml",
-        "source": "/Users/Kangsik/Documents/cs160/Group-10-Project/GlucoseBonds1/mobile/src/main/res/layout/comments.xml"
-    },
-    {
         "merged": "/Users/Kangsik/Documents/cs160/Group-10-Project/GlucoseBonds1/mobile/build/intermediates/res/merged/debug/layout/abc_activity_chooser_view_list_item.xml",
         "source": "/Users/Kangsik/Documents/cs160/Group-10-Project/GlucoseBonds1/mobile/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.2.0/res/layout/abc_activity_chooser_view_list_item.xml"
     },
     {
-        "merged": "/Users/Kangsik/Documents/cs160/Group-10-Project/GlucoseBonds1/mobile/build/intermediates/res/merged/debug/layout/mr_media_route_list_item.xml",
-        "source": "/Users/Kangsik/Documents/cs160/Group-10-Project/GlucoseBonds1/mobile/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/23.0.0/res/layout/mr_media_route_list_item.xml"
+        "merged": "/Users/Kangsik/Documents/cs160/Group-10-Project/GlucoseBonds1/mobile/build/intermediates/res/merged/debug/layout/comments.xml",
+        "source": "/Users/Kangsik/Documents/cs160/Group-10-Project/GlucoseBonds1/mobile/src/main/res/layout/comments.xml"
     },
     {
         "merged": "/Users/Kangsik/Documents/cs160/Group-10-Project/GlucoseBonds1/mobile/build/intermediates/res/merged/debug/layout/activity_registered_mentor.xml",
         "source": "/Users/Kangsik/Documents/cs160/Group-10-Project/GlucoseBonds1/mobile/src/main/res/layout/activity_registered_mentor.xml"
     },
     {
-        "merged": "/Users/Kangsik/Documents/cs160/Group-10-Project/GlucoseBonds1/mobile/build/intermediates/res/merged/debug/layout/activity_forum_details.xml",
-        "source": "/Users/Kangsik/Documents/cs160/Group-10-Project/GlucoseBonds1/mobile/src/main/res/layout/activity_forum_details.xml"
+        "merged": "/Users/Kangsik/Documents/cs160/Group-10-Project/GlucoseBonds1/mobile/build/intermediates/res/merged/debug/layout/mr_media_route_list_item.xml",
+        "source": "/Users/Kangsik/Documents/cs160/Group-10-Project/GlucoseBonds1/mobile/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/23.0.0/res/layout/mr_media_route_list_item.xml"
     },
     {
         "merged": "/Users/Kangsik/Documents/cs160/Group-10-Project/GlucoseBonds1/mobile/build/intermediates/res/merged/debug/layout/abc_select_dialog_material.xml",
         "source": "/Users/Kangsik/Documents/cs160/Group-10-Project/GlucoseBonds1/mobile/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.2.0/res/layout/abc_select_dialog_material.xml"
+    },
+    {
+        "merged": "/Users/Kangsik/Documents/cs160/Group-10-Project/GlucoseBonds1/mobile/build/intermediates/res/merged/debug/layout/activity_forum_details.xml",
+        "source": "/Users/Kangsik/Documents/cs160/Group-10-Project/GlucoseBonds1/mobile/src/main/res/layout/activity_forum_details.xml"
     },
     {
         "merged": "/Users/Kangsik/Documents/cs160/Group-10-Project/GlucoseBonds1/mobile/build/intermediates/res/merged/debug/layout/general_forum.xml",
@@ -296,12 +296,12 @@
         "source": "/Users/Kangsik/Documents/cs160/Group-10-Project/GlucoseBonds1/mobile/src/main/res/layout/mentor.xml"
     },
     {
-        "merged": "/Users/Kangsik/Documents/cs160/Group-10-Project/GlucoseBonds1/mobile/build/intermediates/res/merged/debug/layout/place_autocomplete_item_prediction.xml",
-        "source": "/Users/Kangsik/Documents/cs160/Group-10-Project/GlucoseBonds1/mobile/build/intermediates/exploded-aar/com.google.android.gms/play-services-location/8.4.0/res/layout/place_autocomplete_item_prediction.xml"
-    },
-    {
         "merged": "/Users/Kangsik/Documents/cs160/Group-10-Project/GlucoseBonds1/mobile/build/intermediates/res/merged/debug/layout/abc_action_mode_close_item_material.xml",
         "source": "/Users/Kangsik/Documents/cs160/Group-10-Project/GlucoseBonds1/mobile/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.2.0/res/layout/abc_action_mode_close_item_material.xml"
+    },
+    {
+        "merged": "/Users/Kangsik/Documents/cs160/Group-10-Project/GlucoseBonds1/mobile/build/intermediates/res/merged/debug/layout/place_autocomplete_item_prediction.xml",
+        "source": "/Users/Kangsik/Documents/cs160/Group-10-Project/GlucoseBonds1/mobile/build/intermediates/exploded-aar/com.google.android.gms/play-services-location/8.4.0/res/layout/place_autocomplete_item_prediction.xml"
     },
     {
         "merged": "/Users/Kangsik/Documents/cs160/Group-10-Project/GlucoseBonds1/mobile/build/intermediates/res/merged/debug/layout/place_autocomplete_progress.xml",
@@ -324,12 +324,12 @@
         "source": "/Users/Kangsik/Documents/cs160/Group-10-Project/GlucoseBonds1/mobile/build/intermediates/exploded-aar/com.android.support/design/23.2.0/res/layout/design_menu_item_action_area.xml"
     },
     {
-        "merged": "/Users/Kangsik/Documents/cs160/Group-10-Project/GlucoseBonds1/mobile/build/intermediates/res/merged/debug/layout/design_navigation_item_header.xml",
-        "source": "/Users/Kangsik/Documents/cs160/Group-10-Project/GlucoseBonds1/mobile/build/intermediates/exploded-aar/com.android.support/design/23.2.0/res/layout/design_navigation_item_header.xml"
-    },
-    {
         "merged": "/Users/Kangsik/Documents/cs160/Group-10-Project/GlucoseBonds1/mobile/build/intermediates/res/merged/debug/layout/place_autocomplete_fragment.xml",
         "source": "/Users/Kangsik/Documents/cs160/Group-10-Project/GlucoseBonds1/mobile/build/intermediates/exploded-aar/com.google.android.gms/play-services-location/8.4.0/res/layout/place_autocomplete_fragment.xml"
+    },
+    {
+        "merged": "/Users/Kangsik/Documents/cs160/Group-10-Project/GlucoseBonds1/mobile/build/intermediates/res/merged/debug/layout/design_navigation_item_header.xml",
+        "source": "/Users/Kangsik/Documents/cs160/Group-10-Project/GlucoseBonds1/mobile/build/intermediates/exploded-aar/com.android.support/design/23.2.0/res/layout/design_navigation_item_header.xml"
     },
     {
         "merged": "/Users/Kangsik/Documents/cs160/Group-10-Project/GlucoseBonds1/mobile/build/intermediates/res/merged/debug/layout/listitem_discuss.xml",
@@ -364,12 +364,12 @@
         "source": "/Users/Kangsik/Documents/cs160/Group-10-Project/GlucoseBonds1/mobile/build/intermediates/exploded-aar/com.android.support/design/23.2.0/res/layout/design_layout_tab_icon.xml"
     },
     {
-        "merged": "/Users/Kangsik/Documents/cs160/Group-10-Project/GlucoseBonds1/mobile/build/intermediates/res/merged/debug/layout/message.xml",
-        "source": "/Users/Kangsik/Documents/cs160/Group-10-Project/GlucoseBonds1/mobile/src/main/res/layout/message.xml"
-    },
-    {
         "merged": "/Users/Kangsik/Documents/cs160/Group-10-Project/GlucoseBonds1/mobile/build/intermediates/res/merged/debug/layout/design_layout_snackbar_include.xml",
         "source": "/Users/Kangsik/Documents/cs160/Group-10-Project/GlucoseBonds1/mobile/build/intermediates/exploded-aar/com.android.support/design/23.2.0/res/layout/design_layout_snackbar_include.xml"
+    },
+    {
+        "merged": "/Users/Kangsik/Documents/cs160/Group-10-Project/GlucoseBonds1/mobile/build/intermediates/res/merged/debug/layout/message.xml",
+        "source": "/Users/Kangsik/Documents/cs160/Group-10-Project/GlucoseBonds1/mobile/src/main/res/layout/message.xml"
     },
     {
         "merged": "/Users/Kangsik/Documents/cs160/Group-10-Project/GlucoseBonds1/mobile/build/intermediates/res/merged/debug/layout/abc_action_menu_item_layout.xml",

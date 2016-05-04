@@ -12,24 +12,24 @@
         "source": "/Users/Kangsik/Documents/cs160/Group-10-Project/GlucoseBonds1/mobile/build/intermediates/exploded-aar/com.google.maps.android/android-maps-utils/0.4.3/res/raw/inline_style.kml"
     },
     {
-        "merged": "/Users/Kangsik/Documents/cs160/Group-10-Project/GlucoseBonds1/mobile/build/intermediates/res/merged/debug/raw/nested_folders.kml",
-        "source": "/Users/Kangsik/Documents/cs160/Group-10-Project/GlucoseBonds1/mobile/build/intermediates/exploded-aar/com.google.maps.android/android-maps-utils/0.4.3/res/raw/nested_folders.kml"
-    },
-    {
         "merged": "/Users/Kangsik/Documents/cs160/Group-10-Project/GlucoseBonds1/mobile/build/intermediates/res/merged/debug/raw/nested_multigeometry.kml",
         "source": "/Users/Kangsik/Documents/cs160/Group-10-Project/GlucoseBonds1/mobile/build/intermediates/exploded-aar/com.google.maps.android/android-maps-utils/0.4.3/res/raw/nested_multigeometry.kml"
+    },
+    {
+        "merged": "/Users/Kangsik/Documents/cs160/Group-10-Project/GlucoseBonds1/mobile/build/intermediates/res/merged/debug/raw/nested_folders.kml",
+        "source": "/Users/Kangsik/Documents/cs160/Group-10-Project/GlucoseBonds1/mobile/build/intermediates/exploded-aar/com.google.maps.android/android-maps-utils/0.4.3/res/raw/nested_folders.kml"
     },
     {
         "merged": "/Users/Kangsik/Documents/cs160/Group-10-Project/GlucoseBonds1/mobile/build/intermediates/res/merged/debug/raw/basic_placemark.kml",
         "source": "/Users/Kangsik/Documents/cs160/Group-10-Project/GlucoseBonds1/mobile/build/intermediates/exploded-aar/com.google.maps.android/android-maps-utils/0.4.3/res/raw/basic_placemark.kml"
     },
     {
-        "merged": "/Users/Kangsik/Documents/cs160/Group-10-Project/GlucoseBonds1/mobile/build/intermediates/res/merged/debug/raw/unsupported.kml",
-        "source": "/Users/Kangsik/Documents/cs160/Group-10-Project/GlucoseBonds1/mobile/build/intermediates/exploded-aar/com.google.maps.android/android-maps-utils/0.4.3/res/raw/unsupported.kml"
-    },
-    {
         "merged": "/Users/Kangsik/Documents/cs160/Group-10-Project/GlucoseBonds1/mobile/build/intermediates/res/merged/debug/raw/multigeometry_placemarks.kml",
         "source": "/Users/Kangsik/Documents/cs160/Group-10-Project/GlucoseBonds1/mobile/build/intermediates/exploded-aar/com.google.maps.android/android-maps-utils/0.4.3/res/raw/multigeometry_placemarks.kml"
+    },
+    {
+        "merged": "/Users/Kangsik/Documents/cs160/Group-10-Project/GlucoseBonds1/mobile/build/intermediates/res/merged/debug/raw/unsupported.kml",
+        "source": "/Users/Kangsik/Documents/cs160/Group-10-Project/GlucoseBonds1/mobile/build/intermediates/exploded-aar/com.google.maps.android/android-maps-utils/0.4.3/res/raw/unsupported.kml"
     },
     {
         "merged": "/Users/Kangsik/Documents/cs160/Group-10-Project/GlucoseBonds1/mobile/build/intermediates/res/merged/debug/raw/extended_data.kml",
@@ -56,12 +56,12 @@
         "source": "/Users/Kangsik/Documents/cs160/Group-10-Project/GlucoseBonds1/mobile/build/intermediates/exploded-aar/com.google.maps.android/android-maps-utils/0.4.3/res/raw/ground_overlay.kml"
     },
     {
-        "merged": "/Users/Kangsik/Documents/cs160/Group-10-Project/GlucoseBonds1/mobile/build/intermediates/res/merged/debug/raw/poly_style_boolean_numeric.kml",
-        "source": "/Users/Kangsik/Documents/cs160/Group-10-Project/GlucoseBonds1/mobile/build/intermediates/exploded-aar/com.google.maps.android/android-maps-utils/0.4.3/res/raw/poly_style_boolean_numeric.kml"
-    },
-    {
         "merged": "/Users/Kangsik/Documents/cs160/Group-10-Project/GlucoseBonds1/mobile/build/intermediates/res/merged/debug/raw/document_nest.kml",
         "source": "/Users/Kangsik/Documents/cs160/Group-10-Project/GlucoseBonds1/mobile/build/intermediates/exploded-aar/com.google.maps.android/android-maps-utils/0.4.3/res/raw/document_nest.kml"
+    },
+    {
+        "merged": "/Users/Kangsik/Documents/cs160/Group-10-Project/GlucoseBonds1/mobile/build/intermediates/res/merged/debug/raw/poly_style_boolean_numeric.kml",
+        "source": "/Users/Kangsik/Documents/cs160/Group-10-Project/GlucoseBonds1/mobile/build/intermediates/exploded-aar/com.google.maps.android/android-maps-utils/0.4.3/res/raw/poly_style_boolean_numeric.kml"
     },
     {
         "merged": "/Users/Kangsik/Documents/cs160/Group-10-Project/GlucoseBonds1/mobile/build/intermediates/res/merged/debug/raw/unknwown_folder.kml",
