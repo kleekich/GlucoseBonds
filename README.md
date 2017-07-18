@@ -12,8 +12,8 @@ The three major parts of glucosebonds are:
 
 The following features are implemented:
 
--Users can register as a member 
--Users can participate in forums by posting and commenting
+Users can register as a member 
+Users can participate in forums by posting and commenting
 Users can register as a mentor and send direct messages with mentees
 Users can search for mentors based on location
 Users are provided with step-by-step insulin injection instruction on their phone and smartwatch as well
